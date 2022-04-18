@@ -1,0 +1,20 @@
+{
+  "name": "block3d_document",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "serve": "vuepress serve docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
+    "vuepress-vite": "^2.0.0-beta.39"
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.2.6"
+  }
+}
