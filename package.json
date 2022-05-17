@@ -1,0 +1,33 @@
+{
+  "name": "block3d",
+  "version": "1.0.0 beta.1",
+  "description": "一款支持可视化编程的Web3D开发工具",
+  "main": "server/main.js",
+  "scripts": {
+    "dev": "cd server && npm run dev",
+    "dev-blocks": "cd blocks && npm run dev",
+    "dev-docs": "cd document && npm run dev",
+    "build-blocks": "cd blocks && npm run build && cp -v -r dist/block3d.umd.js ../dist_frontend/js/block3d && cd ..",
+    "build-blocks-obfuscate": "cd blocks && npm run build && node tools/buildBlocksObfuscator.js && cd ..",
+    "build-tsdeclare": "cd tsdeclare && npm run build && cp -v -r dist/tsdeclare.umd.js ../dist_frontend/js/block3d && cd ..",
+    "pkg": "pkg . -C GZip && cp -v -r server/lib server/projects server/templates server/config.json dist",
+    "build-all": "npm run build-blocks-obfuscate && npm run build-tsdeclare && npm run pkg"
+  },
+  "bin": "server/main.js",
+  "pkg": {
+    "scripts": [
+      "server/config/**/*",
+      "server/routes/**/*"
+    ],
+    "assets": [
+      "dist_frontend/**/*"
+    ],
+    "targets": [
+      "win"
+    ],
+    "outputPath": "dist"
+  },
+  "keywords": [],
+  "author": "宅家呗",
+  "license": ""
+}

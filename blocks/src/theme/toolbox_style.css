@@ -1,0 +1,148 @@
+:root {
+  --light: #eee;
+  --dark: #333;
+  --border: solid #6f6f6f 1px;
+}
+/* Makes our label white. */
+.blocklyTreeLabel {
+  color: var(--light);
+}
+/* Adds padding around the group of categories and separators. */
+.blocklyToolboxContents {
+  padding: 6px;
+}
+/* Adds space between the categories, rounds the corners and adds space around the label. */
+.blocklyTreeRow {
+  padding: 4px;
+  margin: 3px 0;
+  border-radius: 4px;
+  height: initial;
+  background-color: #212121;
+  border: none !important; /* 左侧竖条 */
+}
+
+/* Stacks the icon on left of the label. */
+.blocklyTreeRowContentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blocklyTreeIcon {
+  display: none !important;
+}
+
+.blocklyTreeLabel {
+  cursor: default;
+  font: 16px sans-serif;
+  padding: 0 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.blocklyTreeSeparator {
+  border-bottom: var(--border);
+}
+
+.blocklyMainBackground {
+  stroke: none;
+}
+
+.blocklyWidgetDiv .blocklyMenu {
+  background-color: #212121;
+  overflow: visible;
+}
+.blocklyDropDownDiv {
+  border: none;
+  background-color: #212121;
+}
+
+.blocklyMenuItem {
+  color: #ddd;
+  background-color: #212121;
+}
+
+.blocklyMenuItemCheckbox {
+  filter: invert(1);
+}
+/* 分类图标 */
+.sizeSmall {
+  width: 25px;
+  height: 20px;
+  padding: 10px;
+}
+.labelNone {
+  display: none;
+}
+.textIcon {
+  background: center / contain no-repeat url(/media/text.svg);
+}
+.numberIcon {
+  background: center / contain no-repeat url(/media/number.svg);
+}
+.arrayIcon {
+  background: center / contain no-repeat url(/media/array.svg);
+}
+.objectIcon {
+  background: center / contain no-repeat url(/media/object.svg);
+}
+.logicIcon {
+  background: center / contain no-repeat url(/media/logic.svg);
+}
+.loopIcon {
+  background: center / contain no-repeat url(/media/loop.svg);
+}
+.variableIcon {
+  background: center / contain no-repeat url(/media/variable.svg);
+}
+.functionIcon {
+  background: center / contain no-repeat url(/media/function.svg);
+}
+.systemIcon {
+  background: center / contain no-repeat url(/media/system.svg);
+}
+.advancedIcon {
+  background: center / contain no-repeat url(/media/advanced.svg);
+}
+.sceneIcon {
+  background: center / contain no-repeat url(/media/scene.svg);
+}
+.nodeIcon {
+  background: center / contain no-repeat url(/media/node.svg);
+}
+.meshIcon {
+  background: center / contain no-repeat url(/media/mesh.svg);
+}
+.cameraIcon {
+  background: center / contain no-repeat url(/media/camera.svg);
+}
+.lightIcon {
+  background: center / contain no-repeat url(/media/light.svg);
+}
+.eventIcon {
+  background: center / contain no-repeat url(/media/event.svg);
+}
+.animateIcon {
+  background: center / contain no-repeat url(/media/animate.svg);
+}
+.timeIcon {
+  background: center / contain no-repeat url(/media/time.svg);
+}
+.materialIcon {
+  background: center / contain no-repeat url(/media/material.svg);
+}
+.vectorIcon {
+  background: center / contain no-repeat url(/media/vector.svg);
+}
+.toolIcon {
+  background: center / contain no-repeat url(/media/tool.svg);
+}
+.guiIcon {
+  background: center / contain no-repeat url(/media/gui.svg);
+}
+.inspectorIcon {
+  background: center / contain no-repeat url(/media/inspector.svg);
+}
+.tweakpaneIcon {
+  background: center / contain no-repeat url(/media/tweakpane.svg);
+}

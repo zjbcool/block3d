@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0 ",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "宅家呗",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.10.7",
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.0.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "marked": "^4.0.15",
+    "node-fetch": "^2.6.7",
+    "systeminformation": "^5.11.6",
+    "uglify-js": "^3.15.2"
+  }
+}

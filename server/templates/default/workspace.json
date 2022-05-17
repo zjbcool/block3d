@@ -1,0 +1,13 @@
+{
+  "main": {
+    "type": "block",
+    "data": {}
+  },
+  "setting": {
+    "data": {
+      "gutterPosition": 50,
+      "view": "code",
+      "lang": "en"
+    }
+  }
+}

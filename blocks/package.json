@@ -1,0 +1,27 @@
+{
+  "name": "block3d",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/block3d.umd.js",
+  "module": "./dist/block3d.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/block3d.es.js",
+      "require": "./dist/block3d.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "blockly": "^8.0.0",
+    "lit": "^2.2.2"
+  }
+}
