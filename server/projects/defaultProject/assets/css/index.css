@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#renderCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.preloader-background {
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.preloader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;
+  margin-left: -90px;
+  width: 180px;
+  height: 180px;
+}
+.preloader-bar {
+  background: linear-gradient(90deg, #ae4115, #e16531);
+  width: 0%;
+  height: 3px;
+  margin: 15px -1px;
+  border-radius: 5px;
+}
+.preloader-logo {
+  width: 110px;
+  height: 120px;
+  margin: 20px auto;
+  background: center/contain no-repeat url("../media/logo.svg");
+}
+.gui-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+}
