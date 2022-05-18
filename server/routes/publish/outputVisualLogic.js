@@ -12,7 +12,7 @@ module.exports = async (projectName, workspaceData, options) => {
   });
 
   let logicStr = `// 此文件自动生成，请勿修改
-console.log('Block3D-一款支持可视化编程的Web3D开发工具www.zjbku.com');
+console.log('Block3D-一款支持可视化编程的免费Web3D开发工具www.zjbku.com');
 'use strict';
 const appInstance = BABYLON.apps[0];
 `;

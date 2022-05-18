@@ -2,17 +2,20 @@
 const fs = require('fs-extra');
 const { join } = require('node:path');
 const UglifyJS = require("uglify-js");
-const { Preloader, App } = require('./mainjs');
+const { Preloader, App } = require('./mainjs.js');
 
+const preloaderStr = Preloader.toString()
+const appStr = App.toString()
 // 创建main.js
 module.exports = async (projectName, options) => {
   const mainStr = `
 'use strict';
 
-window.addEventListener('load', async () => {
-  ${Preloader.toString()}
-  ${App.toString()}
+${preloaderStr}
 
+${appStr}
+
+window.addEventListener('load', async () => {
   let appInstance;
   BABYLON.apps = [];
   BABYLON.Preloader = Preloader;
