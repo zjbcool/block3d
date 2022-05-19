@@ -410,6 +410,9 @@ async function setup(data) {
       aside && root.removeChild(aside)
       aside = document.createElement('editor-aside')
       root.appendChild(aside)
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'))
+      }, 0)
     }
   }
 
@@ -535,6 +538,6 @@ async function setup(data) {
  */
   function showInfo(message) {
     editorFooter.info = (lang === 'en' ? message.en : message.zh)
-    setTimeout(() => { editorFooter.info = '' }, 4000)
+    // setTimeout(() => { editorFooter.info = '' }, 4000)
   }
 }

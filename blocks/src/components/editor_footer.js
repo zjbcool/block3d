@@ -42,8 +42,15 @@ export class EditorFooter extends LitElement {
       color: #858585;
       user-select: none;
     }
+    #clearInfo {
+      cursor: pointer;
+    }
     #playbackControl {
       cursor: pointer;
+    }
+    .icon-center {
+      display: flex;
+      align-items: center;
     }
     .w-68 {
       width: 68px;
@@ -79,14 +86,19 @@ export class EditorFooter extends LitElement {
     <i class="info">${this.info}</i>
   </div>
   <div class="footer-right">
-    <div id="playbackControl">
-      <img @click="${this._playback}" src=${this.running ? "/media/pause.svg" : "/media/play.svg"} alt="icon">
+    <div id="clearInfo" class="icon-center" title=${this.lang == 'zh' ? '清空信息' : 'clear info'}>
+      <img @click="${this._clearInfo}" src="/media/clear-info.svg" alt="clear">
+    </div>
+    <div id="playbackControl" class="icon-center">
+      <img @click="${this._playback}" src=${this.running ? "/media/pause.svg" : "/media/play.svg"} alt="playback">
     </div>
     <p class="w-68">FPS:<span>${this.fps}</span></p>
   </div>
     `
   }
-
+  _clearInfo() {
+    this.info = ''
+  }
   playback() { }
   _playback = () => {
     this.playback && this.playback()

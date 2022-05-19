@@ -59,7 +59,7 @@ export class PublishDialog extends LitElement {
     data.appTitle = _this.lang === 'zh' ? '标题' : 'Title'
     data.appIcon = _this.lang === 'zh' ? '图标' : 'Icon'
     data.appDescription = _this.lang === 'zh' ? '描述' : 'Description'
-    data.appDescriptionContent = _this.lang === 'zh' ? 'Block3D是一款支持可视化编程的免费Web3D开发工具' : 'Block3d is a free Low-Code Web3D app development tool'
+    data.appDescriptionContent = _this.lang === 'zh' ? 'Block3D是一款免费的零代码Web3D开发工具' : 'Block3D is a free No-Code Web3D app development tool'
     data.build = _this.lang === 'zh' ? '构建:' : 'Build:'
     data.minify = _this.lang === 'zh' ? '压缩JS文件' : 'Minify JS file'
 

@@ -23,11 +23,11 @@ module.exports = async (ctx, next) => {
 
   try {
     await outputVisualLogic(projectName, workspaceData, options);
-    console.log('生成：visual_logic.js');
+    console.log('创建->visual_logic.js');
     await outputMainJs(projectName, options);
-    console.log('生成：main.js');
+    console.log('创建->main.js');
     await outputIndex(projectName, options);
-    console.log('生成：index.html');
+    console.log('创建->index.html');
     ctx.body = 'ok'
   } catch (e) {
     console.log(e);

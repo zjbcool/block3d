@@ -14,11 +14,8 @@ ContextMenuItems.printBlockName = function () {
       return 'enabled';
     },
     callback: function (/** @type {!ContextMenuRegistry.Scope} */ scope) {
-      if (block3d) {
+      if (block3d && block3d.editorFooter) {
         block3d.editorFooter.info = scope.block.type;
-        setTimeout(() => {
-          block3d.editorFooter.info = ''
-        }, 5000)
       }
     },
     scopeType: ContextMenuRegistry.ScopeType.BLOCK,
