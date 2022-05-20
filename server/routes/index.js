@@ -2,6 +2,9 @@ const { join } = require('node:path');
 const fs = require('fs-extra');
 module.exports = async function (ctx, next) {
   const { name } = ctx.params;
+  const lang = ctx.query.lang || 'zh';
+  process.env.LANG = lang;
+  console.log(`server:${lang}`);
   const templateDir = join(process.cwd(), 'templates/default');
   const defaultProjectDir = join(process.env.PROJECTS_FOLDER, 'defaultProject');
   process.env.PROJECT_NAME = name;
@@ -15,7 +18,7 @@ module.exports = async function (ctx, next) {
       }
     }
     ctx.type = 'html'
-    ctx.body = `
+    ctx.body = /*html*/`
 <!DOCTYPE html>
 <html>
 
@@ -34,8 +37,11 @@ module.exports = async function (ctx, next) {
   <script src="/js/babylon/babylon.guiEditor.max.js"></script>
   <script src="/js/babylon/babylon.inspector.bundle.max.js"></script>
 
+  <script src="/js/tweakpane/tweakpane.js"></script>
+
   <script src="/js/blockly/blockly_compressed.js"></script>
   <script src="/js/blockly/blocks_compressed.js"></script>
+  <script src="/js/blockly/msg.${lang === 'zh' ? 'zh' : 'en'}.js"></script>
   <script src="/js/blockly/javascript_compressed.js"></script>
 
   <script src="/js/block3d/tsdeclare.umd.js"></script>

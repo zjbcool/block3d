@@ -6,7 +6,7 @@ import { CodeTab } from './code_tab';
 import { BlockTab } from './block_tab';
 import { EventDispatcher } from './event_dispatcher';
 import toolboxMain from '../category/toolbox_main';
-import setLocale from '../msg/set_locale';
+// import setLocale from '../msg/set_locale';
 
 /**
  * 管理选项卡/工作区
@@ -130,7 +130,7 @@ class TabManager extends EventDispatcher {
       newTab.workspaceElem = document.createElement('div');
       newTab.workspaceElem.className = 'workspace-container';
       this.editorContent.appendChild(newTab.workspaceElem);
-      setLocale(this.lang);
+      // setLocale(this.lang);
       newTab.workspace = inject(newTab.workspaceElem, {
         toolbox: toolboxMain,
         path: '/',

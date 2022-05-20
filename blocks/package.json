@@ -18,10 +18,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.9.5"
+    "vite": "^3.0.0-alpha.1"
   },
   "dependencies": {
-    "blockly": "^8.0.0",
-    "lit": "^2.2.2"
+    "blockly": "^8.0.2",
+    "lit": "^2.2.4"
   }
 }

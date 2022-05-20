@@ -1,0 +1,23 @@
+{
+  "name": "blocks-msg",
+  "private": true,
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/msg.umd.js",
+  "module": "./dist/msg.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-zh": "vite build && cd dist && mv msg.umd.js msg.zh.js && cp -v -r msg.zh.js ../../dist_frontend/js/blockly",
+    "build-en": "vite build && cd dist && mv msg.umd.js msg.en.js && cp -v -r msg.en.js ../../dist_frontend/js/blockly",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "blockly": "^8.0.2"
+  }
+}

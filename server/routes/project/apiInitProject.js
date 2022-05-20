@@ -19,7 +19,7 @@ module.exports = async function (ctx, next) {
     expires = licenseInfo && licenseInfo.data && licenseInfo.data.expiresAt || 0;
 
     // 界面语言
-    data.LANG = ctx.query['lang'] || 'zh';
+    data.LANG = process.env.LANG
     // 标题
     data.TITLE = process.env.TITLE;
     // 版本号

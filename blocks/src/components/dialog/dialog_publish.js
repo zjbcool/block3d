@@ -213,7 +213,7 @@ export class PublishDialog extends LitElement {
         },
         {
           enabled: enableTweakpane,
-          module: 'tweakpane-3.0.7.min.js'
+          module: 'tweakpane.min.js'
         },
       ],
       enableMinifyJSFile: enableMinifyJSFile,
