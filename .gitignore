@@ -4,6 +4,7 @@ document/node_modules
 .DS_Store
 dist
 PKG_CACHE
+release/block3d
 *.local
 *.blend
 *.sh

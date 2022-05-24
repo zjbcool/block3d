@@ -4,7 +4,6 @@ module.exports = async function (ctx, next) {
   const { name } = ctx.params;
   const lang = ctx.query.lang || 'zh';
   process.env.LANG = lang;
-  console.log(`server:${lang}`);
   const templateDir = join(process.cwd(), 'templates/default');
   const defaultProjectDir = join(process.env.PROJECTS_FOLDER, 'defaultProject');
   process.env.PROJECT_NAME = name;
