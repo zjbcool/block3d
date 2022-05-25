@@ -42,7 +42,7 @@ Blocks['create_light'] = {
           .setCheck('Vector3')
           .setAlign(ALIGN_RIGHT);
         this.setTooltip(Msg.POINT_LIGHT_TOOLTIP);
-        this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.pointlight');
+        this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#pointlight');
         updateShadow(_this.getInput('POSITION'), 'VECTOR3', [0, 10, -5]);
         break;
       case 'DirectionalLight':
@@ -51,7 +51,7 @@ Blocks['create_light'] = {
           .setCheck('Vector3')
           .setAlign(ALIGN_RIGHT);
         this.setTooltip(Msg.DIRECTIONAL_LIGHT_TOOLTIP);
-        this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.directionallight');
+        this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#directionallight');
         updateShadow(_this.getInput('DIRECTION'), 'VECTOR3', [0, -1, 0]);
         break;
       case 'SpotLight':
@@ -72,7 +72,7 @@ Blocks['create_light'] = {
           .setCheck('Number')
           .setAlign(ALIGN_RIGHT);
         this.setTooltip(Msg.SPOT_LIGHT_TOOLTIP);
-        this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.spotlight');
+        this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#spotlight');
         updateShadow(this.getInput('POSITION'), 'VECTOR3', [0, 10, -5]);
         updateShadow(_this.getInput('DIRECTION'), 'VECTOR3', [0, -1, 0]);
         updateShadow(this.getInput('ANGLE'), 'ANGLE', '45');
@@ -84,7 +84,7 @@ Blocks['create_light'] = {
           .setCheck('Vector3')
           .setAlign(ALIGN_RIGHT);
         this.setTooltip(Msg.DIRECTIONAL_LIGHT_TOOLTIP);
-        this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.directionallight');
+        this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#hemisphericlight');
         updateShadow(_this.getInput('DIRECTION'), 'VECTOR3', [0, -1, 0]);
         break;
     }
@@ -115,7 +115,7 @@ Blocks['set_get_light_prop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("Sets light property");
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#set-get-light-prop');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.updateKeyField('PointLight');
@@ -151,7 +151,7 @@ Blocks['create_shadow'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Shadow');
     this.setTooltip('Creates a ShadowGenerator object. A ShadowGenerator is the required tool to use the shadows. Each light casting shadows needs to use its own ShadowGenerator.');
-
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#create-shadow')
     updateShadow(light, 'LIGHT', '')
     updateShadow(mapSize, 'NUM', '1024')
   }
@@ -172,7 +172,7 @@ Blocks['set_shadow_prop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("Sets the shadow property");
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#set-shadow-prop');
     this.typeHandle('bias');
   },
   typeHandle(type) {
@@ -196,7 +196,7 @@ Blocks['add_shadow_caster'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Adds a mesh and its descendants to the list of shadow casters.');
-    this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.shadowgenerator#addshadowcaster');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/lights.html#add-shadow-caster');
 
     updateShadow(mesh, 'MESH', '')
   }

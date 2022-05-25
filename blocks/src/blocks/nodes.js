@@ -23,7 +23,7 @@ Blocks['mesh_selector'] = {
     this.setInputsInline(false);
     this.setOutput(true, 'Mesh');
     this.setTooltip('Gets a node (Mesh, Camera, Light) using a given name');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#mesh-selector');
   }
 }
 
@@ -36,7 +36,7 @@ Blocks['camera_selector'] = {
     this.setInputsInline(false);
     this.setOutput(true, 'Camera');
     this.setTooltip('Gets a node (Mesh, Camera, Light) using a given name');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#camera-selector');
   }
 }
 
@@ -49,7 +49,7 @@ Blocks['light_selector'] = {
     this.setInputsInline(false);
     this.setOutput(true, 'Light');
     this.setTooltip('Gets a node (Mesh, Camera, Light) using a given name');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#light-selector');
   }
 }
 Blocks['create_transform_node'] = {
@@ -63,7 +63,7 @@ Blocks['create_transform_node'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip('A TransformNode is an object that is not rendered but can be used as a center of transformation. This can decrease memory usage and increase rendering speed compared to using an empty mesh as a parent and is less complicated than using a pivot matrix.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#create-transform-node');
     updateShadow(name, 'TEXT', '')
   }
 }
@@ -81,7 +81,7 @@ Blocks['node_get_all'] = {
     this.setInputsInline(false);
     this.setOutput(true, 'Array');
     this.setTooltip('All of the meshes/cameras/lights added to this scene');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#node-get-all');
   }
 }
 
@@ -100,7 +100,7 @@ Blocks['node_get_children'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Array');
     this.setTooltip('Get children of this node');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#node-get-children');
 
     updateShadow(node, 'MESH', '')
   }
@@ -128,7 +128,7 @@ Blocks['node_parent'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Gets or sets the parent of the node (without keeping the current position in the scene)');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#node-parent');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.getFieldValue('METHOD') === 'set' && updateShadow(_this.getInput('VALUE'), 'NULL', '');
@@ -148,7 +148,7 @@ Blocks['node_is_child_of'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('Is this node a descendant of the given node? The function will iterate up the hierarchy until the ancestor was found or no more parents defined');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#node-is-child-of');
     updateShadow(childNode, 'MESH', '')
     updateShadow(parentNode, 'MESH', '')
   }
@@ -168,7 +168,7 @@ Blocks['node_set_enabled'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Set the enabled state of this node');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/nodes.html#node-set-enabled');
     updateShadow(node, 'MESH', '')
     updateShadow(enabled, 'BOOL', 'TRUE')
   }

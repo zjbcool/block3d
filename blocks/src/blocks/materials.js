@@ -25,7 +25,7 @@ Blocks['create_material'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Material');
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#create-material');
     updateShadow(name, 'TEXT', '')
   }
 }
@@ -63,7 +63,6 @@ Blocks['set_get_material_prop'] = {
         statementCheckMixin.updateValueInput_.call(_this, isSet);
       }), 'METHOD')
     this.appendValueInput('MATERIAL')
-      .appendField('material')
       .appendField(new FieldDropdown(() => MenuGenerator.materialType.generatMenu(), type => _this.updateKeyField(type)), 'TYPE')
       .setCheck('Material');
     this.appendDummyInput('KEY_INPUT');
@@ -73,7 +72,7 @@ Blocks['set_get_material_prop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("Sets or gets material's properties");
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#set-get-material-prop');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.updateKeyField('StandardMaterial');
@@ -99,7 +98,7 @@ Blocks['get_material_by_mesh'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Material');
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#get-material-by-mesh');
     updateShadow(mesh, 'MESH', '')
   }
 }
@@ -113,7 +112,7 @@ Blocks['remove_material'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#remove-material');
   }
 }
 
@@ -130,7 +129,7 @@ Blocks['create_texture'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Texture');
     this.setTooltip('Create a new texture');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#create-texture');
     updateShadow(url, 'TEXT', './assets/texture/grass.jpg')
   }
 }
@@ -157,7 +156,7 @@ Blocks['set_get_texture_prop'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#set-get-texture-prop');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.updateKeyField('Texture');
@@ -183,7 +182,7 @@ Blocks['remove_texture'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#remove-texture');
   }
 }
 
@@ -203,7 +202,7 @@ Blocks['material_color3'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Color3');
     this.setTooltip(Msg.MAT_GET_TEX_TOOLTIP);
-    this.setHelpUrl(Msg.MAT_GET_TEX_HELP_URL);
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#material-color3');
     updateShadow(r, 'NUM', '255')
     updateShadow(g, 'NUM', '255')
     updateShadow(b, 'NUM', '255')
@@ -228,7 +227,7 @@ Blocks['material_color4'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Color4');
     this.setTooltip('Used to hold a RBGA color');
-    this.setHelpUrl();
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#material-color4');
     updateShadow(r, 'NUM', '255')
     updateShadow(g, 'NUM', '255')
     updateShadow(b, 'NUM', '255')
@@ -282,8 +281,8 @@ Blocks['material_color3_from_hex'] = {
     this.setStyle("material_style");
     this.setInputsInline(true);
     this.setOutput(true, 'Color3');
-    this.setTooltip(Msg.MAT_GET_TEX_TOOLTIP);
-    this.setHelpUrl(Msg.MAT_GET_TEX_HELP_URL);
+    this.setTooltip('create Color3');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#material-color3-from-hex');
     updateShadow(hex, 'TEXT', '#ff0000')
   }
 }
@@ -298,8 +297,8 @@ Blocks['material_color4_from_hex'] = {
     this.setStyle("material_style");
     this.setInputsInline(true);
     this.setOutput(true, 'Color4');
-    this.setTooltip(Msg.MAT_GET_TEX_TOOLTIP);
-    this.setHelpUrl(Msg.MAT_GET_TEX_HELP_URL);
+    this.setTooltip('create Color4');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/materials.html#material-color4-from-hex');
     updateShadow(hex, 'TEXT', '#ffffffff')
   }
 }

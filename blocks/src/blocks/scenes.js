@@ -24,7 +24,7 @@ Blocks['scene_create_custom_preloader'] = {
     this.setNextStatement(true, null);
     this.setStyle("scenes_style");
     this.setTooltip("for changing background of the entire preloader screen.");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/scenes.html#scene-create-custom-preloader");
     this.mixin(createContextMenuBlockMixin('scene_create_custom_preloader_option', 'option'));
     updateShadow(options, 'OBJECT', '')
   }
@@ -69,7 +69,7 @@ Blocks['scene_update_custom_preloader'] = {
     this.setNextStatement(true, null);
     this.setStyle("scenes_style");
     this.setTooltip("Update the preloader progress with percentage");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/scenes.html#scene-update-custom-preloader");
   }
 }
 
@@ -102,7 +102,7 @@ Blocks['scene_assets_manager'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Msg.APP_ASSETS_MANAGER_TOOLTIP);
-    this.setHelpUrl(Msg.APP_ASSETS_MANAGER_HELP_URL);
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-assets-manager');
     this.mixin(createContextMenuBlockMixin('scene_preloader_percentage', 'percentage'));
   }
 }
@@ -138,7 +138,7 @@ Blocks['scene_load_asset'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setTooltip(Msg.APP_ADD_TASK_TOOLTIP);
-    this.setHelpUrl(Msg.APP_ADD_TASK_HELP_URL);
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-load-asset');
     this.mixin(createSurroundCheckMixin('scene_assets_manager'));
 
     updateShadow(assetName, 'TEXT', 'load')
@@ -167,7 +167,7 @@ Blocks['scene_get_loaded_from_asset'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-get-loaded-from-asset');
   }
 }
 
@@ -182,7 +182,7 @@ Blocks['scene_on_finish_load'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Callback called when the task is successful');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-on-finish-load');
   }
 }
 
@@ -197,7 +197,7 @@ Blocks['set_scene_prop'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#set-scene-prop');
     updateShadow(valueInput, 'COLOR3', [0, 0, 0])
   }
 }
@@ -212,7 +212,7 @@ Blocks['scene_create_default_environment'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Creates a new environment');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-create-default-environment');
     this.mixin(createContextMenuBlockMixin('scene_create_default_environment_option', 'option'));
     updateShadow(this.getInput('OPTIONS'), 'OBJECT', '')
   }
@@ -228,7 +228,7 @@ Blocks['scene_update_default_environment'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Updates the background according to the new options');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-update-default-environment');
     this.mixin(createContextMenuBlockMixin('scene_create_default_environment_option', 'option'));
     updateShadow(this.getInput('OPTIONS'), 'OBJECT', '')
   }
@@ -260,7 +260,7 @@ Blocks['scene_get_environment_prop'] = {
     this.setStyle('scenes_style');
     this.setInputsInline(false);
     this.setOutput(true, null);
-    this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.environmenthelper')
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#scene-get-environment-prop')
   }
 }
 
@@ -329,7 +329,7 @@ Blocks['app_fullscreen'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Enters or exits Fullscreen mode');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#app-fullscreen');
 
     updateShadow(enabled, 'BOOL', 'TRUE')
   }
@@ -348,7 +348,7 @@ Blocks['app_pointer_lock'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Enters or exits Pointerlock mode');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#app-pointer-lock');
 
     updateShadow(enabled, 'BOOL', 'TRUE')
   }

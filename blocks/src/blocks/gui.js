@@ -25,7 +25,7 @@ Blocks['create_fullscreen_UI'] = {
     this.setInputsInline(true);
     this.setOutput(true)
     this.setTooltip('Recreate the content of the GUI from a JSON object');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#create-fullscreen-ui');
 
     updateShadow(name, 'TEXT', '')
   }
@@ -46,7 +46,7 @@ Blocks['gui_get_control'] = {
     this.setInputsInline(true);
     this.setOutput(true, ["Control", "Object"]);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#gui-get-control');
 
     updateShadow(name, 'TEXT', '')
   }
@@ -80,7 +80,7 @@ Blocks['gui_control_prop'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#gui-control-prop');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     updateShadow(_this.getInput('VALUE'), 'NUM', '');
@@ -99,7 +99,7 @@ Blocks['gui_get_control_value'] = {
     this.setInputsInline(true);
     this.setOutput(true, ['Number', 'String', 'Boolean', 'Color3']);
     this.setTooltip('Returns the value of the control.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#gui-get-control-value');
   }
 }
 
@@ -131,7 +131,7 @@ Blocks['gui_get_child_controls'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Array');
     this.setTooltip('Will return all controls that have this control as ascendant');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#gui-get-child-controls');
   }
 }
 
@@ -163,7 +163,7 @@ Blocks['gui_event'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/gui.html#gui-event");
   }
 }
 
@@ -181,7 +181,7 @@ Blocks['gui_move_control_to_vector'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#gui-move-control-to-vector');
 
     updateShadow(target, 'VECTOR3', [0, 0, 0])
   }

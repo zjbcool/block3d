@@ -29,7 +29,7 @@ Blocks['display_axes'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('It is often useful to be able to quickly display world and local axes to see position and rotation for example. ');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tools.html#display-axis');
     updateShadow(size, 'NUM', '1')
   }
 }
@@ -148,7 +148,7 @@ Blocks['feature_available'] = {
     this.setStyle("tools_style");
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
-    this.setHelpUrl('');
-    this.setTooltip('Check if a feature is available in the user\'s browser.')
+    this.setTooltip('Check if a feature is available in the user\'s browser.');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tools.html#feature-available');
   }
 }

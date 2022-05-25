@@ -29,7 +29,7 @@ Blocks['pointer_event'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#pointer-event");
     this.mixin(createBlockWithContextMenuMixin('picking_info', 'picked'));
   }
 }
@@ -47,7 +47,7 @@ Blocks['picking_info'] = {
     this.setOutput(true, null);
     this.setStyle("events_style");
     this.setTooltip("Returns the information(mesh/point/normal) where the user has clicked.");
-    this.setHelpUrl("https://zjbcool.com/v3d-plugins/teleport/teleport.html#picked-object2");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#picking-info");
   },
 
   updateShape_(option) {
@@ -113,7 +113,7 @@ Blocks['keyboard_event'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("The keyboard event");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#keyboard-event");
     this.mixin(createBlockWithContextMenuMixin('get_key_input', 'key input'));
   }
 }
@@ -130,7 +130,7 @@ Blocks['get_key_input'] = {
     this.setOutput(true, null);
     this.setStyle("events_style");
     this.setTooltip("Returns the key/keyCode the user has pressed.");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#get-key-input");
   }
 }
 
@@ -148,7 +148,7 @@ Blocks['event_create_action'] = {
     this.setOutput(true, null);
     this.setStyle("events_style");
     this.setTooltip("Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired. ");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#event-create-action");
 
   },
   updateParam(param) {
@@ -239,7 +239,7 @@ Blocks['event_add_actions'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip("Add actions to a mesh");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#event-add-actions");
     updateShadow(actions, 'ARRAY', '')
     updateShadow(mesh, 'MESH', '')
   }
@@ -253,7 +253,7 @@ Blocks['create_custom_event'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#create-custom-event");
   }
 }
 
@@ -270,7 +270,7 @@ Blocks['dispatch_custom_event'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#dispatch-custom-event");
     updateShadow(data, 'OBJECT', '')
   }
 }
@@ -288,7 +288,7 @@ Blocks['add_custom_event_listener'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#add-custom-event-listener");
     this.mixin(createBlockWithContextMenuMixin('custom_event_data', 'custom event data'));
   }
 }
@@ -401,7 +401,7 @@ Blocks['create_ray'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Ray');
     this.setTooltip("Creates a new ray");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#create-ray");
     updateShadow(origin, 'VECTOR3', [0, 0, 0])
     updateShadow(direction, 'VECTOR3', [0, 0, 1])
     updateShadow(length, 'NUM', '100')
@@ -425,7 +425,7 @@ Blocks['ray_intersects_mesh'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip("Checks if ray intersects a mesh or meshes.");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/events.html#ray-intersects-mesh");
     updateShadow(mesh, 'MESH', '')
     this.mixin(createBlockWithContextMenuMixin('picking_info', 'picked'));
   }

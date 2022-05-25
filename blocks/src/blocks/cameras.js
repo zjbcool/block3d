@@ -23,7 +23,7 @@ Blocks['create_camera'] = {
     this.setStyle("cameras_style");
     this.setInputsInline(true);
     this.setOutput(true, 'Camera');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#create-camera');
     _this.updateShape_('UniversalCamera');
     updateShadow(name, 'TEXT', '')
   },
@@ -155,7 +155,7 @@ Blocks['set_get_camera_prop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("Sets the camera's property");
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#set-get-camera-prop');
     this.mixin(statementCheckMixin);
     this.updateKeyField('UniversalCamera');
     statementCheckMixin.updateValueInput_.call(_this, true);
@@ -194,7 +194,7 @@ Blocks['set_get_active_camera'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Msg.set_get_active_camera_tooltip)
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#set-get-active-camera');
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     updateShadow(_this.getInput('VALUE'), 'CAMERA', '')
@@ -211,7 +211,7 @@ Blocks['remove_camera'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Msg.remove_camera_tooltip);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#remove-camera');
     updateShadow(camera, 'CAMERA', '')
   }
 }
@@ -239,7 +239,7 @@ Blocks['autorotate_camera'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Create a smooth rotation of an ArcRotateCamera when there is no user interaction.\nspeed: (number) The speed at which the camera rotates around the model.\nwait time (number) The time (seconds) to wait after user interaction before the camera starts rotating\nspin up time: (number) The time (seconds) to take to spin up to the full idle rotation speed.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#autorotate-camera');
 
     updateShadow(speed, 'NUM', '0.05')
     updateShadow(waitTime, 'NUM', '2')
@@ -268,7 +268,7 @@ Blocks['bounce_camera'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add a bouncing effect to an ArcRotateCamera when reaching a specified minimum and maximum radius\nduration: (number) The duration of the animation, in seconds\nmin distance: (number) Minimum allowed distance of the camera to the target (The camera can not get closer).\nmax distance: (number) Maximum allowed distance of the camera to the target (The camera can not get further).');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#bounce-camera');
 
     updateShadow(duration, 'NUM', '0.45')
     updateShadow(minRadius, 'NUM', '1')
@@ -289,7 +289,7 @@ Blocks['zoom_camera'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('(Mesh) Targets the given mesh');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#zoom-camera');
     this.setMutator(new Mutator(["invisibleBlock"]));
     this.mixin(advancedOptionsMixin([
       ["whenFinishedSlot", "when finished slot", !1],
@@ -327,7 +327,7 @@ Blocks['camera_control_enabled'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Sets the camera control enabled or not.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#camera-control-enabled');
 
     updateShadow(camera, 'CAMERA', '')
     updateShadow(enabled, 'BOOL', 'TRUE')
@@ -346,7 +346,7 @@ Blocks['camera_get_forward_ray'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Ray');
     this.setTooltip('Gets a ray in the forward direction from the camera.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/cameras.html#camera-get-forward-ray');
     updateShadow(length, 'NUM', '100')
   },
 }

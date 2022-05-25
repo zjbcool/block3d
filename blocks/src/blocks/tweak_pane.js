@@ -31,7 +31,7 @@ Blocks['create_tweak_pane'] = {
     this.setNextStatement(true, null);
     this.setStyle('tweak_pane_style');
     this.setTooltip('Create an instance of a pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#create-tweak-pane');
     updateShadow(title, 'TEXT', '')
   }
 }
@@ -46,7 +46,7 @@ Blocks['pane_add_folder'] = {
     this.setOutput(true, null);
     this.setStyle('tweak_pane_style');
     this.setTooltip('Add folder to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-folder');
     updateShadow(title, 'TEXT', '')
 
   }
@@ -95,7 +95,7 @@ Blocks['pane_add_slider'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add slider to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-slider');
     this.mixin(createContextMenuBlockMixin('pane_slider_options', 'option'));
     updateShadow(label, 'TEXT', '')
   }
@@ -125,7 +125,7 @@ Blocks['pane_add_list'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add list to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-list');
     this.mixin(createContextMenuBlockMixin('pane_get_value', 'get value'));
     updateShadow(label, 'TEXT', '')
 
@@ -156,7 +156,7 @@ Blocks['pane_add_checkbox'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add checkbox to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-checkbox');
     this.mixin(createContextMenuBlockMixin('pane_get_value', 'get value'));
     updateShadow(label, 'TEXT', '')
 
@@ -187,7 +187,7 @@ Blocks['pane_add_text'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add text to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-text');
     this.mixin(createContextMenuBlockMixin('pane_get_value', 'get value'));
     updateShadow(label, 'TEXT', '')
     updateShadow(text, 'TEXT', '')
@@ -219,7 +219,7 @@ Blocks['pane_add_color'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add color to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-color');
     this.mixin(createContextMenuBlockMixin('pane_get_value', 'get value'));
     updateShadow(label, 'TEXT', '')
     updateShadow(hex, 'TEXT', '#ff0000')
@@ -247,7 +247,7 @@ Blocks['pane_add_button'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Add button to the pane');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-add-button');
     updateShadow(title, 'TEXT', '');
   }
 }
@@ -260,7 +260,7 @@ Blocks['pane_get_value'] = {
     this.setOutput(true);
     this.setStyle('tweak_pane_style');
     this.setTooltip("");
-    this.setHelpUrl("https://zjbcool.com/v3d-plugins/gui/gui.html#create-gui");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/tweakpane.html#pane-get-value");
   }
 }
 

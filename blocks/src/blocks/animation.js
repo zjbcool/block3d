@@ -160,7 +160,7 @@ Blocks['get_animation_group_by_name'] = {
     this.setStyle('animation_style');
     this.setInputsInline(true);
     this.setOutput('AnimationGroup')
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#get-animation-group-by-name");
     updateShadow(name, 'TEXT', '')
   }
 }
@@ -189,7 +189,7 @@ Blocks['set_get_animaiton_group_prop'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#set-get-animation-group-prop");
     this.mixin(statementCheckMixin);
     statementCheckMixin.updateValueInput_.call(_this, true);
     updateShadow(_this.getInput('VALUE'), 'ARRAY', '')
@@ -210,7 +210,7 @@ Blocks['animation_group_playback'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setHelpUrl("")
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#animation-group-playback")
     dummy.setVisible(false)
   },
 
@@ -234,7 +234,7 @@ Blocks['animation_go_to_frame'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Goes to a specific frame in this animation group')
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#animation-go-to-frame");
     updateShadow(frame, 'NUM', '')
   }
 }
@@ -256,7 +256,7 @@ Blocks['animation_blending'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('')
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#animation-blending");
     updateShadow(blendingSpeed, 'NUM', '1')
   }
 }
@@ -299,7 +299,7 @@ Blocks['transition_animation'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip("Transition property of an host to the target Value");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/animation.html#transition-animation");
     this.setMutator(new Mutator(["invisibleBlock"]));
     this.mixin(advancedOptionsMixin([
       ["enableCb", "enable finish slot", !1],

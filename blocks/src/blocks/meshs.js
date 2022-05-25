@@ -34,7 +34,7 @@ function createSetShapesOption() {
           this.setInputsInline(false);
           this.setPreviousStatement(true, null);
           this.setNextStatement(true, null);
-          this.setHelpUrl('https://doc.babylonjs.com/divingDeeper/mesh/creation/set/box');
+          this.setHelpUrl('');
           this.mixin(createSurroundCheckMixin('object_create'));
           updateShadow(value, 'NUM', '1');
         }
@@ -59,7 +59,7 @@ Blocks['mesh_create_set_shapes'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Mesh');
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-create-set-shapes');
     this.mixin(CUSTOM_CONTEXT_MENU_MESH_CREATE_SET_SHAPES_OPTION_MIXIN);
     updateShadow(name, 'TEXT', '');
     updateShadow(options, 'OBJECT', '');
@@ -89,7 +89,7 @@ Blocks['set_get_mesh_prop'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#set-get-mesh-prop');
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.mixin(statementCheckMixin);
     this.updateKeyField(true);
@@ -142,7 +142,7 @@ Blocks['set_get_mesh_transform'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Sets or gets the mesh transform.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#set-get-mesh-transform');
     statementCheckMixin.updateValueInput_.call(_this, true);
     this.mixin(statementCheckMixin);
     updateShadow(_this.getInput('VALUE'), 'VECTOR3', [0, 0, 0]);
@@ -172,7 +172,7 @@ Blocks['translate_mesh'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Translates the mesh along the axis vector for the passed distance in the given space.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#translate-mesh');
     updateShadow(mesh, 'MESH', '')
     updateShadow(axis, 'VECTOR3', [0, 1, 0])
     updateShadow(distance, 'NUM', '')
@@ -201,7 +201,7 @@ Blocks['rotate_mesh'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Rotates the mesh around the axis vector for the passed angle (amount) expressed in radians, in the given space.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#rotate-mesh');
     updateShadow(mesh, 'MESH', '')
     updateShadow(axis, 'VECTOR3', [0, 1, 0])
     updateShadow(degree, 'ANGLE', '')
@@ -230,7 +230,7 @@ Blocks['rotate_mesh_pov'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Perform relative rotation change from the point of view of behind the front of the mesh.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#rotate-mesh-pov');
     updateShadow(mesh, 'MESH', '')
     updateShadow(pitch, 'ANGLE', '')
     updateShadow(yaw, 'ANGLE', '')
@@ -251,7 +251,7 @@ Blocks['set_mesh_direction'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Sets this transform node rotation to the given local axis.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#set-mesh-direction');
     updateShadow(mesh, 'MESH', '')
     updateShadow(direction, 'VECTOR3', [0, 1, 0])
   }
@@ -270,7 +270,7 @@ Blocks['mesh_look_at'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Orients a mesh towards a target point. ');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-look-at');
     updateShadow(mesh, 'MESH', '')
     updateShadow(point, 'VECTOR3', [0, 0, 0])
   }
@@ -289,7 +289,7 @@ Blocks['remove_mesh'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Returns a new Mesh object generated from the current mesh properties.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#remove-mesh');
     updateShadow(mesh, 'MESH', '')
   }
 }
@@ -306,7 +306,7 @@ Blocks['clone_mesh'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Mesh');
     this.setTooltip('Returns a new Mesh object generated from the current mesh properties.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#clone-mesh');
     updateShadow(mesh, 'MESH', '')
     updateShadow(name, 'TEXT', '')
   }
@@ -325,7 +325,7 @@ Blocks['mesh_set_parent'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Defines the passed node as the parent of the current node.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-set-parent');
     updateShadow(childMesh, 'MESH', '')
     updateShadow(parentMesh, 'MESH', '')
   }
@@ -343,7 +343,7 @@ Blocks['mesh_create_instance'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Mesh');
     this.setTooltip('Creates a new InstancedMesh object from the mesh model.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-create-instance');
     updateShadow(mesh, 'MESH', '')
     updateShadow(name, 'TEXT', '')
   }
@@ -380,7 +380,7 @@ Blocks['drag_mesh'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#drag-mesh');
     this.setMutator(new Mutator(["invisibleBlock"]));
 
     this.mixin(createContextMenuBlockMixin('mesh_when_dragged_options', 'option'));
@@ -424,7 +424,7 @@ Blocks['check_point_behind_mesh'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('Checks if a pointer is behind of a mesh.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#check-point-behind-mesh');
     updateShadow(point, 'VECTOR3', [0, 0, 0])
     updateShadow(mesh, 'MESH', '')
   }
@@ -448,7 +448,7 @@ Blocks['check_intersects_mesh'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('True if the mesh intersects another mesh or a SolidParticle object');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#check-intersects-mesh');
     updateShadow(mesh, 'MESH', '')
     updateShadow(targetMesh, 'MESH', '')
   }
@@ -466,7 +466,7 @@ Blocks['check_intersects_point'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('True if the mesh intersects another mesh or a SolidParticle object');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#check-intersects-point');
     updateShadow(mesh, 'MESH', '')
     updateShadow(point, 'VECTOR3', [0, 0, 0])
   }
@@ -496,7 +496,7 @@ Blocks['mesh_create_decal'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Mesh');
     this.setTooltip('Creates a decal mesh. A decal is a mesh usually applied as a model onto the surface of another mesh');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-create-decal');
     this.mixin(createContextMenuBlockMixin('mesh_create_decal_option', 'option', [['VALUE', 'VECTOR3', [0, 0, 0]]]));
     updateShadow(name, 'TEXT', '');
     updateShadow(mesh, 'MESH', '');
@@ -539,7 +539,7 @@ Blocks['mesh_add_lod_level'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Add a mesh as LOD level triggered at the given distance.');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-add-lod-level');
     updateShadow(mesh, 'MESH', '')
     updateShadow(distance, 'NUM', '10')
     updateShadow(lodLevel, 'MESH', '')

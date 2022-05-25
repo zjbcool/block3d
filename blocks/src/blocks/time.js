@@ -20,7 +20,7 @@ Blocks['time_after'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/time.html#time-after");
 
     updateShadow(value, 'NUM', '1')
   }
@@ -39,7 +39,7 @@ Blocks['time_every_frame'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/time.html#time-every-frame");
   }
 }
 
@@ -51,7 +51,7 @@ Blocks['get_delta_time'] = {
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setTooltip("Gets the time spent between current and previous frame. Returns a number representing the delta time in seconds.");
-    this.setHelpUrl("");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/time.html#get-delta-time");
   }
 }
 
@@ -70,7 +70,7 @@ Blocks['create_timer'] = {
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip("repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.");
-    this.setHelpUrl("https://developer.mozilla.org/en-US/docs/Web/API/setInterval");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/time.html#create-timer");
     updateShadow(seconds, 'NUM', '')
   }
 }
@@ -84,7 +84,7 @@ Blocks['remove_timer'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip("Cancels a timer");
-    this.setHelpUrl("https://developer.mozilla.org/en-US/docs/Web/API/setInterval");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/time.html#remove-timer");
   }
 }
 
