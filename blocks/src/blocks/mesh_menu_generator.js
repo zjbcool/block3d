@@ -100,23 +100,24 @@ MenuGenerator.Disc = new DropdownHelper([
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
   ['sideOrientation', 'sideOrientation', 'NUM', '', '(number) side orientation'],
 ])
-// 未更新选项
+
 MenuGenerator.Torus = new DropdownHelper([
-  ['size', 'size', 'NUM', '1', '(number) side size of the plane'],
-  ['width', 'width', 'NUM', '1', '(number) size of the width'],
-  ['height', 'height', 'NUM', '1', '(number) size of the height'],
+  ['diameter', 'diameter', 'NUM', '1', '(number) diameter of the torus'],
+  ['thickness', 'thickness', 'NUM', '0.5', '(number) thickness of its tube'],
+  ['tessellation', 'tessellation', 'NUM', '16', '(number) number of segments along the circle'],
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
   ['sideOrientation', 'sideOrientation', 'NUM', '', '(number) side orientation'],
-  ['sourcePlane', 'sourcePlane', 'NULL', '', '(Plane) source plane (math) the mesh will be transformed to'],
 ])
-// 未更新选项
+
 MenuGenerator.TorusKnot = new DropdownHelper([
-  ['size', 'size', 'NUM', '1', '(number) side size of the plane'],
-  ['width', 'width', 'NUM', '1', '(number) size of the width'],
-  ['height', 'height', 'NUM', '1', '(number) size of the height'],
+  ['radius', 'radius', 'NUM', '2', '(number) radius of the torus knot'],
+  ['tube', 'tube', 'NUM', '0.5', '(number) thickness of its tube'],
+  ['radialSegments', 'radialSegments', 'NUM', '32', '(number) number of radial segments'],
+  ['tubularSegments', 'tubularSegments', 'NUM', '32', '(number) number of tubular segments'],
+  ['p', 'p', 'NUM', '2', '(number) number of windings'],
+  ['q', 'q', 'NUM', '3', '(number) number of windings'],
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
   ['sideOrientation', 'sideOrientation', 'NUM', '', '(number) side orientation'],
-  ['sourcePlane', 'sourcePlane', 'NULL', '', '(Plane) source plane (math) the mesh will be transformed to'],
 ])
 
 MenuGenerator.Ground = new DropdownHelper([
@@ -125,19 +126,24 @@ MenuGenerator.Ground = new DropdownHelper([
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
   ['subdivisions', 'subdivisions', 'NUM', '1', '(number) number of square subdivisions'],
 ])
-// 未更新选项
+
 MenuGenerator.GroundFromHeightMap = new DropdownHelper([
   ['width', 'width', 'NUM', '1', '(number) size of the width'],
   ['height', 'height', 'NUM', '1', '(number) size of the height'],
+  ['subdivisions', 'subdivisions', 'NUM', '1', '(number) number of map subdivisions'],
+  ['minHeight', 'minHeight', 'NUM', '0', '(number) minimum altitude'],
+  ['maxHeight', 'maxHeight', 'NUM', '1', '(number) maximum altitude'],
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
-  ['subdivisions', 'subdivisions', 'NUM', '1', '(number) number of square subdivisions'],
 ])
-// 未更新选项
+
 MenuGenerator.TiledGround = new DropdownHelper([
-  ['width', 'width', 'NUM', '1', '(number) size of the width'],
-  ['height', 'height', 'NUM', '1', '(number) size of the height'],
+  ['xmin', 'xmin', 'NUM', '-1', '(number) map min x coordinate value'],
+  ['zmin', 'zmin', 'NUM', '-1', '(number) map min z coordinate value'],
+  ['xmax', 'xmax', 'NUM', '1', '(number) map max x coordinate value'],
+  ['zmax', 'zmax', 'NUM', '1', '(number) map max z coordinate value'],
+  ['subdivisions', 'subdivisions', 'OBJECT', '', 'object ( {w: number, h: number} ) number of subdivisions (tiles) on the height and the width of the map'],
+  ['precision', 'precision', 'OBJECT', '', '( {w: number, h: number} ) number of subdivisions on the height and the width of each tile'],
   ['updatable', 'updatable', 'BOOL', 'FALSE', '	(boolean) true if the mesh is updatable'],
-  ['subdivisions', 'subdivisions', 'NUM', '1', '(number) number of square subdivisions'],
 ])
 
 MenuGenerator.Lines = new DropdownHelper([
@@ -151,6 +157,9 @@ MenuGenerator.Lines = new DropdownHelper([
 MenuGenerator.meshProps = new DropdownHelper([
   ['billboardMode', 'billboardMode', 'NUM', '', 'Gets or sets the billboard mode. Default is 0. \n0	BILLBOARDMODE_NONE	\n1	BILLBOARDMODE_X	\n2	BILLBOARDMODE_Y	\n4	BILLBOARDMODE_Z	\n7	BILLBOARDMODE_ALL'],
   ['checkCollisions', 'checkCollisions', 'BOOL', 'TRUE', 'Gets or sets a boolean indicating that this mesh can be used in the collision engine'],
+  ['edgesColor', 'edgesColor', 'COLOR4', [255, 0, 0, 255], 'Defines edge color used when edgesRenderer is enabled'],
+  ['edgesShareWithInstances', 'edgesShareWithInstances', 'BOOL', 'FALSE', 'true to use the edge renderer for all instances of this mesh'],
+  ['edgesWidth', 'edgesWidth', 'NUM', '1', 'Defines edge width used when edgesRenderer is enabled'],
   ['ellipsoid', 'ellipsoid', 'VECTOR3', [0.5, 1, 0.5], 'Gets or sets the ellipsoid used to impersonate this mesh when using collision engine '],
   ['ellipsoidOffset', 'ellipsoidOffset', 'VECTOR3', [0, 0, 0], 'Gets or sets the ellipsoid offset used to impersonate this mesh when using collision engine'],
   ['isPickable', 'isPickable', 'BOOL', 'TRUE', 'Gets or sets a boolean indicating if the mesh can be picked (by scene.pick for instance or through actions). Default is true'],
@@ -184,6 +193,11 @@ MenuGenerator.decalOption = new DropdownHelper([
   ['normal', 'normal', 'VECTOR3', [0, 1, 0], 'the normal of the mesh where the decal is applied onto (World coordinates)'],
   ['size', 'size', 'VECTOR3', [1, 1, 1], 'the x, y, z sizes of the decal'],
   ['angle', 'angle', 'ANGLE', '0', 'the angle to rotate the decal'],
+])
+MenuGenerator.autoLodOpts = new DropdownHelper([
+  ['quality', 'quality', 'NUM', '0.5', 'sets the expected quality(0.0-1.0)'],
+  ['distance', 'distance', 'NUM', '10', 'the distance when this optimized version should be used'],
+  ['optimizeMesh', 'optimizeMesh', 'BOOL', 'FALSE', 'Gets an already optimized mesh'],
 ])
 MenuGenerator.highlightLayerProp = new DropdownHelper([
   ['disableBoundingBoxesFromEffectLayer', 'disableBoundingBoxesFromEffectLayer', 'BOOL', 'TRUE', 'Specifies if the bounding boxes should be rendered normally or if they should undergo the effect of the layer'],

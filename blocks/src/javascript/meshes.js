@@ -31,10 +31,11 @@ JavaScript['mesh_create_tiledground_option'] = JavaScript['object_key_value'];
 JavaScript['mesh_create_lines_option'] = JavaScript['object_key_value'];
 
 JavaScript['mesh_when_dragged_options'] = JavaScript['object_key_value'];
+JavaScript['mesh_auto_lod_option'] = JavaScript['object_key_value'];
 
 JavaScript['set_get_mesh_prop'] = block => {
   const method = block.getFieldValue('METHOD');
-  const mesh = JavaScript.valueToCode(block, 'MESH', JavaScript.ORDER_NONE) ;
+  const mesh = JavaScript.valueToCode(block, 'MESH', JavaScript.ORDER_NONE);
   const key = block.getFieldValue('KEY');
   const value = JavaScript.valueToCode(block, 'VALUE', JavaScript.ORDER_NONE) || `\'\'`;
   if (!mesh) return '';
@@ -270,6 +271,32 @@ JavaScript['mesh_add_lod_level'] = block => {
   if (!mesh) return ''
   return `
   ${mesh}.addLODLevel(${distance}, ${lodMesh})`;
+}
+
+JavaScript['mesh_auto_lod'] = block => {
+  const mesh = JavaScript.valueToCode(block, 'MESH', JavaScript.ORDER_NONE);
+  const settings = JavaScript.valueToCode(block, 'SETTINGS', JavaScript.ORDER_NONE);
+  const doCb = JavaScript.statementToCode(block, 'DO_CB');
+
+  if (!mesh) return ''
+  return `
+  ${mesh}.simplify(
+    ${settings},
+    false,
+    BABYLON.SimplificationType.QUADRATIC,
+    function () {
+      ${doCb}
+    }
+  )`;
+}
+
+JavaScript['mesh_render_edges'] = block => {
+  const mesh = JavaScript.valueToCode(block, 'MESH', JavaScript.ORDER_NONE);
+  const epsilon = JavaScript.valueToCode(block, 'EPSILON', JavaScript.ORDER_NONE) || 0.95;
+
+  if (!mesh) return ''
+  return `
+  ${mesh}.enableEdgesRendering(${epsilon});`;
 }
 
 JavaScript['create_highlight_layer'] = block => {

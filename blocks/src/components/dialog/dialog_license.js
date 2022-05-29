@@ -43,16 +43,17 @@ export class activeDialog extends LitElement {
     data.activeButton = _this.lang === 'zh' ? '激活' : 'Active'
     data.inactiveButton = _this.lang === 'zh' ? '取消激活' : 'Inactive'
     data.activeExpiresTitle = _this.lang === 'zh' ? '已过期！有效期截至' : 'Expired! valid until '
+    data.getKeyUrl = 'https://shop.zjbku.com/product/block3d-license-key/'
 
     let dialog;
     let dialogGetKey;
     if (this.lang === 'zh') {
       dialogGetKey = html`
-      <div class='tip'>没有激活码？<a href='https://shop.zjbcool.com/product-category/block3d/' target='_blank'>点此</a>获取</div>
+      <div class='tip'>没有激活码？<a href=${data.getKeyUrl} target='_blank'>点此</a>获取</div>
       `
     } else {
       dialogGetKey = html`
-      <div class='tip'>No active key? Click <a href='https://shop.zjbcool.com/product-category/block3d/' target='_blank'>here</a></div>
+      <div class='tip'>No active key? Click <a href=${data.getKeyUrl} target='_blank'>here</a></div>
       `
     }
     // 未激活

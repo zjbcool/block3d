@@ -138,7 +138,7 @@ JavaScript['field_color4'] = (block) => {
   const b = block.getFieldValue('B');
   const a = block.getFieldValue('A');
 
-  return [`BABYLON.Color4.FromInts(${r}, ${g}, ${b}), ${a}`, JavaScript.ORDER_FUNCTION_CALL];
+  return [`BABYLON.Color4.FromInts(${r}, ${g}, ${b}, ${a})`, JavaScript.ORDER_FUNCTION_CALL];
 }
 
 JavaScript['material_color3_from_hex'] = (block) => {

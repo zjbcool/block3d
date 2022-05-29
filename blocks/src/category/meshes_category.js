@@ -83,6 +83,14 @@ export default {
       "kind": "block",
       "type": "mesh_add_lod_level",
     },
+    {
+      "kind": "block",
+      "type": "mesh_auto_lod",
+    },
+    {
+      "kind": "block",
+      "type": "mesh_render_edges",
+    },
     // {
     //   "kind": "label",
     //   "text": "Highlight Layer:"

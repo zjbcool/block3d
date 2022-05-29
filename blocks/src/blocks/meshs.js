@@ -505,24 +505,6 @@ Blocks['mesh_create_decal'] = {
   }
 }
 
-Blocks['mesh_create_decal_option'] = {
-  init() {
-    const _this = this;
-    this.appendDummyInput()
-      .appendField('set')
-      .appendField(new FieldDropdown(() => MenuGenerator.decalOption.generatMenu(), option => MenuGenerator.decalOption.updateShape(_this, value, option)), 'KEY');
-    const value = this.appendValueInput('VALUE')
-      .appendField('to');
-    this.setStyle("meshes_style");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setHelpUrl('');
-    this.mixin(createSurroundCheckMixin('mesh_create_decal'));
-    updateShadow(value, 'VECTOR3', [0, 0, 0])
-  }
-}
-
 Blocks['mesh_add_lod_level'] = {
   init() {
     const lodLevel = this.appendValueInput('LOD_MESH')
@@ -543,6 +525,63 @@ Blocks['mesh_add_lod_level'] = {
     updateShadow(mesh, 'MESH', '')
     updateShadow(distance, 'NUM', '10')
     updateShadow(lodLevel, 'MESH', '')
+  }
+}
+
+Blocks['mesh_auto_lod_option'] = {
+  init() {
+    const _this = this;
+    this.appendValueInput('VALUE')
+      .appendField('set')
+      .appendField(new FieldDropdown(() => MenuGenerator.autoLodOpts.generatMenu(), option => MenuGenerator.autoLodOpts.updateShape(_this, _this.getInput('VALUE'), option)), 'KEY')
+      .appendField('to');
+    this.setStyle('meshes_style');
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setHelpUrl('https://doc.babylonjs.com/typedoc/classes/babylon.pointerdragbehavior');
+    this.mixin(createSurroundCheckMixin('object_create'));
+  }
+}
+
+Blocks['mesh_auto_lod'] = {
+  init() {
+    const mesh = this.appendValueInput('MESH')
+      .appendField('auto LOD')
+      .setCheck(['Mesh', null]);
+    const settings = this.appendValueInput('SETTINGS')
+      .appendField('settings')
+      .setCheck('Array');
+    this.appendStatementInput('DO_CB')
+      .appendField('ready do');
+    this.setStyle("meshes_style");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('Add a mesh as LOD level triggered at the given distance.');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-auto-lod');
+    this.mixin(createContextMenuBlockMixin('mesh_auto_lod_option', 'option'))
+    updateShadow(mesh, 'MESH', '')
+    updateShadow(settings, 'ARRAY', '')
+  }
+}
+
+Blocks['mesh_render_edges'] = {
+  init() {
+    const mesh = this.appendValueInput('MESH')
+      .appendField('render edges')
+      .setCheck('Mesh');
+    const epsilon = this.appendValueInput('EPSILON')
+      .appendField('epsilon')
+      .setCheck('Number');
+    this.setStyle("meshes_style");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('Enables the edge rendering mode on the mesh. This mode makes the mesh edges visible. \n epsilon: defines the maximal distance between two angles to detect a face');
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/meshes.html#mesh-render-edges');
+    updateShadow(mesh, 'MESH', '')
+    updateShadow(epsilon, 'NUM', '0.95')
   }
 }
 
