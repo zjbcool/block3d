@@ -6,7 +6,6 @@ import { CodeTab } from './code_tab';
 import { BlockTab } from './block_tab';
 import { EventDispatcher } from './event_dispatcher';
 import toolboxMain from '../category/toolbox_main';
-// import setLocale from '../msg/set_locale';
 
 /**
  * 管理选项卡/工作区
@@ -130,7 +129,7 @@ class TabManager extends EventDispatcher {
       newTab.workspaceElem = document.createElement('div');
       newTab.workspaceElem.className = 'workspace-container';
       this.editorContent.appendChild(newTab.workspaceElem);
-      // setLocale(this.lang);
+
       newTab.workspace = inject(newTab.workspaceElem, {
         toolbox: toolboxMain,
         path: '/',
@@ -162,12 +161,6 @@ class TabManager extends EventDispatcher {
         oneBasedIndex: false,
         renderer: 'geras'
       });
-
-      // 
-      newTab.workspace.registerButtonCallback('guiDocumentBtn', () => {
-        window.open('https://cocopon.github.io/tweakpane/getting-started.html')
-      })
-
     } else if (type === 'code') {
       newTab = new CodeTab(title);
       this.active ? this.active.tabElem.insertAdjacentElement('afterend', newTab.tabElem) : this.tabContainer.appendChild(newTab.tabElem);

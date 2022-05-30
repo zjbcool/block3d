@@ -12,11 +12,6 @@ export default {
       "text": "TweakPane:"
     },
     {
-      "kind": "button",
-      "text": "open document",
-      "callbackKey": "guiDocumentBtn"
-    },
-    {
       "kind": "block",
       "type": "create_tweak_pane",
     },
