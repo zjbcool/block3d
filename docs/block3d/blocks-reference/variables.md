@@ -6,7 +6,7 @@
 
 变量可以理解为临时保存计算结果的一块计算机内存。比如，我们在场景中创建了一个立方体网格，为了以后继续访问它，可以把它保存到变量`box`，在需要时，直接访问这个变量就可以了。
 
-![variables-example](/imgs/blocks/variables-example.png)
+![variables-example](https://cdn.zjbku.com/blocks/variables-example.png)
 
 变量只在所属选项卡中有效。比如，变量`box`是在`main`选项卡中创建的，在另一个选项卡中无法直接访问到它。要访问它可以通过系统拼图下的[glob_set_get_vars](./system.md#glob-set-get-vars)拼图。
 
@@ -16,10 +16,10 @@
 
 设置变量的值。快捷键：`Shift` + `V`
 
-![variables_set_dynamic](/imgs/blocks/variables_set_dynamic.png)
+![variables_set_dynamic](https://cdn.zjbku.com/blocks/variables_set_dynamic.png)
 
 ## variables_get_dynamic
 
 获取变量的值。快捷键：`Alt` + `Shift` + `V`
 
-![variables_get_dynamic](/imgs/blocks/variables_get_dynamic.png)
+![variables_get_dynamic](https://cdn.zjbku.com/blocks/variables_get_dynamic.png)

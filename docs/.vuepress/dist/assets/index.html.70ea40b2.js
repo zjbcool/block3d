@@ -1,0 +1,1 @@
+const t={key:"v-05c20cea",path:"/babylonjs/",title:"\u6B22\u8FCE\u9605\u8BFBBabylon.js\u5165\u95E8",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/index.md"};export{t as data};

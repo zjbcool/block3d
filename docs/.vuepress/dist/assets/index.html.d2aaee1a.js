@@ -1,0 +1,1 @@
+const e={key:"v-a1e8ebec",path:"/block3d/",title:"Block3D\u7528\u6237\u624B\u518C",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1650265496e3,contributors:[{name:"zjbcool",email:"lizuohai1983@gmail.com",commits:1}]},filePathRelative:"block3d/index.md"};export{e as data};

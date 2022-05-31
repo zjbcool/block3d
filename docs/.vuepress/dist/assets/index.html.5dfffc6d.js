@@ -1,0 +1,1 @@
+const e={key:"v-5965d517",path:"/babylonjs/divingDeeper/environment/",title:"\u73AF\u5883 Environment",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u771F\u5B9E\u7684\u73AF\u5883",slug:"\u771F\u5B9E\u7684\u73AF\u5883",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/environment/index.md"};export{e as data};

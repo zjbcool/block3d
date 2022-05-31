@@ -15,7 +15,7 @@
 
 创建`key/value`快捷键：`Alt` + `Shift` + `O`
 
-![object_create](/imgs/blocks/object_create.png)
+![object_create](https://cdn.zjbku.com/blocks/object_create.png)
 
 ## object_member
 
@@ -23,22 +23,22 @@
 
 在Block3D中一切皆对象，你可以使用这个拼图操作所有对象的属性。
 
-![object_member](/imgs/blocks/object_member.png)
+![object_member](https://cdn.zjbku.com/blocks/object_member.png)
 
 ## object_keys
 
 返回所有对象成员的键，数组类型。
 
-![object_keys](/imgs/blocks/object_keys.png)
+![object_keys](https://cdn.zjbku.com/blocks/object_keys.png)
 
 ## convert_object_to_json
 
 将一个对象转换为一个JSON对象。
 
-![convert_object_to_json](/imgs/blocks/convert_object_to_json.png)
+![convert_object_to_json](https://cdn.zjbku.com/blocks/convert_object_to_json.png)
 
 ## convert_json_to_object
 
 将JSON转换为对象。
 
-![convert_json_to_object](/imgs/blocks/convert_json_to_object.png)
+![convert_json_to_object](https://cdn.zjbku.com/blocks/convert_json_to_object.png)

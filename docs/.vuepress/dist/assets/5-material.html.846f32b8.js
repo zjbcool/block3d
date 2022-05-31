@@ -1,0 +1,1 @@
+const t={key:"v-aa7d329c",path:"/babylonjs/start/chap2/5-material.html",title:"\u7EB9\u7406",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6DFB\u52A0\u7EB9\u7406",slug:"\u6DFB\u52A0\u7EB9\u7406",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap2/5-material.md"};export{t as data};

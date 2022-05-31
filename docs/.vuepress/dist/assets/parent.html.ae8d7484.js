@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,a as n,b as r}from"./app.090844ca.js";const s={},c={id:"parents-and-children",tabindex:"-1"},o=n("a",{class:"header-anchor",href:"#parents-and-children","aria-hidden":"true"},"#",-1),d=r(" Parents and Children"),_=[o,d];function h(i,l){return a(),t("h1",c,_)}var p=e(s,[["render",h],["__file","parent.html.vue"]]);export{p as default};

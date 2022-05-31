@@ -1,7 +1,7 @@
 {
   "name": "block3d_document",
   "version": "1.0.0",
-  "description": "",
+  "description": "block3d文档",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -11,10 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
-    "vuepress-vite": "^2.0.0-beta.39"
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.45",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.45",
+    "vuepress-vite": "^2.0.0-beta.45"
   },
   "dependencies": {
-    "@vueuse/core": "^8.2.6"
+    "@vueuse/core": "^8.5.0"
   }
 }

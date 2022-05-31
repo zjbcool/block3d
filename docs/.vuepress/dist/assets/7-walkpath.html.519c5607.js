@@ -1,0 +1,1 @@
+const t={key:"v-dcf7ad64",path:"/babylonjs/start/chap3/7-walkpath.html",title:"\u884C\u8D70\u5728\u6751\u5E84",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u884C\u8D70\u5728\u6751\u5E84",slug:"\u884C\u8D70\u5728\u6751\u5E84-1",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap3/7-walkpath.md"};export{t as data};

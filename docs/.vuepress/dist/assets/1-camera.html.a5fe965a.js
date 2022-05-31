@@ -1,0 +1,1 @@
+const a={key:"v-eda2ba14",path:"/babylonjs/start/chap8/1-camera.html",title:"\u73AF\u987E\u56DB\u5468",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap8/1-camera.md"};export{a as data};

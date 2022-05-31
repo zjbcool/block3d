@@ -1,0 +1,1 @@
+const e={key:"v-73910ba7",path:"/babylonjs/divingDeeper/mesh/",title:"\u7F51\u683CMeshes",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/mesh/index.md"};export{e as data};

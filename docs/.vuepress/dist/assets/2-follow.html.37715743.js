@@ -1,0 +1,1 @@
+const t={key:"v-5c1fa86b",path:"/babylonjs/start/chap8/2-follow.html",title:"\u8DDF\u968F\u89D2\u8272",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap8/2-follow.md"};export{t as data};

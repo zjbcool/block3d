@@ -1,0 +1,4 @@
+<template><h1 id="以创建原点为中心-centered-on-created-origin" tabindex="-1"><a class="header-anchor" href="#以创建原点为中心-centered-on-created-origin" aria-hidden="true">#</a> 以创建原点为中心 Centered on Created Origin</h1>
+<h2 id="关于局部原点的变换-transformations-about-the-local-origin" tabindex="-1"><a class="header-anchor" href="#关于局部原点的变换-transformations-about-the-local-origin" aria-hidden="true">#</a> 关于局部原点的变换 Transformations About the Local Origin</h2>
+<p>当一个网格被创建时，每个顶点的位置向量是由(0, 0, 0)这个网格的<strong>创建原点 created origin</strong>和它的<strong>局部原点 local origin</strong>来进行平移、旋转和缩放。在本节中，一个网格的变换中心永远是它的局部原点。关于变换中心的改变，请参考<RouterLink to="/babylonjs/divingDeeper/mesh/transforms/parentPivot.html">父级和轴心</RouterLink>。除了简单地指定向量值来改变网格的位置、旋转和缩放外，还可以使用坐标变换 cooordinate transformation 的方法，以另一个网格的参考系来变换一个网格。也可以对网格顶点坐标进行变换，有效地改变局部原点，这个烘焙变换 baking transformations 的过程会讲到，尽管它只在特殊情况下需要。</p>
+</template>

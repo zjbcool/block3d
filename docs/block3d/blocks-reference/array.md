@@ -15,7 +15,7 @@
 
 `element`拼图只能应用于`array_create`拼图内部。
 
-![array_create](/imgs/blocks/array_create.png)
+![array_create](https://cdn.zjbku.com/blocks/array_create.png)
 
 ## array_repeat
 
@@ -25,19 +25,19 @@
 - item - 要添加进数组的元素
 - repeated - 数组的长度
 
-![array_repeat](/imgs/blocks/array_repeat.png)
+![array_repeat](https://cdn.zjbku.com/blocks/array_repeat.png)
 
 ## array_length
 
 返回一个数组的长度。
 
-![array_length](/imgs/blocks/array_length.png)
+![array_length](https://cdn.zjbku.com/blocks/array_length.png)
 
 ## array_is_empty
 
 判断一个数组是否为空，若为空返回`true`；否则返回`false`
 
-![array_is_empty](/imgs/blocks/array_is_empty.png)
+![array_is_empty](https://cdn.zjbku.com/blocks/array_is_empty.png)
 
 ## array_index_of
 
@@ -47,13 +47,13 @@
 - first - 表示从前往后查找
 - last - 表示从后往前查找
 
-![array_index_of](/imgs/blocks/array_index_of.png)
+![array_index_of](https://cdn.zjbku.com/blocks/array_index_of.png)
 
 ## array_includes
 
 检查数组中是否包含某元素，若包含，返回`true`；否则返回`false`。
 
-![array_includes](/imgs/blocks/array_includes.png)
+![array_includes](https://cdn.zjbku.com/blocks/array_includes.png)
 
 ## array_get_index
 
@@ -64,7 +64,7 @@
 - get and remove - 查找并删除元素，返回删除元素的索引
 - remove - 删除元素
 
-![array_get_index](/imgs/blocks/array_get_index.png)
+![array_get_index](https://cdn.zjbku.com/blocks/array_get_index.png)
 
 ## array_set_index
 
@@ -74,13 +74,13 @@
 - set - 将数组中指定位置的元素替换为其他元素（数组的长度保持不变）
 - insert - 在指定的位置向数组中添加一个新元素，将移动先前位于该位置的元素（增加数组的长度）
 
-![array_set_index](/imgs/blocks/array_set_index.png)
+![array_set_index](https://cdn.zjbku.com/blocks/array_set_index.png)
 
 ## array_get_sublist
 
 截取两个指定位置之间的数组片段为新数组。不会更改原始数组。
 
-![array_get_sublist](/imgs/blocks/array_get_sublist.png)
+![array_get_sublist](https://cdn.zjbku.com/blocks/array_get_sublist.png)
 
 ## array_split
 
@@ -89,7 +89,7 @@
 参数：
 - delimiter - 分割符号
 
-![array_split](/imgs/blocks/array_split.png)
+![array_split](https://cdn.zjbku.com/blocks/array_split.png)
 
 ## array_sort
 
@@ -102,17 +102,17 @@
 - ascending - 升序
 - descending - 降序
 
-![array_sort](/imgs/blocks/array_sort.png)
+![array_sort](https://cdn.zjbku.com/blocks/array_sort.png)
 
 ## array_reverse
 
 从原始数组创建一个新数组，其元素按照与原始数组相反顺序排列。不会改变原始数组。
 
-![array_reverse](/imgs/blocks/array_reverse.png)
+![array_reverse](https://cdn.zjbku.com/blocks/array_reverse.png)
 
 ## array_for_each
 
 遍历数组。在拼图上执行右键-`创建element/index`，可创建每次迭代的元素和索引，注意，它只能用于`array_for_each`拼图内部。
 
-![array_for_each](/imgs/blocks/array_for_each.png)
+![array_for_each](https://cdn.zjbku.com/blocks/array_for_each.png)
 

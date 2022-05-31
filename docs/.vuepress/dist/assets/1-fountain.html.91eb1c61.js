@@ -1,0 +1,1 @@
+const t={key:"v-2bb1c285",path:"/babylonjs/start/chap6/1-fountain.html",title:"\u521B\u5EFA\u8F66\u524A\u55B7\u6CC9\u6C60\u6A21\u578B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap6/1-fountain.md"};export{t as data};

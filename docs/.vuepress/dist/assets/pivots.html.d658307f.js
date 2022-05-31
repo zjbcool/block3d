@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,a as s,b as a}from"./app.090844ca.js";const c={},_={id:"pivots",tabindex:"-1"},r=s("a",{class:"header-anchor",href:"#pivots","aria-hidden":"true"},"#",-1),i=a(" pivots"),n=[r,i];function d(h,p){return t(),o("h1",_,n)}var l=e(c,[["render",d],["__file","pivots.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,a,b as s}from"./app.090844ca.js";const n={},c={id:"sequencing-rotations",tabindex:"-1"},r=a("a",{class:"header-anchor",href:"#sequencing-rotations","aria-hidden":"true"},"#",-1),i=s(" Sequencing Rotations"),_=[r,i];function d(h,f){return t(),o("h1",c,_)}var u=e(n,[["render",d],["__file","addRotations.html.vue"]]);export{u as default};

@@ -1,0 +1,1 @@
+const e={key:"v-24c5a038",path:"/babylonjs/divingDeeper/scene/offscreenCanvas.html",title:"\u79BB\u5C4F\u753B\u5E03 Offscreen Canvas",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/scene/offscreenCanvas.md"};export{e as data};

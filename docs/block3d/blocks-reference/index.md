@@ -8,13 +8,19 @@
 
 拼图是图形化的代码片段。用户只需控制拼图上的各种组件（值、单选框、下拉菜单、扩展选项等）来定义拼图的功能，然后通过插槽与其它拼图结合，从而实现复杂的编程。
 
-![about-block](/imgs/blocks/about-block.png)
+![scene_assets_manager_1](https://cdn.zjbku.com/blocks/scene_assets_manager_1.png)
 
 ## 拼图分类
 
-Block3D的拼图以功能分类存放在工具栏，下图是分类图标与名称对照表
+Block3D的拼图分为三类：
 
-![block-category](/imgs/start/block-category.jpg)
+- 基础拼图 - 基础编程功能
+- 核心拼图 - 核心功能
+- 扩展拼图 - 依赖额外JS库的扩展功能
+
+下图是分类图标与名称对照表：
+
+![category](https://cdn.zjbku.com/start/category.jpg)
 
 ## 如何创建拼图？
 
@@ -27,9 +33,11 @@ Block3D的拼图以功能分类存放在工具栏，下图是分类图标与名�
 
 ::: tip 技巧
 拼图的名称由一些通过下划线连接的关键词组成，在使用`查找拼图`时，输入关键词可以快速查找。多个关键词要以空格分开。
+
+在拼图的右键菜单中，通过`打印拼图名称`可以将拼图名称打印到底部状态栏查看。
 :::
 
-![search-block](/imgs/blocks/search-block.png)
+![search-block](https://cdn.zjbku.com/blocks/search-block.png)
 
 ## 拼图常用操作
 
@@ -37,13 +45,13 @@ Block3D的拼图以功能分类存放在工具栏，下图是分类图标与名�
 
 拼图右键
 
-![context-menu](/imgs/blocks/context-menu.png)
+![context-menu](https://cdn.zjbku.com/blocks/context-menu.png)
 
 ### 工作区快捷菜单
 
 工作区空白处右键
 
-![context-menu-1](/imgs/blocks/context-menu-1.png)
+![context-menu-1](https://cdn.zjbku.com/blocks/context-menu-1.png)
 
 ## 拼图设计理念
 
@@ -51,7 +59,7 @@ Block3D的拼图系统遵循面向对象的编程理念，这比较符合人类�
 
 举个例子，以下拼图创建了一个立方体，并让它可拖拽
 
-![blocks-example](/imgs/blocks/blocks-example.png)
+![blocks-example](https://cdn.zjbku.com/blocks/blocks-example.png)
 
 实现过程：
 

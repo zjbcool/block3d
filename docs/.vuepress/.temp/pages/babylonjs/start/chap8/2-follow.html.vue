@@ -1,0 +1,22 @@
+<template><h1 id="跟随角色" tabindex="-1"><a class="header-anchor" href="#跟随角色" aria-hidden="true">#</a> 跟随角色</h1>
+<nav class="table-of-contents"><ul></ul></nav>
+<p>在不使用结合<strong>parent</strong>的情况下，我们还可以使用 <strong>FollowCamera</strong> 跟踪角色的运动。</p>
+<p>我们为 <strong>FollowCamera</strong> 提供了一个起始位置和一个要跟随的目标以及一个可以查看目标的目标位置。</p>
+<p>我们使用名称、开始位置和可选的场景参数创建 FollowCamera。</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> camera <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BABYLON<span class="token punctuation">.</span>FollowCamera</span><span class="token punctuation">(</span><span class="token string">"FollowCam"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">BABYLON<span class="token punctuation">.</span>Vector3</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> scene<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后我们设定目标：高于目标中心的高度；</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>heightOffset <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>与目标的径向距离加上高度偏移；</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>radius <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>旋转，以弧度为单位，xy 平面中目标的中心；</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>rotationOffset <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>从当前位置移动到目标位置的加速度；</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>cameraAcceleration <span class="token operator">=</span> <span class="token number">0.005</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>加速停止的速度</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>maxCameraSpeed <span class="token operator">=</span> <span class="token number">10</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然我们也将相机附加到画布上</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span><span class="token function">attachControl</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>最后我们设定了目标</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>camera<span class="token punctuation">.</span>lockedTarget <span class="token operator">=</span> targetMesh<span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><a href="https://playground.babylonjs.com/#KBS9I5#98" target="_blank" rel="noopener noreferrer">跟随相机<ExternalLinkIcon/></a></p>
+</template>

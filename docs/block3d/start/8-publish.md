@@ -1,28 +1,22 @@
-# 激活和发布
+# 发布
 
 [[toc]]
 
-## 激活授权
-
-通过菜单栏-`下拉菜单`-`发布`，可以打开发布面板。如果菜单上显示`未激活`，发布面板将无法显示，此时要求用户激活授权。
-
-用户购买授权码后，通过`下拉菜单`-`授权码...`，在打开的激活面板输入授权码，即可完成激活。注意，激活和取消激活需要连接互联网，除此Block3D可离线使用。
-
-![publish-1](/imgs/start/publish-1.jpg)
-
 ## 发布面板
 
-发布面板用于将Block3D应用发布成可部署到服务器的静态文件。
+通过菜单栏-`下拉菜单`-`发布...`，可以打开发布面板（快捷键`Ctrl` + `P`）。发布面板用于将Block3D应用发布成可部署到服务器的静态文件。
 
-![publish-1](/imgs/start/publish.jpg)
+![publish-app](https://cdn.zjbku.com/start/publish-app.jpg)
 
 ### 模块：
 
 - Babylon - 底层引擎babylon.js，核心模块，默认勾选
-- Loaders - 如果3D资产使用.babylon以外的格式，需要勾选
 - PEP - 用于兼容触屏设置，建议始终勾选
+- glTF 2.0 Loader - 用于加载.gltf/.glb格式的文件
+- Obj Loader - 用于加载.obj格式的文件
+- Stl Loader - 用于加载.stl格式的文件
 - GUI - 如果用到GUI分类拼图，需要勾选
-- TweakPane - 如果用到该分类拼图，需要勾选，这类拼图用于生成参数调节面板
+- TweakPane - 如果用到TweakPane分类拼图，需要勾选
 
 ### 应用：
 
@@ -35,5 +29,3 @@
 ## 静态文件
 
 点击`OK`按钮发布后，在项目文件夹下会增加`index.html`文件，在`assets/js`路径下会增加`main.js`和`virsual_logic.js`。`index.html`和`assets`文件夹就是最终部署所需的静态文件，直接上传到服务器，就可以通过网址访问。
-
-

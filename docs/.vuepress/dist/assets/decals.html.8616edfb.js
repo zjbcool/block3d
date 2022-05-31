@@ -1,0 +1,1 @@
+const e={key:"v-53fce82c",path:"/babylonjs/divingDeeper/mesh/decals.html",title:"\u8D34\u82B1 Decals",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u521B\u5EFA\u8D34\u82B1 CreateDecal",slug:"\u521B\u5EFA\u8D34\u82B1-createdecal",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/mesh/decals.md"};export{e as data};

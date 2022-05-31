@@ -1,3 +1,5 @@
 docs/babylonjs
 node_modules
-.vuepress
+.vuepress/.temp
+.vuepress/.cache
+.vuepress/dist

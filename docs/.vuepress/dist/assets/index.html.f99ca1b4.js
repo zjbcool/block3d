@@ -1,0 +1,1 @@
+const e={key:"v-49a54d83",path:"/babylonjs/divingDeeper/materials/nodeMaterials/",title:"\u8282\u70B9\u6750\u8D28 Node Material",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/materials/nodeMaterials/index.md"};export{e as data};

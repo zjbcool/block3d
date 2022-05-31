@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t,a,b as n}from"./app.090844ca.js";const o={},r={id:"assetcontainers",tabindex:"-1"},c=a("a",{class:"header-anchor",href:"#assetcontainers","aria-hidden":"true"},"#",-1),_=n(" assetContainers"),i=[c,_];function d(h,f){return s(),t("h1",r,i)}var m=e(o,[["render",d],["__file","assetContainers.html.vue"]]);export{m as default};

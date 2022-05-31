@@ -1,0 +1,1 @@
+const e={key:"v-4dabea43",path:"/plugin/",title:"\u63D2\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:".babylon\u5BFC\u51FA\u63D2\u4EF6",slug:"babylon\u5BFC\u51FA\u63D2\u4EF6",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"plugin/index.md"};export{e as data};

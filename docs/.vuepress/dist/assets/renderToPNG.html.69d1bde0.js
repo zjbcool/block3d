@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as t,a as o,b as n}from"./app.090844ca.js";const a={},s={id:"rendertopng",tabindex:"-1"},c=o("a",{class:"header-anchor",href:"#rendertopng","aria-hidden":"true"},"#",-1),_=n(" renderToPNG"),d=[c,_];function h(i,f){return r(),t("h1",s,d)}var m=e(a,[["render",h],["__file","renderToPNG.html.vue"]]);export{m as default};
