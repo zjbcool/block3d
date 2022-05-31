@@ -1,1 +1,0 @@
-const t={key:"v-354833d0",path:"/babylonjs/start/chap4/1-mesh-intersect.html",title:"\u78B0\u649E",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u78B0\u649E",slug:"\u78B0\u649E-1",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap4/1-mesh-intersect.md"};export{t as data};

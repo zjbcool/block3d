@@ -1,1 +1,0 @@
-const e={key:"v-4177041f",path:"/babylonjs/divingDeeper/mesh/displayBoundingBoxes.html",title:"\u7ED8\u5236\u8FB9\u754C\u76D2 Bounding Boxes",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/mesh/displayBoundingBoxes.md"};export{e as data};

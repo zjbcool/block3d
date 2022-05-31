@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,a as o,b as r}from"./app.090844ca.js";const s={},n={id:"rotating-around-axis",tabindex:"-1"},c=o("a",{class:"header-anchor",href:"#rotating-around-axis","aria-hidden":"true"},"#",-1),i=r(" Rotating Around Axis"),_=[c,i];function d(h,f){return t(),a("h1",n,_)}var u=e(s,[["render",d],["__file","pivot.html.vue"]]);export{u as default};

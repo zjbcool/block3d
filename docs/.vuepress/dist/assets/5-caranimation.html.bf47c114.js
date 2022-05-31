@@ -1,1 +1,0 @@
-const t={key:"v-5e4c04ca",path:"/babylonjs/start/chap3/5-caranimation.html",title:"\u6C7D\u8F66\u52A8\u753B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap3/5-caranimation.md"};export{t as data};

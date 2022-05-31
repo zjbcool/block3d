@@ -1,1 +1,0 @@
-const t={key:"v-666d532c",path:"/babylonjs/start/chap3/3-carmat.html",title:"\u6C7D\u8F66\u6750\u8D28",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6C7D\u8F66\u6750\u8D28",slug:"\u6C7D\u8F66\u6750\u8D28-1",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap3/3-carmat.md"};export{t as data};

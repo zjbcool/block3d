@@ -1,1 +1,0 @@
-const e={key:"v-36ea1dfc",path:"/babylonjs/divingDeeper/materials/usingMaterials/texturePerBoxFace.html",title:"\u6309\u9762\u7ED9\u6750\u8D28",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/materials/usingMaterials/texturePerBoxFace.md"};export{e as data};

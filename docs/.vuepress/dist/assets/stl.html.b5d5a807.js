@@ -1,1 +1,0 @@
-const e={key:"v-c5c30ed2",path:"/babylonjs/divingDeeper/importers/stl.html",title:".stl\u52A0\u8F7D\u5668\u63D2\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/importers/stl.md"};export{e as data};

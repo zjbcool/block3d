@@ -1,1 +1,0 @@
-const t={key:"v-d6984670",path:"/babylonjs/start/chap2/",title:"\u521B\u5EFA\u6751\u5E84",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap2/index.md"};export{t as data};

@@ -1,1 +1,0 @@
-const e={key:"v-fa173d68",path:"/babylonjs/divingDeeper/developWithBjs/",title:"\u4F7F\u7528\u548C\u5F00\u53D1 Babylon.js",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/developWithBjs/index.md"};export{e as data};

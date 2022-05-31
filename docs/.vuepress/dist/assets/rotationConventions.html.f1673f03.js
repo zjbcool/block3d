@@ -1,1 +1,0 @@
-import{_ as o,o as t,c as e,a as n,b as a}from"./app.090844ca.js";const s={},r={id:"rotation-conventions",tabindex:"-1"},c=n("a",{class:"header-anchor",href:"#rotation-conventions","aria-hidden":"true"},"#",-1),i=a(" Rotation Conventions"),_=[c,i];function d(h,f){return t(),e("h1",r,_)}var v=o(s,[["render",d],["__file","rotationConventions.html.vue"]]);export{v as default};

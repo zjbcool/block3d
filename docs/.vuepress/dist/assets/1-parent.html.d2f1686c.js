@@ -1,1 +1,0 @@
-const t={key:"v-eca81568",path:"/babylonjs/start/chap3/1-parent.html",title:"\u7F51\u683C\u7ED3\u5408",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u7236\u5B50\u5173\u7CFB",slug:"\u7236\u5B50\u5173\u7CFB",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap3/1-parent.md"};export{t as data};

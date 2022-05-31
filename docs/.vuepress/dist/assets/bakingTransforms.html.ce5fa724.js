@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as s,a as t,b as n}from"./app.090844ca.js";const o={},r={id:"baking-transformations",tabindex:"-1"},c=t("a",{class:"header-anchor",href:"#baking-transformations","aria-hidden":"true"},"#",-1),i=n(" Baking Transformations"),_=[c,i];function d(f,h){return e(),s("h1",r,_)}var l=a(o,[["render",d],["__file","bakingTransforms.html.vue"]]);export{l as default};

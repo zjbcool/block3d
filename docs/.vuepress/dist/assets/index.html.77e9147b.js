@@ -1,1 +1,0 @@
-const e={key:"v-4cb29dce",path:"/download/",title:"\u4E0B\u8F7DBlock3D",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u7528\u6237\u534F\u8BAE",slug:"\u7528\u6237\u534F\u8BAE",children:[]}],git:{updatedTime:1650265496e3,contributors:[{name:"zjbcool",email:"lizuohai1983@gmail.com",commits:1}]},filePathRelative:"download/index.md"};export{e as data};

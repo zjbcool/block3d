@@ -1,1 +1,0 @@
-const e={key:"v-1d767c1b",path:"/babylonjs/divingDeeper/scene/optimizeYourScene.html",title:"\u4F18\u5316\u573A\u666F",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/scene/optimizeYourScene.md"};export{e as data};

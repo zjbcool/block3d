@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,a as n,b as r}from"./app.090844ca.js";const s={},o={id:"target-axes-alignment",tabindex:"-1"},c=n("a",{class:"header-anchor",href:"#target-axes-alignment","aria-hidden":"true"},"#",-1),_=r(" Target Axes Alignment"),i=[c,_];function d(l,h){return t(),a("h1",o,i)}var m=e(s,[["render",d],["__file","targetAlign.html.vue"]]);export{m as default};

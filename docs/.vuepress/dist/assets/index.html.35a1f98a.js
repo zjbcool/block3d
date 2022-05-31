@@ -1,1 +1,0 @@
-const e={key:"v-1c841644",path:"/babylonjs/divingDeeper/materials/",title:"\u6750\u8D28 Materials",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/divingDeeper/materials/index.md"};export{e as data};

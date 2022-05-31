@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,a as s,b as n}from"./app.090844ca.js";const o={},r={id:"parents-and-pivots",tabindex:"-1"},c=s("a",{class:"header-anchor",href:"#parents-and-pivots","aria-hidden":"true"},"#",-1),_=n(" Parents and Pivots"),d=[c,_];function i(h,f){return t(),a("h1",r,d)}var p=e(o,[["render",i],["__file","index.html.vue"]]);export{p as default};

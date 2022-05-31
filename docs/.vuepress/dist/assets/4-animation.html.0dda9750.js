@@ -1,1 +1,0 @@
-const t={key:"v-5206b516",path:"/babylonjs/start/chap3/4-animation.html",title:"\u8F66\u8F6E\u52A8\u753B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u52A8\u753B\u57FA\u7840",slug:"\u52A8\u753B\u57FA\u7840",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"babylonjs/start/chap3/4-animation.md"};export{t as data};

@@ -5,5 +5,5 @@ set -e
 
 # 提交
 git add -A
-git commit -m 'update doc'
+git commit -m '更新文档'
 git push -f https://github.com/zjbcool/block3d.git master
