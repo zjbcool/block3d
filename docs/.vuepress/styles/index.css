@@ -1,9 +1,0 @@
-:root {
-  --c-brand: #bb464b;
-  --c-brand-light: #e0684b;
-}
-
-html.dark {
-  --c-brand: #bb464b;
-  --c-brand-light: #e0684b;
-}
