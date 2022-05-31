@@ -1,6 +1,6 @@
-docs/babylonjs
 node_modules
-.temp
-.cache
-dist
 push.sh
+.gitignore
+docs/babylonjs/
+docs/.vuepress/
+
