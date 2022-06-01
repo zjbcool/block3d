@@ -123,6 +123,10 @@ function setShadowStr(shadowName, shadowValue) {
       return `<shadow type="math_angle">
 <field name="ANGLE">${shadowValue}</field>
 </shadow>`;
+    case 'HEX':
+      return `<shadow type="math_hex">
+<field name="HEX">${shadowValue}</field>
+</shadow>`;
     case 'TEXT':
       return `<shadow type="text">
 <field name="TEXT">${shadowValue}</field>

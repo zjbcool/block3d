@@ -3,7 +3,7 @@ import {
   FieldDropdown,
   ALIGN_RIGHT,
 } from 'blockly';
-import MenuGenerator from './gui_menu_generater';
+import { MenuGenerator } from './gui_menu_generater';
 import {
   createStatementCheckMixin,
 } from './mixins';
@@ -17,7 +17,7 @@ Blocks['create_fullscreen_UI'] = {
       .appendField('name')
       .setCheck('String')
       .setAlign(ALIGN_RIGHT);
-    const jsonObj = this.appendValueInput('JSON')
+    this.appendValueInput('JSON')
       .appendField('from JSON')
       .setCheck(null)
       .setAlign(ALIGN_RIGHT);
@@ -28,6 +28,40 @@ Blocks['create_fullscreen_UI'] = {
     this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#create-fullscreen-ui');
 
     updateShadow(name, 'TEXT', '')
+  }
+}
+
+Blocks['set_get_advTexture_prop'] = {
+  init() {
+    const _this = this;
+    const statementCheckMixin = createStatementCheckMixin();
+    let isSet;
+
+    this.appendValueInput('ADV_TEXTURE')
+      .appendField(new FieldDropdown([
+        ['set', 'set'],
+        ['get', 'get'],
+      ], method => {
+        isSet = method === 'set';
+        statementCheckMixin.updateShape_.call(_this, isSet);
+        statementCheckMixin.updateValueInput_.call(_this, isSet);
+        isSet && MenuGenerator.advTextureProp.updateShape(_this, _this.getInput('VALUE'), _this.getFieldValue('PROP'));
+        !isSet && MenuGenerator.advTextureProp.updateTooltip(_this, _this.getFieldValue('PROP'));
+      }), 'METHOD')
+      .appendField('advTexture')
+    this.appendDummyInput()
+      .appendField(new FieldDropdown(() => MenuGenerator.advTextureProp.generatMenu(), option => {
+        isSet && MenuGenerator.advTextureProp.updateShape(_this, _this.getInput('VALUE'), option)
+      }), 'PROP')
+      .setAlign(ALIGN_RIGHT);
+    this.setStyle("gui_style");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/gui.html#set-get-advTexture-prop');
+    this.mixin(statementCheckMixin);
+    statementCheckMixin.updateValueInput_.call(_this, true);
+    updateShadow(_this.getInput('VALUE'), 'BOOL', 'FALSE');
   }
 }
 

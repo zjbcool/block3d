@@ -151,6 +151,7 @@ export default {
   camera_prop_keysRotateRight_tooltip: 'Gets or Set the list of keyboard keys used to control the right rotation move of the camera.',
   camera_prop_keysUp_tooltip: 'Gets or Set the list of keyboard keys used to control the forward move of the camera.',
   camera_prop_keysUpward_tooltip: 'Gets or Set the list of keyboard keys used to control the upward move of the camera.',
+  camera_prop_layerMask_tooltip: 'Restricts the camera to viewing objects with the same layerMask. A camera with a layerMask of 1 will render mesh.layerMask & camera.layerMask!== 0',
   camera_prop_lockedTarget_tooltip: 'Define the current target of the camera as an object or a position. Please note that locking a target will disable panning.',
   camera_prop_lowerAlphaLimit_tooltip: 'Nullable<number> 相机在经线方向的最小度数\n 这有助于限制相机在场景中的移动',
   camera_prop_lowerBetaLimit_tooltip: 'number 相机在纬线方向的最小度数\n 这有助于限制相机在场景中的移动',

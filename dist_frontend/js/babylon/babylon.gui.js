@@ -1759,7 +1759,7 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         this.markAsDirty();
     };
     /** Define the Uurl to load snippets */
-    AdvancedDynamicTexture.SnippetUrl = "https://snippet.babylonjs.com";
+    AdvancedDynamicTexture.SnippetUrl = core_Misc_observable__WEBPACK_IMPORTED_MODULE_1__.Constants.SnippetUrl;
     /** Indicates if some optimizations can be performed in GUI GPU management (the downside is additional memory/GPU texture memory used) */
     AdvancedDynamicTexture.AllowGPUOptimizations = true;
     return AdvancedDynamicTexture;
@@ -14407,6 +14407,7 @@ var TextBlock = /** @class */ (function (_super) {
         _this._outlineColor = "white";
         _this._underline = false;
         _this._lineThrough = false;
+        _this._wordDivider = " ";
         /**
          * An event triggered after the text is changed
          */
@@ -14631,6 +14632,26 @@ var TextBlock = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    Object.defineProperty(TextBlock.prototype, "wordDivider", {
+        /**
+         * Gets or sets word divider
+         */
+        get: function () {
+            return this._wordDivider;
+        },
+        /**
+         * Gets or sets word divider
+         */
+        set: function (value) {
+            if (this._wordDivider === value) {
+                return;
+            }
+            this._wordDivider = value;
+            this._markAsDirty();
+        },
+        enumerable: false,
+        configurable: true
+    });
     TextBlock.prototype._getTypeName = function () {
         return "TextBlock";
     };
@@ -14812,10 +14833,10 @@ var TextBlock = /** @class */ (function (_super) {
     TextBlock.prototype._parseLineWordWrap = function (line, width, context) {
         if (line === void 0) { line = ""; }
         var lines = [];
-        var words = this.wordSplittingFunction ? this.wordSplittingFunction(line) : line.split(" ");
+        var words = this.wordSplittingFunction ? this.wordSplittingFunction(line) : line.split(this._wordDivider);
         var lineWidth = this._getTextMetricsWidth(context.measureText(line));
         for (var n = 0; n < words.length; n++) {
-            var testLine = n > 0 ? line + " " + words[n] : words[0];
+            var testLine = n > 0 ? line + this._wordDivider + words[n] : words[0];
             var testWidth = this._getTextMetricsWidth(context.measureText(testLine));
             if (testWidth > width && n > 0) {
                 lines.push({ text: line, width: lineWidth });
@@ -14947,6 +14968,9 @@ var TextBlock = /** @class */ (function (_super) {
     (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
         (0,core_Misc_observable__WEBPACK_IMPORTED_MODULE_1__.serialize)()
     ], TextBlock.prototype, "outlineColor", null);
+    (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+        (0,core_Misc_observable__WEBPACK_IMPORTED_MODULE_1__.serialize)()
+    ], TextBlock.prototype, "wordDivider", null);
     return TextBlock;
 }(_control__WEBPACK_IMPORTED_MODULE_3__.Control));
 

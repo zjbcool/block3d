@@ -198,7 +198,7 @@ Blocks['set_scene_prop'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setHelpUrl('https://zjbku.com/block3d/blocks-reference/scenes.html#set-scene-prop');
-    updateShadow(valueInput, 'COLOR3', [0, 0, 0])
+    updateShadow(valueInput, 'ARRAY', '')
   }
 }
 

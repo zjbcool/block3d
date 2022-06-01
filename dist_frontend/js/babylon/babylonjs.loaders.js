@@ -1367,7 +1367,7 @@ var SolidParser = /** @class */ (function () {
                     normals: undefined,
                     uvs: undefined,
                     colors: undefined,
-                    materialName: "",
+                    materialName: this._materialNameFromObj,
                 };
                 this._addPreviousObjMesh();
                 //Push the last mesh created with only the name
@@ -8266,8 +8266,7 @@ var GLTFLoader = /** @class */ (function () {
                 // transform, which effectively ignores the transform of the skinned mesh, as per spec.
                 var mesh = ArrayItem.Get("".concat(context, "/mesh"), this._gltf.meshes, node.mesh);
                 promises.push(this._loadMeshAsync("/meshes/".concat(mesh.index), node, mesh, function (babylonTransformNode) {
-                    // Duplicate the metadata from the skin node to the skinned mesh in case any loader extension added metadata.
-                    babylonTransformNode.metadata = node._babylonTransformNodeForSkin.metadata;
+                    var babylonTransformNodeForSkin = node._babylonTransformNodeForSkin;
                     var skin = ArrayItem.Get("".concat(context, "/skin"), _this._gltf.skins, node.skin);
                     promises.push(_this._loadSkinAsync("/skins/".concat(skin.index), node, skin, function (babylonSkeleton) {
                         _this._forEachPrimitive(node, function (babylonMesh) {
@@ -8289,6 +8288,7 @@ var GLTFLoader = /** @class */ (function () {
                             else {
                                 babylonTransformNode.parent = _this._rootBabylonMesh;
                             }
+                            _this._parent.onSkinLoadedObservable.notifyObservers({ node: babylonTransformNodeForSkin, skinnedNode: babylonTransformNode });
                         });
                     }));
                 }));
@@ -9003,13 +9003,16 @@ var GLTFLoader = /** @class */ (function () {
                         inTangent: key.inTangent ? key.inTangent[targetIndex] : undefined,
                         value: key.value[targetIndex],
                         outTangent: key.outTangent ? key.outTangent[targetIndex] : undefined,
+                        interpolation: key.interpolation,
                     }); }));
                     _this._forEachPrimitive(targetNode, function (babylonAbstractMesh) {
                         var babylonMesh = babylonAbstractMesh;
-                        var morphTarget = babylonMesh.morphTargetManager.getTarget(targetIndex);
-                        var babylonAnimationClone = babylonAnimation.clone();
-                        morphTarget.animations.push(babylonAnimationClone);
-                        babylonAnimationGroup.addTargetedAnimation(babylonAnimationClone, morphTarget);
+                        if (babylonMesh.morphTargetManager) {
+                            var morphTarget = babylonMesh.morphTargetManager.getTarget(targetIndex);
+                            var babylonAnimationClone = babylonAnimation.clone();
+                            morphTarget.animations.push(babylonAnimationClone);
+                            babylonAnimationGroup.addTargetedAnimation(babylonAnimationClone, morphTarget);
+                        }
                     });
                 };
                 for (var targetIndex = 0; targetIndex < targetNode._numMorphTargets; targetIndex++) {
@@ -10250,6 +10253,13 @@ var GLTFFileLoader = /** @class */ (function () {
          */
         this.onMeshLoadedObservable = new core_Misc_observable__WEBPACK_IMPORTED_MODULE_0__.Observable();
         /**
+         * Callback raised when the loader creates a skin after parsing the glTF properties of the skin node.
+         * @see https://doc.babylonjs.com/divingDeeper/importers/glTF/glTFSkinning#ignoring-the-transform-of-the-skinned-mesh
+         * @param node - the transform node that corresponds to the original glTF skin node used for animations
+         * @param skinnedNode - the transform node that is the skinned mesh itself or the parent of the skinned meshes
+         */
+        this.onSkinLoadedObservable = new core_Misc_observable__WEBPACK_IMPORTED_MODULE_0__.Observable();
+        /**
          * Observable raised when the loader creates a texture after parsing the glTF properties of the texture.
          */
         this.onTextureLoadedObservable = new core_Misc_observable__WEBPACK_IMPORTED_MODULE_0__.Observable();
@@ -10509,6 +10519,7 @@ var GLTFFileLoader = /** @class */ (function () {
         delete this._progressCallback;
         this.preprocessUrlAsync = function (url) { return Promise.resolve(url); };
         this.onMeshLoadedObservable.clear();
+        this.onSkinLoadedObservable.clear();
         this.onTextureLoadedObservable.clear();
         this.onMaterialLoadedObservable.clear();
         this.onCameraLoadedObservable.clear();

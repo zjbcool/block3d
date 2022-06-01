@@ -1,5 +1,6 @@
 import {
   Blocks,
+  FieldNumber,
   FieldAngle,
   FieldDropdown,
   ALIGN_RIGHT
@@ -15,6 +16,19 @@ Blocks['math_angle'] = {
     this.setOutput(true, 'Number');
     this.setTooltip("A number.");
     this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/math_number.html#math-angle");
+  }
+}
+
+Blocks['math_hex'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField('0x')
+      .appendField(new FieldNumber('10000000'), 'HEX');
+    this.setStyle("math_style");
+    this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip("A hex number.");
+    this.setHelpUrl("https://zjbku.com/block3d/blocks-reference/math_number.html#math-hex");
   }
 }
 

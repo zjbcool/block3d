@@ -8,6 +8,7 @@ export default {
     ['barHeight', 'barHeight', 'TEXT', '3px', ''],
   ]),
   sceneProps: new DropdownHelper([
+    ['activeCameras', 'activeCameras', 'ARRAY', '', 'All of the active cameras added to this scene.'],
     ['ambientColor', 'ambientColor', 'COLOR3', [0, 0, 0], 'Defines the color used to simulate the ambient color (Default is (0, 0, 0))'],
     ['animationTimeScale', 'animationTimeScale', 'NUM', '1', 'Gets or sets a general scale for animation speed'],
     ['animationsEnabled', 'animationsEnabled', 'BOOL', 'TRUE', 'Sets a boolean indicating if animations are enabled'],

@@ -17,6 +17,10 @@ export default {
     },
     {
       "kind": "block",
+      "type": "set_get_advTexture_prop",
+    },
+    {
+      "kind": "block",
       "type": "gui_get_control",
     },
     {

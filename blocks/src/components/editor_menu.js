@@ -236,7 +236,7 @@ export class EditorMenu extends LitElement {
       TOOLS_NME_TEXT: this.lang === 'zh' ? "节点材质编辑器" : 'NodeMaterial Editor',
       TOOLS_SANDBOX_TEXT: this.lang === 'zh' ? "沙盒" : 'Sandbox',
 
-      DROPDOWN_TABS_ADD_TEXT: this.lang === 'zh' ? "创建选项卡..." : 'Create New Tab...',
+      DROPDOWN_TABS_ADD_TEXT: this.lang === 'zh' ? "新建选项卡..." : 'Create New Tab...',
       DROPDOWN_TABS_REMOVE_TEXT: this.lang === 'zh' ? "删除选项卡..." : 'Remove Tab...',
       DROPDOWN_TABS_RENAME_TEXT: this.lang === 'zh' ? "重命名选项卡..." : 'Rename Tab...',
     }

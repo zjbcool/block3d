@@ -4,6 +4,10 @@ JavaScript['math_angle'] = (block) => {
   return [`${block.getFieldValue('ANGLE')}`, JavaScript.ORDER_FUNCTION_CALL]
 }
 
+JavaScript['math_hex'] = (block) => {
+  return [`0x${block.getFieldValue('HEX')}`, JavaScript.ORDER_FUNCTION_CALL]
+}
+
 JavaScript['math_radians_degrees'] = (block) => {
   const method = block.getFieldValue('METHOD')
   const value = JavaScript.valueToCode(block, 'VALUE', JavaScript.ORDER_NONE) || `0`;

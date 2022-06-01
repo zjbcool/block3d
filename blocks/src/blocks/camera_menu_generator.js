@@ -39,6 +39,7 @@ const applyGravity = ['applyGravity', 'applyGravity', 'BOOL', 'TRUE', 'camera_pr
   keysRotateRight = ['keysRotateRight', 'keysRotateRight', 'ARRAY', '', 'camera_prop_keysRotateRight_tooltip'],
   keysUp = ['keysUp', 'keysUp', 'ARRAY', '', 'camera_prop_keysUp_tooltip'],
   keysUpward = ['keysUpward', 'keysUpward', 'ARRAY', '', 'camera_prop_keysUpward_tooltip'],
+  layerMask = ['layerMask', 'layerMask', 'HEX', '10000000', 'camera_prop_layerMask_tooltip'],
   lockedTarget = ['lockedTarget', 'lockedTarget', 'NONE', '', 'camera_prop_lockedTarget_tooltip'],
   lowerAlphaLimit = ['lowerAlphaLimit', 'lowerAlphaLimit', 'NUM', '', 'camera_prop_lowerAlphaLimit_tooltip'],
   lowerBetaLimit = ['lowerBetaLimit', 'lowerBetaLimit', 'NUM', '', 'camera_prop_lowerBetaLimit_tooltip'],
@@ -75,11 +76,11 @@ const applyGravity = ['applyGravity', 'applyGravity', 'BOOL', 'TRUE', 'camera_pr
   wheelPrecision = ['wheelPrecision', 'wheelPrecision', 'NUM', '3', 'camera_prop_wheelPrecision_tooltip'];
 
 MenuGenerator.UniversalCamera = new DropdownHelper([
-  applyGravity, angularSensibility, cameraDirection, cameraRotation, checkCollisions, ellipsoid, ellipsoidOffset, fov, globalPosition, ignoreParentScaling, inertia, inverseRotationSpeed, position, target, invertRotation, keysDown, keysDownward, keysLeft, keysRight, keysRotateLeft, keysRotateRight, keysUp, keysUpward, lockedTarget, maxZ, minZ, noRotationConstraint, rotation, speed, touchAngularSensibility, touchMoveSensibility
+  applyGravity, angularSensibility, cameraDirection, cameraRotation, checkCollisions, ellipsoid, ellipsoidOffset, fov, globalPosition, ignoreParentScaling, inertia, inverseRotationSpeed, position, target, invertRotation, keysDown, keysDownward, keysLeft, keysRight, keysRotateLeft, keysRotateRight, keysUp, keysUpward, layerMask, lockedTarget, maxZ, minZ, noRotationConstraint, rotation, speed, touchAngularSensibility, touchMoveSensibility
 ]);
 
 MenuGenerator.ArcRotateCamera = new DropdownHelper([
-  alpha, beta, cameraDirection, cameraRotation, checkCollisions, collisionRadius, fov, globalPosition, inertia, lockedTarget, lowerAlphaLimit, lowerBetaLimit, lowerRadiusLimit, mapPanning, maxZ, minZ, panningAxis, panningDistanceLimit, panningInertia, panningOriginTarget, pinchToPanMaxDistance, position, radius, speed, target, targetHost, targetScreenOffset, upperAlphaLimit, upperBetaLimit, upperRadiusLimit, useNaturalPinchZoom, wheelDeltaPercentage, wheelPrecision,
+  alpha, beta, cameraDirection, cameraRotation, checkCollisions, collisionRadius, fov, globalPosition, inertia, layerMask, lockedTarget, lowerAlphaLimit, lowerBetaLimit, lowerRadiusLimit, mapPanning, maxZ, minZ, panningAxis, panningDistanceLimit, panningInertia, panningOriginTarget, pinchToPanMaxDistance, position, radius, speed, target, targetHost, targetScreenOffset, upperAlphaLimit, upperBetaLimit, upperRadiusLimit, useNaturalPinchZoom, wheelDeltaPercentage, wheelPrecision,
 ]);
 
 MenuGenerator.FollowCamera = new DropdownHelper([
@@ -92,6 +93,7 @@ MenuGenerator.FollowCamera = new DropdownHelper([
   inertia,
   inverseRotationSpeed,
   invertRotation,
+  layerMask,
   lockedTarget,
   lowerHeightOffsetLimit,
   lowerRadiusLimit,

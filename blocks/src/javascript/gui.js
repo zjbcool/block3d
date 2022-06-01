@@ -18,6 +18,27 @@ JavaScript['create_fullscreen_UI'] = (block) => {
   return [`${fun}(${name}, ${json})`, JavaScript.ORDER_FUNCTION_CALL]
 }
 
+JavaScript['set_get_advTexture_prop'] = (block) => {
+  const method = block.getFieldValue('METHOD');
+  const advTexture = JavaScript.valueToCode(block, 'ADV_TEXTURE', JavaScript.ORDER_NONE);
+  const prop = block.getFieldValue('PROP');
+  const value = JavaScript.valueToCode(block, 'VALUE', JavaScript.ORDER_NONE) || `\'\'`;
+
+  if (!advTexture) return ''
+
+  if (method === 'set') {
+    if (prop == 'layerMask') {
+      return `
+  ${advTexture}.layer.layerMask = ${value}`
+    } else {
+      return `
+  ${advTexture}.${prop} = ${value};`
+    }
+  } else if (method === 'get') {
+    return [`${advTexture}.${prop}`, JavaScript.ORDER_FUNCTION_CALL]
+  }
+}
+
 JavaScript['gui_get_control'] = (block) => {
   const name = JavaScript.valueToCode(block, 'NAME', JavaScript.ORDER_NONE) || `\'\'`;
   const adt = JavaScript.valueToCode(block, 'ADT', JavaScript.ORDER_NONE);

@@ -1,4 +1,4 @@
 // 英文Msg
-import './set_locale_en'
+// import './set_locale_en'
 // 中文Msg
-// import './set_locale_zh'
+import './set_locale_zh'
