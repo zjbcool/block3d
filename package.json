@@ -5,6 +5,7 @@
   "main": "server/main.js",
   "scripts": {
     "update-babylon": "cd server/scripts && node updateBabylon.js",
+    "update-blockly": "cd server/scripts && node updateBlockly.js",
     "dev": "cd server && npm run dev",
     "dev-blocks": "cd blocks && npm run dev",
     "dev-docs": "cd document && npm run dev",
