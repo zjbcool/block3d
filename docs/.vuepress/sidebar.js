@@ -21,6 +21,7 @@ module.exports = {
       collapsible: true,
       children: [
         "/block3d/diving-deeper/tabmanager",
+        "/block3d/diving-deeper/inspector",
         "/block3d/diving-deeper/shortcuts",
         "/block3d/diving-deeper/tools",
       ],
