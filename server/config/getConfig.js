@@ -13,6 +13,7 @@ module.exports = () => {
       name: 'Block3D',
       version: 'v1.0.0-beta.1',
     }
+    
     process.env.VERSION = info.version;
     process.env.TITLE = `${info.name} ${info.version}`;
   } catch (e) {
