@@ -11,12 +11,10 @@ module.exports = () => {
     // 标题
     const info = {
       name: 'Block3D',
-      version: '1.0.0 Beta.1',
-      date: '2022-6-15'
+      version: 'v1.0.0-beta.1',
     }
     process.env.VERSION = info.version;
     process.env.TITLE = `${info.name} ${info.version}`;
-    process.env.RELEASE_DATE = info.date;
   } catch (e) {
     console.log(e);
   }

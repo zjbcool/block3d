@@ -3,8 +3,8 @@ const fs = require('fs-extra');
 const { join } = require('node:path');
 // 混淆block3d.umd.js
 (async () => {
-  const inputFile = join(process.cwd(), 'dist/block3d.umd.js')
-  const outputFile = join(process.cwd(), '../editor/public/js/block3d/block3d.umd.js')
+  const inputFile = join(__dirname, '../../blocks/dist/block3d.umd.js')
+  const outputFile = join(__dirname, '../../dist_frontend/js/block3d/block3d.umd.js')
   const result = (await fs.readFile(inputFile)).toString()
   const obfuscationResult = JavaScriptObfuscator.obfuscate(result, {
     compact: true,

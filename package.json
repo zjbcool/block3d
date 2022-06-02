@@ -6,14 +6,13 @@
   "scripts": {
     "update-babylon": "cd server/scripts && node updateBabylon.js",
     "update-blockly": "cd server/scripts && node updateBlockly.js",
+    "obfuscate-blocks": "cd server/scripts && node obfuscateBlocks.js",
     "dev": "cd server && npm run dev",
     "dev-blocks": "cd blocks && npm run dev",
     "dev-docs": "cd document && npm run dev",
     "build-blocks": "cd blocks && npm run build && cp -v -r dist/block3d.umd.js ../dist_frontend/js/block3d && cd ..",
-    "build-blocks-obfuscate": "cd blocks && npm run build && node tools/buildBlocksObfuscator.js && cd ..",
     "build-tsdeclare": "cd tsdeclare && npm run build && cp -v -r dist/tsdeclare.umd.js ../dist_frontend/js/block3d && cd ..",
-    "pkg": "pkg . -C GZip && cp -v -r server/lib server/projects server/templates server/config.json dist",
-    "build-all": "npm run build-blocks-obfuscate && npm run build-tsdeclare && npm run pkg"
+    "pkg": "pkg . -C GZip && cp -v -r server/lib server/projects server/templates server/config.json dist"
   },
   "bin": "server/main.js",
   "pkg": {

@@ -17,9 +17,6 @@ export class AboutDialog extends LitElement {
   static properties = {
     lang: {},
     version: {},
-    releaseDate: {},
-    babylon: {},
-    blockly: {},
   }
 
   constructor() {
@@ -28,7 +25,6 @@ export class AboutDialog extends LitElement {
     this.version = ''
     this.babylon = ''
     this.blockly = ''
-    this.releaseDate = ''
   }
 
   render() {
@@ -36,11 +32,10 @@ export class AboutDialog extends LitElement {
     const data = {
       header: _this.lang === 'zh' ? '关于' : 'About',
       version: _this.lang === 'zh' ? `版本：${_this.version}` : `Version: ${_this.version}`,
-      releaseDate: _this.lang === 'zh' ? `日期：${_this.releaseDate}` : `Date: ${_this.releaseDate}`,
       author: _this.lang === 'zh' ? '作者：宅家呗' : 'Author: zjbku',
-      website: _this.lang === 'zh' ? '网站: ' : 'Website: ',
-      email: _this.lang === 'zh' ? '邮箱: block3d@163.com' : 'E-mail: block3d@163.com',
-      discussions: _this.lang === 'zh' ? '讨论:' : 'Discussions:',
+      website: _this.lang === 'zh' ? '网站：' : 'Website: ',
+      email: _this.lang === 'zh' ? '邮箱：block3d@163.com' : 'E-mail: block3d@163.com',
+      discussions: _this.lang === 'zh' ? '讨论: ' : 'Discussions:',
     }
     return html`
   <div class="dialog-bg d-flex">
@@ -56,7 +51,6 @@ export class AboutDialog extends LitElement {
           <div class="dialog-text-wrap">
             <div class="dialog-title">Block3D</div>
             <div class="dialog-text">${data.version}</div>
-            <div class="dialog-text">${data.releaseDate}</div>
             <div class="dialog-text">${data.author}</div>
             <div class="dialog-text">${data.website}<a class="text-light" target="_blank" href="https://www.zjbku.com">https://zjbku.com</a></div>
             <div class="dialog-text">${data.email}</div>

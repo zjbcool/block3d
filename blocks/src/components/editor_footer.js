@@ -42,15 +42,11 @@ export class EditorFooter extends LitElement {
       color: #858585;
       user-select: none;
     }
-    #clearInfo {
-      cursor: pointer;
-    }
-    #playbackControl {
-      cursor: pointer;
-    }
+
     .icon-center {
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
     .w-68 {
       width: 68px;
@@ -61,7 +57,8 @@ export class EditorFooter extends LitElement {
     info: {},
     fps: {},
     running: {},
-    lang: {}
+    lang: {},
+    noticeIcon: {}
   };
 
   constructor() {
@@ -69,7 +66,8 @@ export class EditorFooter extends LitElement {
     this.info = '';
     this.fps = '';
     this.running = true;
-    this.lang = 'zh'
+    this.lang = 'zh';
+    this.noticeIcon = "/media/notice.svg"
   }
 
   getYear() {
@@ -89,6 +87,9 @@ export class EditorFooter extends LitElement {
     <div id="clearInfo" class="icon-center" title=${this.lang == 'zh' ? '清空信息' : 'clear info'}>
       <img @click="${this._clearInfo}" src="/media/clear-info.svg" alt="clear">
     </div>
+    <div id="notice" class="icon-center" title=${this.lang == 'zh' ? '消息' : 'notice'}>
+      <img @click="${this._showNotice}" src=${this.noticeIcon} alt="clear">
+    </div>
     <div id="playbackControl" class="icon-center">
       <img @click="${this._playback}" src=${this.running ? "/media/pause.svg" : "/media/play.svg"} alt="playback">
     </div>
@@ -99,9 +100,13 @@ export class EditorFooter extends LitElement {
   _clearInfo() {
     this.info = ''
   }
+  showNotice() { }
+  _showNotice() {
+    this.showNotice()
+  }
   playback() { }
   _playback = () => {
-    this.playback && this.playback()
+    this.playback()
   }
 }
 

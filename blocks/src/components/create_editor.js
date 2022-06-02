@@ -20,7 +20,6 @@ export function createEditor(root, data) {
     AUTO_SAVE,
     EXTERNAL_SERVER,
     VERSION,
-    RELEASE_DATE,
   } = data
   const body = document.body
   // editorContainer
@@ -93,8 +92,13 @@ export function createEditor(root, data) {
   aboutDialog.id = 'aboutDialog'
   aboutDialog.lang = LANG
   aboutDialog.version = VERSION
-  aboutDialog.releaseDate = RELEASE_DATE
   body.appendChild(aboutDialog)
+  // noticeDialog
+  const noticeDialog = create('notice-dialog')
+  noticeDialog.id = 'noticeDialog'
+  noticeDialog.lang = LANG
+  noticeDialog.currentVersion = VERSION
+  body.appendChild(noticeDialog)
   // welcomeDialog
   const welcomeDialog = create('welcome-dialog')
   welcomeDialog.lang = LANG

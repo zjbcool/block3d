@@ -35,6 +35,7 @@ async function setup(data) {
     settingsDialog = $('settingsDialog'),
     licenseDialog = $('licenseDialog'),
     aboutDialog = $('aboutDialog'),
+    noticeDialog = $('noticeDialog'),
     loadingScreen = $('loadingScreen'),
     editorFooter = $('editorFooter'),
     searchBlockDialog = $('searchBlockDialog');
@@ -515,6 +516,23 @@ async function setup(data) {
         embedMode: true,
         globalRoot: createDebugLayerElement()
       })
+    }
+  }
+  /**
+   * 通知
+   */
+  // 获取github release信息
+  editorFooter.showNotice = () => noticeDialog.open()
+  const releaseInfo = 'https://api.github.com/repos/zjbcool/block3d/releases'
+  const fetchRease = await fetch(releaseInfo)
+  if (fetchRease.ok) {
+    const releases = await fetchRease.json()
+    if(!releases.length) return
+    const { tag_name, published_at } = releases[0]
+    noticeDialog.latestVersion = tag_name
+    noticeDialog.releaseDate = published_at
+    if (tag_name !== data.VERSION) {
+      editorFooter.noticeIcon = '/media/notice-active.svg'
     }
   }
 
