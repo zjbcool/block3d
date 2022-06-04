@@ -3869,6 +3869,7 @@ var Container = /** @class */ (function (_super) {
     Container.prototype._flagDescendantsAsMatrixDirty = function () {
         for (var _i = 0, _a = this.children; _i < _a.length; _i++) {
             var child = _a[_i];
+            child._isClipped = false;
             child._markMatrixAsDirty();
         }
     };
@@ -24084,7 +24085,7 @@ var MRDLBackplateMaterialDefines = /** @class */ (function (_super) {
         /*
             "IRIDESCENCE_ENABLE", "SMOOTH_EDGES"
         */
-        _this.IRIDESCENCE_ENABLED = true;
+        _this.IRIDESCENCE_ENABLE = true;
         _this.SMOOTH_EDGES = true;
         _this._needNormals = true;
         _this.rebuild();
@@ -24309,7 +24310,7 @@ var MRDLBackplateMaterial = /** @class */ (function (_super) {
                 "_Line_Gradient_Blend_",
                 "_Fade_Out_",
             ];
-            var samplers = [];
+            var samplers = ["_Iridescent_Map_"];
             var uniformBuffers = new Array();
             core_Misc_decorators__WEBPACK_IMPORTED_MODULE_1__.MaterialHelper.PrepareUniformsAndSamplersList({
                 uniformsNames: uniforms,

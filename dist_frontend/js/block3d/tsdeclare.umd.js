@@ -124,6 +124,7 @@ declare module BABYLON {
         transformNodes: TransformNode[];
         /**
          * ActionManagers available on the scene.
+         * @deprecated
          */
         actionManagers: AbstractActionManager[];
         /**
@@ -30946,6 +30947,8 @@ declare module BABYLON {
          * @returns The current light
          */
         setShadowProjectionMatrix(matrix: Matrix, viewMatrix: Matrix, renderList: Array<AbstractMesh>): IShadowLight;
+        /** @hidden */
+        protected _syncParentEnabledState(): void;
     }
 
 
@@ -46114,7 +46117,8 @@ declare module BABYLON {
          */
         get noMipmap(): boolean;
         private _noMipmap;
-        private _files;
+        /** @hidden */
+        _files: Nullable<string[]>;
         protected _forcedExtension: Nullable<string>;
         /**
          * Gets the forced extension (if any)
@@ -49060,6 +49064,7 @@ declare module BABYLON {
         private _loaderOptions?;
         private _creationFlags?;
         private _useSRGBBuffer?;
+        private _forcedExtension?;
         /** Returns the texture mime type if it was defined by a loader (undefined else) */
         get mimeType(): string | undefined;
         /**
@@ -49094,15 +49099,17 @@ declare module BABYLON {
          * @param mimeType defines an optional mime type information
          * @param loaderOptions options to be passed to the loader
          * @param creationFlags specific flags to use when creating the texture (Constants.TEXTURE_CREATIONFLAG_STORAGE for storage textures, for eg)
+         * @param forcedExtension defines the extension to use to pick the right loader
          */
-        constructor(url: Nullable<string>, sceneOrEngine?: Nullable<Scene | ThinEngine>, noMipmapOrOptions?: boolean | ITextureCreationOptions, invertY?: boolean, samplingMode?: number, onLoad?: Nullable<() => void>, onError?: Nullable<(message?: string, exception?: any) => void>, buffer?: Nullable<string | ArrayBuffer | ArrayBufferView | HTMLImageElement | Blob | ImageBitmap>, deleteBuffer?: boolean, format?: number, mimeType?: string, loaderOptions?: any, creationFlags?: number);
+        constructor(url: Nullable<string>, sceneOrEngine?: Nullable<Scene | ThinEngine>, noMipmapOrOptions?: boolean | ITextureCreationOptions, invertY?: boolean, samplingMode?: number, onLoad?: Nullable<() => void>, onError?: Nullable<(message?: string, exception?: any) => void>, buffer?: Nullable<string | ArrayBuffer | ArrayBufferView | HTMLImageElement | Blob | ImageBitmap>, deleteBuffer?: boolean, format?: number, mimeType?: string, loaderOptions?: any, creationFlags?: number, forcedExtension?: string);
         /**
          * Update the url (and optional buffer) of this texture if url was null during construction.
          * @param url the url of the texture
          * @param buffer the buffer of the texture (defaults to null)
          * @param onLoad callback called when the texture is loaded  (defaults to null)
+         * @param forcedExtension defines the extension to use to pick the right loader
          */
-        updateURL(url: string, buffer?: Nullable<string | ArrayBuffer | ArrayBufferView | HTMLImageElement | Blob>, onLoad?: () => void): void;
+        updateURL(url: string, buffer?: Nullable<string | ArrayBuffer | ArrayBufferView | HTMLImageElement | Blob>, onLoad?: () => void, forcedExtension?: string): void;
         /**
          * Finish the loading sequence of a texture flagged as delayed load.
          * @hidden
@@ -52532,6 +52539,25 @@ declare module BABYLON {
          */
         scaleToRef(scale: number, result: Vector3): Vector3;
         /**
+         * Rotates the vector using the given unit quaternion and stores the new vector in result
+         * @param q the unit quaternion representing the rotation
+         * @param result the output vector
+         * @returns the current Vector3
+         */
+        applyRotationQuaternionToRef(q: Quaternion, result: Vector3): Vector3;
+        /**
+         * Rotates the vector in place using the given unit quaternion
+         * @param q the unit quaternion representing the rotation
+         * @returns the current updated Vector3
+         */
+        applyRotationQuaternionInPlace(q: Quaternion): Vector3;
+        /**
+         * Rotates the vector using the given unit quaternion and returns the new vector
+         * @param q the unit quaternion representing the rotation
+         * @returns a new Vector3
+         */
+        applyRotationQuaternion(q: Quaternion): Vector3;
+        /**
          * Scale the current Vector3 values by a factor and add the result to a given Vector3
          * @param scale defines the scale factor
          * @param result defines the Vector3 object where to store the result
@@ -53817,6 +53843,12 @@ declare module BABYLON {
          */
         subtract(other: Quaternion): Quaternion;
         /**
+         * Subtract a quaternion to the current one
+         * @param other defines the quaternion to subtract
+         * @returns the current quaternion
+         */
+        subtractInPlace(other: DeepImmutable<Quaternion>): Quaternion;
+        /**
          * Multiplies the current quaternion by a scale factor
          * @param value defines the scale factor
          * @returns a new quaternion set by multiplying the current quaternion coordinates by the float "scale"
@@ -53878,6 +53910,21 @@ declare module BABYLON {
          */
         conjugate(): Quaternion;
         /**
+         * Returns the inverse of the current quaternion
+         * @returns a new quaternion
+         */
+        invert(): Quaternion;
+        /**
+         * Invert in place the current quaternion
+         * @returns this quaternion
+         */
+        invertInPlace(): Quaternion;
+        /**
+         * Gets squared length of current quaternion
+         * @returns the quaternion length (float)
+         */
+        lengthSquared(): number;
+        /**
          * Gets length of current quaternion
          * @returns the quaternion length (float)
          */
@@ -53887,6 +53934,11 @@ declare module BABYLON {
          * @returns the current updated quaternion
          */
         normalize(): Quaternion;
+        /**
+         * Normalize a copy of the current quaternion
+         * @returns the normalized quaternion
+         */
+        normalizeToNew(): Quaternion;
         /**
          * Returns a new Vector3 set with the Euler angles translated from the current quaternion
          * @returns a new Vector3 containing the Euler angles
@@ -67006,19 +67058,6 @@ declare module BABYLON {
 
 
     /**
-     * Helper class that provides a small promise polyfill
-     */
-    export class PromisePolyfill {
-        /**
-         * Static function used to check if the polyfill is required
-         * If this is the case then the function will inject the polyfill to window.Promise
-         * @param force defines a boolean used to force the injection (mostly for testing purposes)
-         */
-        static Apply(force?: boolean): void;
-    }
-
-
-    /**
      * Class used to connect with the reflector zone of the sandbox via the reflector bridge
      * @since 5.0.0
      */
@@ -67765,30 +67804,6 @@ declare module BABYLON {
 
 
     /**
-     * Class used to provide helpers for slicing
-     */
-    export class SliceTools {
-        /**
-         * Provides a slice function that will work even on IE
-         * @param data defines the array to slice
-         * @param start defines the start of the data (optional)
-         * @param end defines the end of the data (optional)
-         * @returns the new sliced array
-         */
-        static Slice<T>(data: T, start?: number, end?: number): T;
-        /**
-         * Provides a slice function that will work even on IE
-         * The difference between this and Slice is that this will force-convert to array
-         * @param data defines the array to slice
-         * @param start defines the start of the data (optional)
-         * @param end defines the end of the data (optional)
-         * @returns the new sliced array
-         */
-        static SliceToArray<T, P>(data: T, start?: number, end?: number): Array<P>;
-    }
-
-
-    /**
      * Defines an array and its length.
      * It can be helpful to group result from both Arrays and smart arrays in one structure.
      */
@@ -67992,6 +68007,7 @@ declare module BABYLON {
      * @param str Source string
      * @param suffix Suffix to search for in the source string
      * @returns Boolean indicating whether the suffix was found (true) or not (false)
+     * @deprecated Please use native string function instead
      */
     export const EndsWith: (str: string, suffix: string) => boolean;
     /**
@@ -67999,6 +68015,7 @@ declare module BABYLON {
      * @param str Source string
      * @param suffix Suffix to search for in the source string
      * @returns Boolean indicating whether the suffix was found (true) or not (false)
+     * @deprecated Please use native string function instead
      */
     export const StartsWith: (str: string, suffix: string) => boolean;
     /**
@@ -68551,23 +68568,6 @@ declare module BABYLON {
          * @returns the new object or null if the system was not able to do the instantiation
          */
         static Instantiate(className: string): any;
-        /**
-         * Provides a slice function that will work even on IE
-         * @param data defines the array to slice
-         * @param start defines the start of the data (optional)
-         * @param end defines the end of the data (optional)
-         * @returns the new sliced array
-         */
-        static Slice<T>(data: T, start?: number, end?: number): T;
-        /**
-         * Provides a slice function that will work even on IE
-         * The difference between this and Slice is that this will force-convert to array
-         * @param data defines the array to slice
-         * @param start defines the start of the data (optional)
-         * @param end defines the end of the data (optional)
-         * @returns the new sliced array
-         */
-        static SliceToArray<T, P>(data: T, start?: number, end?: number): Array<P>;
         /**
          * Polyfill for setImmediate
          * @param action defines the action to execute after the current execution block
@@ -85033,6 +85033,7 @@ declare module BABYLON {
         removeMaterial(toRemove: Material): number;
         /**
          * Removes the given action manager from this scene.
+         * @deprecated
          * @param toRemove The action manager to remove
          * @returns The index of the removed action manager
          */
@@ -85099,6 +85100,7 @@ declare module BABYLON {
         addGeometry(newGeometry: Geometry): void;
         /**
          * Adds the given action manager to this scene
+         * @deprecated
          * @param newActionManager The action manager to add
          */
         addActionManager(newActionManager: AbstractActionManager): void;

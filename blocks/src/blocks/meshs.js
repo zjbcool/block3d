@@ -472,6 +472,23 @@ Blocks['check_intersects_point'] = {
   }
 }
 
+Blocks['mesh_create_decal_option'] = {
+  init() {
+    const _this = this;
+    const value = this.appendValueInput('VALUE')
+      .appendField('set')
+      .appendField(new FieldDropdown(() => MenuGenerator.decalOption.generatMenu(), option => MenuGenerator.decalOption.updateShape(_this, value, option)), 'KEY')
+      .appendField('to');
+    this.setStyle('meshes_style');
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setHelpUrl('');
+    this.mixin(createSurroundCheckMixin('object_create'));
+    updateShadow(value, 'NUM', '1');
+  }
+}
+
 Blocks['mesh_create_decal'] = {
   init() {
     this.appendDummyInput()

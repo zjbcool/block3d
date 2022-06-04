@@ -99,7 +99,7 @@ async function createLicenseFile(licenseInfo) {
  * @param {string} status 状态
  */
 async function updateLicenseStatus(licensekey, status) {
-  const url = `https://shop.zjbcool.com/wp-json/lmfwc/v2/licenses/${licensekey}`;
+  const url = `https://shop.zjbku.com/wp-json/lmfwc/v2/licenses/${licensekey}`;
   const putData = {
     status: status,
   }

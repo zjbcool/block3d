@@ -3,10 +3,10 @@ const { exec } = require("node:child_process");
 module.exports = function (url) {
   // 拿到当前系统的参数
   switch (process.platform) {
-    //mac系统使用 一下命令打开url在浏览器
+    //mac系统使用 以下命令在浏览器打开url
     case "darwin":
       exec(`open ${url}`);
-    //win系统使用 一下命令打开url在浏览器
+    //win系统使用 以下命令在浏览器打开url
     case "win32":
       exec(`start ${url}`);
     // 默认mac系统

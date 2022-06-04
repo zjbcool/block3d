@@ -18,7 +18,7 @@ export function createAds(root) {
       <h1 class="ml-10">支持Block3D<h1>
     </div>
     <h3>去广告3个月</h3>
-    <h1 class="text-orange">￥199</h1>
+    <h1 class="text-orange">￥259</h1>
   </a>
 
   <a class="support-card" href=${getKeyUrl} target="_blank">
