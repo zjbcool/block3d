@@ -41,7 +41,8 @@ export class noticeDialog extends LitElement {
       currentVersion: _this.lang === 'zh' ? `当前版本：${_this.currentVersion}` : `Current Version: ${_this.currentVersion}`,
       latestVersion: _this.lang === 'zh' ? `最新版本：` : `Latest Version: `,
       releaseDate: _this.lang === 'zh' ? `发布日期：${date}` : `Release Date: ${date}`,
-      downloadLink: `https://github.com/zjbcool/block3d/releases/download/${_this.latestVersion}/Block3D-Setup.exe`
+      downloadLink: `https://github.com/zjbcool/block3d/releases/download/${_this.latestVersion}/block3d-${_this.latestVersion}.zip`,
+      changelog: _this.lang === 'zh' ? `更新日志：` : `Changelog: `,
     }
     return html`
   <div class="dialog-bg d-flex">
@@ -60,6 +61,9 @@ export class noticeDialog extends LitElement {
               ${data.latestVersion}<a class="color-link" href=${data.downloadLink} download>${_this.latestVersion}</a>
             </div>
             <div class="dialog-text">${data.releaseDate}</div>
+            <div class="dialog-text">
+              ${data.changelog}<a class="color-link" href="https://zjbku.com/changelog/" target="_blank">https://zjbku.com/changelog/</a>
+            </div>
           </div>
         </div>
         <input type="button" value="OK" class="button" @click="${this.close}">  

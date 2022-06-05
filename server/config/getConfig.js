@@ -11,7 +11,7 @@ module.exports = () => {
     // 标题
     const info = {
       name: 'Block3D',
-      version: 'v1.0.0-beta.1',
+      version: 'v1.0.0-beta.2',
     }
     
     process.env.VERSION = info.version;

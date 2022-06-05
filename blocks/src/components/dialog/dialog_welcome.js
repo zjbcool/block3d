@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit';
 
 export class WelcomeDialog extends LitElement {
-  static styles = 
-  css`
+  static styles =
+    css`
     .dialog-bg {
       position: absolute;
       top: 0;
@@ -76,6 +76,12 @@ export class WelcomeDialog extends LitElement {
     .row-right {
       width: 50%;
       margin-left: 6px;
+    }
+    .link-color {
+      display: block;
+      height: 30px;
+      color: rgb(111, 111, 111);
+      text-align: center;
     }`
   static properties = {
     lang: {},
@@ -91,6 +97,7 @@ export class WelcomeDialog extends LitElement {
   }
 
   render() {
+    const agreement = this.lang === 'zh' ? '《用户协议》' : 'User Agreement'
     const items = [
       {
         shotcut: 'Ctrl + O',
@@ -131,6 +138,7 @@ export class WelcomeDialog extends LitElement {
             </div>
           `)}
         </div>
+        <a class="link-color" href="https://www.zjbku.com/download/license.html" target="_blank">${agreement}</a>
       </div>
     </div>
     `

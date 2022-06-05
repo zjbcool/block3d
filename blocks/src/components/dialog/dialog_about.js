@@ -12,7 +12,11 @@ export class AboutDialog extends LitElement {
       color: #e16531;
       font-size: 18px;
       font-weight: 800;
-    }`]
+    }
+    .color-link {
+      color: #e16531;
+    }
+    `]
 
   static properties = {
     lang: {},

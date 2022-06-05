@@ -1,6 +1,6 @@
 {
   "name": "block3d",
-  "version": "1.0.0 beta.1",
+  "version": "1.0.0",
   "description": "一款支持可视化编程的Web3D开发工具",
   "main": "server/main.js",
   "scripts": {

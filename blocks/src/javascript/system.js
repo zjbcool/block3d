@@ -8,10 +8,10 @@ JavaScript['console_log'] = (block) => {
   switch (method) {
     case 'log':
       return `
-      console.log(${text});`
+  console.log(${text});`
     case 'info':
       return `
-      block3d.editorFooter.info = ${text};`
+  block3d && block3d.editorFooter.info = ${text};`
   }
 }
 
@@ -28,7 +28,7 @@ JavaScript['execute_tab'] = block => {
     return ''
   } else {
     return `
-    tab_${tab}(${tab_arg});`
+  tab_${tab}(${tab_arg});`
   }
 }
 
