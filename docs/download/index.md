@@ -4,10 +4,13 @@
 Block3D处于测试阶段，不推荐用于项目开发。
 :::
 
-|版本         |操作系统|下载                 |
-|:------------|:-------|:-------------------------------|
-|v1.0.0-beta.1|win     |[地址1][a1.0.0-beta.1] [地址2][b1.0.0-beta.1]|
+|版本         |操作系统|下载                                         |
+|:------------|:-------|:--------------------------------------------|
+|v1.0.0-beta.2|win10+  |[地址1][a1.0.0-beta.2] [地址2][b1.0.0-beta.2]|
+|v1.0.0-beta.1|win10+  |[地址1][a1.0.0-beta.1] [地址2][b1.0.0-beta.1]|
 
+[a1.0.0-beta.2]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.2/block3d.zip
+[b1.0.0-beta.2]:https://cdn.zjbku.com/download/v1.0.0-beta.2/block3d.zip
 [a1.0.0-beta.1]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.1/Block3D-Setup.exe
 [b1.0.0-beta.1]:https://cdn.zjbku.com/download/v1.0.0-beta.1/Block3D-Setup.exe
 

@@ -6,7 +6,7 @@ Block3D通过资产管理器[scene_assets_manager](../blocks-reference/scenes.md
 
 ## 加载场景
 
-Block3D支持`.babylon` `.glTF/.glb` `.stl` `.obj`等格式的3D场景，其中`.babylon`是默认格式，如果使用了默认以外的格式，只需注意在发布面板勾选相应的模块即可。见《快速上手》[发布面板](../start/8-publish.md)。
+Block3D支持`.babylon` `.glTF/.glb` `.stl` `.obj`等格式的3D场景，其中`.babylon`是默认格式，如果使用了默认以外的格式，只需注意发布时在发布面板勾选相应的模块即可，见《快速上手》[发布面板](../start/8-publish.md)。
 
 使用[scene_load_asset](../blocks-reference/scenes.md#scene-load-asset)拼图可以载以上类型的场景。在《快速上手》[加载资产](../start/3-load-assets.html#加载3d资产)中已有介绍。此外，可以使用[scene_get_loaded_from_asset](../blocks-reference/scenes.md#scene-get-loaded-from-asset)拼图获取加载的资产内容。如下拼图：
 
