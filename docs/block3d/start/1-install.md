@@ -4,42 +4,15 @@
 
 ## 下载软件
 
-在[下载](../../download/index.md)页面免费获取Block3D安装包。
+在[下载](../../download/index.md)页面免费获取Block3D免安装包。
 
-## 安装步骤(windows)
+## 安装（windows）
 
-系统要求windows 10+
+Block3D支持windows 10+操作系统。
 
-安装步骤：
-
-1. 双击`block3d-setup.exe`安装包开始安装
-2. 选择安装程序语言，点击确定
-
-![install-1](https://cdn.zjbku.com/start/install-1.jpg)
-
-3. 阅读用户协议，勾选同意，点击下一步
-
-![install-2-1](https://cdn.zjbku.com/start/install-2-1.jpg)
-
-4. 选择安装位置，点击下一步
-
-![install-3](https://cdn.zjbku.com/start/install-3.jpg)
-
-5. 创建快捷方式，建议都勾选上，点击下一步
-
-![install-4](https://cdn.zjbku.com/start/install-4.jpg)
-
-6. 点击安装，稍等片刻...
-
-![install-5](https://cdn.zjbku.com/start/install-5.jpg)
-
-7. 完成！可以直接运行，或者稍后通过桌面快捷方式运行
-
-![install-6](https://cdn.zjbku.com/start/install-6.jpg)
+Block3D从v1.0.0-beta.2开始使用免安装包，只需下载`.zip`文件，然后解压到任意目录，双击执行`block3d.exe`，程序会自动打开默认浏览器。为了程序的性能和稳定性，推荐使用谷歌的Chrome浏览器。
 
 ## 界面布局
-
-Block3D是在本地浏览器中运行的，双击桌面图标后Block3D会自动打开系统默认的浏览器。推荐使用谷歌Chrome浏览器。
 
 Block3D界面布局及功能：
 - 菜单栏 - 新建、保存、发布、切换语言等
@@ -53,7 +26,7 @@ Block3D界面布局及功能：
 
 ## 设置项目路径
 
-第一次运行Block3D要首先打开菜单栏-`下拉菜单`-`设置...`，
+Block3D默认项目文件夹设置在安装目录的`projects`，如果你想设置到安装目录以外，可以通过菜单栏-`下拉菜单`-`设置...`，
 
 ![menu-dropdown](https://cdn.zjbku.com/start/menu-dropdown.jpg)
 
