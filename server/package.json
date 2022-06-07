@@ -1,6 +1,6 @@
 {
-  "name": "server",
-  "version": "1.0.0 ",
+  "name": "block3d",
+  "version": "v1.0.0-beta.2",
   "description": "",
   "main": "main.js",
   "scripts": {

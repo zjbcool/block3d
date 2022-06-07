@@ -1,6 +1,7 @@
 node_modules
+examples
+document
 blocks/node_modules
-document/node_modules
 .DS_Store
 dist
 PKG_CACHE

@@ -9,11 +9,11 @@ export default {
   /**
    * advanced_connect block
    */
-  ADVANCED_CONNECT_TOOLTIP: 'This block facilitates connecting other blocks with each other, \n to make it more convenient to move, delete and use them in other blocks.',
+  ADVANCED_CONNECT_TOOLTIP: '该拼图仅用于连接其它拼图, 便于移动、删除和使用',
   /**
    * advanced_comment block
    */
-  ADVANCED_COMMENT_TOOLTIP: 'Comment block',
+  ADVANCED_COMMENT_TOOLTIP: '注释',
   /**
    * get_VARS block
    */
@@ -159,12 +159,12 @@ export default {
   camera_prop_lowerRotationOffsetLimit_tooltip: '相机位置相对于目标物体的最小角度。\n 这有助于限制相机在场景中的移动',
   camera_prop_lowerHeightOffsetLimit_tooltip: '相机相对于目标物体的最小高度。这有助于限制相机在场景中的移动',
   camera_prop_maxCameraSpeed_tooltip: '定义相机跟随物体的最大速度。',
-  camera_prop_maxZ_tooltip: 'Define the maximum distance the camera can see to. This is important to note that the depth buffer are not infinite and the further it end the more your scene might encounter depth fighting issue.',
-  camera_prop_minZ_tooltip: 'Define the minimum distance the camera can see from. This is important to note that the depth buffer are not infinite and the closer it starts the more your scene might encounter depth fighting issue.',
-  camera_prop_position_tooltip: 'Define the current local position of the camera in the scene',
-  camera_prop_noRotationConstraint_tooltip: 'Add constraint to the camera to prevent it to move freely in all directions and around all axis.',
+  camera_prop_maxZ_tooltip: '定义相机可以观察的最大距离',
+  camera_prop_minZ_tooltip: '定义相机可以观察的最小距离',
+  camera_prop_position_tooltip: '定义相机在场景的位置（局部坐标）',
+  camera_prop_noRotationConstraint_tooltip: '为相机添加约束，阻止相机在所有方向和所有轴向上自由移动',
   camera_prop_rotation_tooltip: '定义当前相机的旋转值',
-  camera_prop_rotationOffset_tooltip: 'Define a rotation offset between the camera and the object it follows',
+  camera_prop_rotationOffset_tooltip: '定义相机和相机所跟随物体间的旋转偏移',
   camera_prop_speed_tooltip: '定义当前相机的速度',
   camera_prop_target_tooltip: '定义相机的目标点',
   camera_prop_targetHost_tooltip: '定义相机的目标网格，相机会在半径距离上看向此网格。注意此设置会禁用平移',
@@ -178,9 +178,9 @@ export default {
   camera_prop_panningInertia_tooltip: 'number 定义平移时的惯性值\n 0 没有惯性；1 一直运动',
   camera_prop_panningOriginTarget_tooltip: 'Vector3 定义平移前相机的目标',
   camera_prop_pinchToPanMaxDistance_tooltip: 'number Defines the distance used to consider the camera in pan mode vs pinch/zoom.\n Basically if your fingers moves away from more than this distance you will be considered in pinch mode.',
-  camera_prop_radius_tooltip: 'number Defines the radius of the camera from it s target point.',
-  camera_prop_targetScreenOffset_tooltip: 'Vector2 Defines a screen offset for the camera position.',
-  camera_prop_upperAlphaLimit_tooltip: 'Nullable<number> Maximum allowed angle on the longitudinal axis.\n 这有助于限制相机在场景中的移动',
+  camera_prop_radius_tooltip: 'number 定义相机距离目标点的半径',
+  camera_prop_targetScreenOffset_tooltip: 'Vector2 定义相机目标点在屏幕上的偏移',
+  camera_prop_upperAlphaLimit_tooltip: 'Nullable<number> 沿纬线方向的最大角度\n 这有助于限制相机在场景中的移动',
   camera_prop_upperBetaLimit_tooltip: 'number 沿经线方向的最大角度\n 这有助于限制相机在场景中的移动',
   camera_prop_upperHeightOffsetLimit_tooltip: 'Maximum allowed height of camera position relative to target object.This can help limiting how the Camera is able to move in the scene.',
   camera_prop_upperRadiusLimit_tooltip: 'Nullable<number> Maximum allowed distance of the camera to the target (The camera can not get further).\n 这有助于限制相机在场景中的移动',
