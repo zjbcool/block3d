@@ -225,10 +225,12 @@ export class EditorMenu extends LitElement {
       DROPDOWN_SETTING_TEXT: this.lang === 'zh' ? "设置..." : 'Settings...',
       DROPDOWN_SETTING_TITLE: this.lang === 'zh' ? "设置编辑器" : 'the settings for the editor',
       DROPDOWN_RENAME_TAB_TITLE: this.lang === 'zh' ? "重命名激活选项卡" : 'Rename tha active tab',
-      DROPDOWN_HIDE_LEFT_AREA_TEXT: this.lang === 'zh' ? "隐藏/显示编辑器" : 'Hide/Hide editor',
-      DROPDOWN_SEARCH_BLOCK_TEXT: this.lang === 'zh' ? "查找拼图..." : 'Search block...',
-      DROPDOWN_ACTIVE_TEXT: this.lang === 'zh' ? "激活码..." : 'Active key...',
+      DROPDOWN_HIDE_LEFT_AREA_TEXT: this.lang === 'zh' ? "隐藏/显示编辑区" : 'Hide/Show Editor',
+      DROPDOWN_SEARCH_BLOCK_TEXT: this.lang === 'zh' ? "查找拼图..." : 'Search Block...',
+      DROPDOWN_ACTIVE_TEXT: this.lang === 'zh' ? "激活码..." : 'Active Key...',
       DROPDOWN_ACTIVE_TITLE: this.lang === 'zh' ? "去除广告" : 'remove ads',
+      DROPDOWN_CHANGE_VIEW_TEXT: this.lang === 'zh' ? "切换视图" : 'Switch View',
+      DROPDOWN_CHANGE_VIEW_TITLE: this.lang === 'zh' ? "在代码和场景视图之间切换" : 'Switch view between code and scene',
       DROPDOWN_ABOUT_TEXT: this.lang === 'zh' ? "关于" : 'About',
 
       DROPDOWN_INSPECTOR_TEXT: this.lang === 'zh' ? "场景查看器" : 'Scene Inspector',
@@ -324,6 +326,12 @@ export class EditorMenu extends LitElement {
           <p class="dropdown-label" title="${data.DROPDOWN_ACTIVE_TITLE}" id="licenseKey">
             ${data.DROPDOWN_ACTIVE_TEXT}
           </p>
+          <p class="dropdown-label" title="${data.DROPDOWN_CHANGE_VIEW_TITLE}" id="changeView">
+            ${data.DROPDOWN_CHANGE_VIEW_TEXT}<span class="dropdown-shortcut">Ctrl+Shift+V</span>
+          </p>
+
+          <div class="dropdown-separator"></div>
+
           <p class="dropdown-label" title="${data.DROPDOWN_SETTING_TITLE}" id="setting">
             ${data.DROPDOWN_SETTING_TEXT}
           </p>

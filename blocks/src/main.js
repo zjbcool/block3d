@@ -22,6 +22,7 @@ export * from './theme/dark'
 // 组件
 export * from './tab_manager/tab_manager'
 export * from './tab_manager/tab_dialog'
+export * from './tab_manager/code_view'
 export * from './gutter'
 export * from './app'
 // 快捷键

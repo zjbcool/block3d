@@ -11,7 +11,7 @@ JavaScript['console_log'] = (block) => {
   console.log(${text});`
     case 'info':
       return `
-  block3d && block3d.editorFooter.info = ${text};`
+  block3d && (block3d.editorFooter.info = ${text});`
   }
 }
 

@@ -42,15 +42,19 @@ async function setup(data) {
 
   loadingScreen.open()
   block3d.editorFooter = editorFooter
-  // 创建组件
+
+  // 创建tabManager组件
   const tabManager = new block3d.TabManager('#editor', lang)
   // 为代码编辑器添加代码提示
   tabManager.addExtralLib = monaco => {
-    monaco.languages.typescript.javascriptDefaults.addExtraLib(tsdeclare.babylon_d_ts);
-    monaco.languages.typescript.javascriptDefaults.addExtraLib(tsdeclare.appInstance_d_ts);
+    monaco.languages.typescript.javascriptDefaults.addExtraLib(tsdeclare.babylon_d_ts)
+    monaco.languages.typescript.javascriptDefaults.addExtraLib(tsdeclare.appInstance_d_ts)
   }
   block3d.tabManager = tabManager
+  // 拖拽条
   const gutter = new block3d.Gutter('#editor', '#gutter', '#output')
+  // 代码视图
+  const codeView = new block3d.CodeView('#codeView')
 
   let appInstance
   BABYLON.apps = []
@@ -60,6 +64,7 @@ async function setup(data) {
   gutter.onMove = () => {
     tabManager.resize()
     appInstance.resize()
+    codeView.resize()
   }
   gutter.onStop = () => {
     // 保存gutter位置
@@ -166,6 +171,9 @@ async function setup(data) {
       case 'licenseKey':
         licenseDialog.open()
         break
+      case 'changeView':
+        changeView()
+        break
       case 'setting':
         settingsDialog.open()
         break
@@ -173,6 +181,31 @@ async function setup(data) {
         aboutDialog.open()
         break
     }
+  }
+  /**
+   * 切换视图
+   */
+  function changeView() {
+    if (leftDays) {
+      codeView.isVisible = !codeView.isVisible
+      showCodeView(block3d.code)
+    } else {
+      showInfo({ en: 'The feature needs active', zh: '该功能需要激活' })
+    }
+  }
+
+  /**
+   * 显示代码视图
+   * @param {string} value 
+   * @returns 
+   */
+  async function showCodeView(value) {
+    if (codeView.editor) {
+      value && codeView.editor.setValue(value)
+      return
+    }
+    await codeView.createEditor()
+    value && codeView.editor.setValue(value)
   }
   /**
      * 注册快捷键
@@ -224,6 +257,13 @@ async function setup(data) {
         case 's':
         case 'S':
           doSaveAs()
+          e.preventDefault()
+          e.stopPropagation()
+          e.key = false
+          return false
+        case 'v':
+        case 'V':
+          changeView()
           e.preventDefault()
           e.stopPropagation()
           e.key = false
@@ -385,6 +425,7 @@ async function setup(data) {
   /**
    * 保存工作区和编译js
    */
+
   async function saveAndCompile() {
     const workspace = saveWorkspace()
     const fetchSave = await fetch('/api/save', {
@@ -394,12 +435,15 @@ async function setup(data) {
     })
     tabManager.customTabs = workspace.workspaceData.map(item => item.title).slice(1, -1)
     if (fetchSave.ok) {
-      const code = await fetchSave.text()
+      block3d.code = await fetchSave.text()
+
       // 执行代码，运行应用
       appInstance && appInstance.dispose()
       appInstance.setup()
-      eval(code)
+      eval(block3d.code)
       appInstance.run()
+      // 代码视图显示时，更新代码视图
+      codeView.isVisible && showCodeView(block3d.code)
       // showInfo({ en: 'saved!', zh: '已保存！' })
       // 场景查看器
       setting.data.openInspector && doOpenInspector('scene')
@@ -527,7 +571,7 @@ async function setup(data) {
   const fetchRease = await fetch(releaseInfo)
   if (fetchRease.ok) {
     const releases = await fetchRease.json()
-    if(!releases.length) return
+    if (!releases.length) return
     const { tag_name, published_at } = releases[0]
     noticeDialog.latestVersion = tag_name
     noticeDialog.releaseDate = published_at

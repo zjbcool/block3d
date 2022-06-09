@@ -35,7 +35,7 @@ export function createEditor(root, data) {
   editorContainer.appendChild(menu)
   // main
   const main = create('main')
-  main.innerHTML = `
+  main.innerHTML = /*html*/`
   <div class="editor" id="editor">
     <search-block id="searchBlockDialog"></search-block>
   </div>
@@ -43,6 +43,9 @@ export function createEditor(root, data) {
   <div class="output" id="output">
     <div id="sceneView" class="view">
       <canvas id="renderCanvas" class="renderCanvas" touch-action="none"></canvas>
+    </div>
+    <div id="codeView" class="view"></div>
+      
     </div>
   </div>
   `
