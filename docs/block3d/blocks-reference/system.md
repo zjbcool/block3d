@@ -88,3 +88,9 @@ console.log(tab_arg) // execute_tab拼图参数
 用于连接带返回值的拼图。该拼图不会产生任何代码，仅用于连接，以方便整体操作拼图。
 
 ![advanced_connect](https://cdn.zjbku.com/blocks/advanced_connect.png)
+
+## advanced_new_line
+
+用于换行。
+
+![advanced_new_line](https://cdn.zjbku.com/blocks/advanced_new_line.png)
