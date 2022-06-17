@@ -2,6 +2,11 @@
 
 [[toc]]
 
+## 1.0.0-beta.4(2022-06-17)
+
+- 场景分类下`scene_get_loaded_from_asset`拼图增加`json`选项
+- 修复发布的应用无法正常运行的问题
+
 ## 1.0.0-beta.3(2022-06-14)
 
 - 系统分类新增`advanced_new_line`拼图，用于换行
