@@ -2,6 +2,16 @@
 
 [[toc]]
 
+## 1.0.0-beta.5(2022-06-24)
+
+- 更新底层引擎Babylon.js v5.12.1
+- 修改循环分类下`controls_for`拼图`from`默认参数为`0`
+- 修改
+  - 相机分类下`set_get_camera_prop`拼图，避免报错
+  - 灯光分类下`set_get_light_prop`拼图，避免报错
+  - 材质分类下`set_get_material_prop`拼图，避免报错
+  - 材质分类下`set_get_texture_prop`拼图，避免报错
+
 ## 1.0.0-beta.4(2022-06-17)
 
 - 场景分类下`scene_get_loaded_from_asset`拼图增加`json`选项
