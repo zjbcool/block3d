@@ -4,7 +4,7 @@
 
 ## 1.0.0-beta.6(2022-07-01)
 
-- 更新相机分类的中文版*拼图提示*
+- 更新相机分类的中文版*拼图提示* 
 - 修改默认项目路径为：`C:\Users\Administrator\AppData\Roaming\block3d\projects`
 - 移除安装目录中的配置文件`config.json`
 - 移除安装目录中的密钥
