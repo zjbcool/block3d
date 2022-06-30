@@ -28,11 +28,37 @@ footerHtml: true
 footer: 版权所有 © 2022-至今 宅家呗
 ---
 
-## 为你的模型添加交互
+## 截图
 
 ![block3d](https://cdn.zjbku.com/start-1.jpg) 
 
+## 媒体
 
+<div class="media-container">
+  <a class="media-icon" href="https://space.bilibili.com/213849618" target="_blank">
+    <img src="https://cdn.zjbku.com/media/bilibili.png">
+    <p class="media-text">宅家呗</p>
+  </a>
 
+  <a class="media-icon" href="https://www.ixigua.com/home/3310092926/" target="_blank">
+    <img src="https://cdn.zjbku.com/media/ixigua.png">
+    <p class="media-text">宅家呗</p>
+  </a>
+</div>
+
+## 交流
+
+<div class="media-container">
+  <a class="media-icon" href="https://github.com/zjbcool/block3d/discussions" target="_blank">
+    <img src="https://cdn.zjbku.com/media/github-fill.png">
+    <p class="media-text">论坛</p>
+  </a>
+
+  <a class="media-icon" href="https://h5.dingtalk.com/circle/healthCheckin.html?corpId=ding3eff0fcb04937b52984df9a2ac8e1df3&dcfd07d0-73=05c3b591-a9&cbdbhh=qwertyuiop&origin=1#/" target="_blank">
+    <img src="https://cdn.zjbku.com/media/dingding.png">
+    <p class="media-text">群:21935218</p>
+  </a>
+
+</div>
 
  
