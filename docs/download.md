@@ -15,7 +15,7 @@ Block3D处于测试阶段，不推荐用于项目开发。
 
 [更新日志][changelog] | [示例程序][examples]| [历史版本][releases]
 
-[changelog]:../changelog/index.md
+[changelog]:./changelog.md
 [examples]:https://github.com/zjbcool/block3d-examples
 [releases]:https://github.com/zjbcool/block3d/releases
 

@@ -66,12 +66,6 @@
 
 ![create_texture](https://cdn.zjbku.com/blocks/create_texture.png)
 
-## remove_texture
-
-删除纹理。在Block3D中删除网格、材质并不会删除其纹理，需要使用此拼图手动删除。
-
-![remove_texture](https://cdn.zjbku.com/blocks/remove_texture.png)
-
 ## set_get_texture_prop
 
 用于设置或获取纹理属性。
@@ -96,6 +90,28 @@
 - vScale - 沿v坐标轴的缩放值
 - wAng - 沿w坐标轴旋转的角度
 - wRotationCenter - 定义旋转中心（w）
+
+## texture_events
+
+纹理事件。
+
+参数：
+- dispose - 纹理被删除时触发
+- load - 纹理加载时触发
+
+![texture_events](https://cdn.zjbku.com/blocks/texture_events.png)
+
+## get_texture_size
+
+返回纹理尺寸。返回值是一个包含`width` 和 `height`属性的对象。
+
+![get_texture_size](https://cdn.zjbku.com/blocks/get_texture_size.png)
+
+## remove_texture
+
+删除纹理。在Block3D中删除网格、材质并不会删除其纹理，需要使用此拼图手动删除。
+
+![remove_texture](https://cdn.zjbku.com/blocks/remove_texture.png)
 
 ## material_color3
 

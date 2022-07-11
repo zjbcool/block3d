@@ -77,6 +77,76 @@ console.log(tab_arg) // execute_tab拼图参数
 
 ![local_storage_remove_item](https://cdn.zjbku.com/blocks/local_storage_remove_item.png)
 
+## create_web_request
+
+创建一个WebRequest对象用于与服务器交互。通过 WebRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。
+
+深入学习，请参考<https://developer.mozilla.org/en-US/docs/Web/HTTP>
+
+参数：
+- method - 进行网络请求的方法
+  - GET - 用于从服务器获取数据
+  - POST - 用于发送数据给服务器
+  - PUT - 用于修改服务器指定资源
+  - DELETE - 用于删除服务器指定的资源
+- url - 要请求的资源地址
+
+参考：<https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods>
+
+![create_web_request](https://cdn.zjbku.com/blocks/create_web_request.png)
+
+## web_request_events
+
+WebRequest对象的事件。
+
+参数：
+- abort - 当请求取消时触发
+- error - 当请求发生错误时触发
+- load - 当网络请求传输完成时触发
+- loadend - 当请求完成时触发，不管是否成功
+- loadstart - 当网络请求开始加载数据时触发
+- progress - 当请求收到更多数据时定期触发
+- readystatechange - 当readyState属性改变时触发
+- timeout - 由于预设时间到期而终止进度时触发
+
+参考：<https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#events>
+
+![web_request_events](https://cdn.zjbku.com/blocks/web_request_events.png)
+
+## web_request_prop
+
+设置或获取WebRequest对象的属性。
+
+参数：
+- readyState - (number) 返回客户端状态，参考：[readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState)
+- response - (any) 返回客户端响应
+- responseText - (string) 以文本形式返回客户端响应
+- responseType - (void) 设置或获取期望的响应类型
+- responseURL - (string) 返回客户端响应地址
+- status - (number) 返回客户端状态，参考：[状态码](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- statusText - (string) 以文本形式返回客户端状态
+- timeout - (number) 设置或获取超时时间，单位毫秒
+
+参考：<https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#properties>
+
+![web_request_prop](https://cdn.zjbku.com/blocks/web_request_prop.png)
+
+## set_web_request_header
+
+设置请求头。
+
+参考：<https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers>
+
+![set_web_request_header](https://cdn.zjbku.com/blocks/set_web_request_header.png)
+
+## send_web_request
+
+启动请求。可选参数`data`用于提供请求正文。如果请求方法为`GET`或`HEAD`，则忽略该参数。
+
+参考：<https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send>
+
+![send_web_request](https://cdn.zjbku.com/blocks/send_web_request-1.png)
+
 ## advanced_comment
 
 用于添加单行注释。
