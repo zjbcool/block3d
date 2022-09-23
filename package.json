@@ -1,0 +1,22 @@
+{
+  "name": "block3d_document",
+  "version": "1.0.0",
+  "description": "block3d documents",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "serve": "vuepress serve docs"
+  },
+  "keywords": [],
+  "author": "zjbku",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.50",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.50",
+    "@vuepress/plugin-search": "^2.0.0-beta.50",
+    "vuepress-vite": "^2.0.0-beta.50"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.1.1"
+  }
+}
