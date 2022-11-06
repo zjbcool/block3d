@@ -8,5 +8,5 @@
 - [IBL Backer](https://github.com/derkreature/IBLBaker)：创建dds环境文件
 - [Lys](https://www.knaldtech.com/lys/)：创建dds环境文件
 
-- PVRTexTool - for opening *.dds and *.ktx files.
+- [PVRTexTool](https://developer.imaginationtech.com/) - 用于打开.dds和.ktx文件
 - [keycode](https://keycode.info/)：键盘代码查看器

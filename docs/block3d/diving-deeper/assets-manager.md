@@ -1,43 +1,30 @@
 # 资产管理器
 
-Block3D通过资产管理器[scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图向场景中加载各种类型的资产，包括场景、纹理、图片、二进制文件、音频等。
+Block3D通过[资产管理器scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图向场景中加载各种类型的资产，包括网格、纹理、图片、二进制文件、音频等。
 
 [[toc]]
 
-## 加载场景
+## 加载资产
 
-Block3D支持`.babylon` `.glTF/.glb` `.stl` `.obj`等格式的3D场景，其中`.babylon`是默认格式，如果使用了默认以外的格式，只需注意发布时在发布面板勾选相应的模块即可，见《快速上手》[发布面板](../start/8-publish.md)。
+场景分类下的[加载资产scene_load_asset](../blocks-reference/scenes.md#scene-load-asset)拼图用于创建加载任务，在《快速上手》[加载资产](../start/3-load-assets.html#加载3d资产)中已有介绍。此外，[获取加载资产scene_get_loaded_from_asset](../blocks-reference/scenes.md#scene-get-loaded-from-asset)拼图用于获取加载的资产。通过这些拼图可以加载以下资产：
 
-使用[scene_load_asset](../blocks-reference/scenes.md#scene-load-asset)拼图可以载以上类型的场景。在《快速上手》[加载资产](../start/3-load-assets.html#加载3d资产)中已有介绍。此外，可以使用[scene_get_loaded_from_asset](../blocks-reference/scenes.md#scene-get-loaded-from-asset)拼图获取加载的资产内容。如下拼图：
+1. 加载网格 - 加载`.babylon` `.glTF/.glb` `.stl` `.obj`等格式的网格，其中`.babylon`是默认格式，如果使用其它格式，需要注意在发布面板勾选相应的模块，见《快速上手》[发布面板](../start/8-publish.md)
+2. 加载纹理 - 预加载体积较大的纹理、立方体纹理
+3. 加载JSON - 可用于加载以`.json`文件保存的节点材质、GUI
+4. 加载文本 - 可加载外部`.txt`文件
 
-![assets-manager-1](https://cdn.zjbku.com/diving-deeper/assets-manager-1.png)
+![assets-manager-1](https://cdn.zjbku.com/diving-deeper/assets-manager-1-min.jpg)
 
-## 加载贴图
+:::tip 提示
+注意，上面的示例中有一个从远程服务器地址加载json的任务，也就是说资产管理器拼图支持从本地或远程服务器加载资产。
+:::
 
-对于多张贴图和较大的贴图提前进行预加载是正确的做法。
+## 自定义加载界面
 
-![assets-manager-2](https://cdn.zjbku.com/diving-deeper/assets-manager-2.png)
+在用户等待资产加载的过程中，提供一个加载界面展示加载进度和展示LOGO，是个不错的选择。使用场景分类下的`创建加载界面scene_create_custom_preloader`拼图和`更新加载界面scene_update_custom_preloader`拼图可以很方便地实现这个功能。
 
-## 加载JSON
+![assets-manager-5](https://cdn.zjbku.com/diving-deeper/assets-manager-2-min.jpg)
 
-在Block3D中，UI和节点材质是通过外部编辑器导出`.json`文件，然后再加载到场景的。
+创建加载界面的选项中的`logo图片`需要将图片转为base64编码，可以使用`下拉菜单-工具-Base64编辑器`转换。
 
-![assets-manager-3](https://cdn.zjbku.com/diving-deeper/assets-manager-3.png)
-
-## 加载文本
-
-对于大文本可以通过加载外部`.txt`实现。
-
-![assets-manager-4](https://cdn.zjbku.com/diving-deeper/assets-manager-4.png)
-
-## 自定义加载器
-
-制作一个加载界面一般都需要用代码实现，Block3D尽量简化这一步。
-
-默认在[scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图上勾选`useDefaultPreloader`，将使用默认加载器。取消勾选后，用户可以使用[scene_create_custom_preloader](../blocks-reference/scenes.md#scene-create-custom-preloader)拼图定制个性化的加载器。
-
-![scene_create_custom_preloader](https://cdn.zjbku.com/blocks/scene_create_custom_preloader_1.png)
-
-然后分别在[scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图的`on progress` 和 `on ready`插槽中执行加载器的更新和完成。其中，更新加载器所需的`percentage`拼图通过[scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图右键菜单创建。
-
-![assets-manager-5](https://cdn.zjbku.com/diving-deeper/assets-manager-5.png)
+更新加载器拼图的`进度`参数，可通过[资产管理器scene_assets_manager](../blocks-reference/scenes.md#scene-assets-manager)拼图右键菜单`创建 百分比`命令创建。

@@ -6,7 +6,8 @@
 
 ## display_axis
 
-该拼图用于显示坐标。如果`parent`参数为空，则显示世界坐标；如果指定为某个网格，则显示该网格的局部坐标。
+该拼图用于显示坐标。如果`父级`参数为空，则显示世界坐标；如果指定为某个网格，则显示该网格的局部坐标。
 
-![display_axis](https://cdn.zjbku.com/blocks/display_axis.png)
+## add_inspectable_custom_properties
 
+向检查器中添加可查看的自定义属性。`属性`参数接收一个对象数组，对象成员可通过该拼图右键菜单-`创建 选项`创建。

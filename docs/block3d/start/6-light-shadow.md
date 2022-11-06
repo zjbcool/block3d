@@ -4,13 +4,11 @@
 
 ## 创建灯光
 
-在灯光分类下找到`create_light`拼图，在下拉菜单中选择平行光`DirectionalLight`。对于方向`direction`参数先保持默认，稍后我们在场景中实时调节，再把最终的参数复制到这里。
+在灯光分类下找到`创建灯光create_light`拼图，在下拉菜单中选择平行光`平行光`。对于方向`方向`参数先保持默认，稍后我们在场景中实时调节，再把最终的参数复制到这里。
 
-![light-shadow](https://cdn.zjbku.com/start/light-shadow.png)
+使用`灯光属性light_properties_accessors`拼图可以设置灯光的属性，如强度、漫反射等
 
-使用`set_get_light_prop`拼图可以设置灯光的属性，如强度`intensity`、漫反射`diffuse`、位置`position`等
-
-![light-shadow-1](https://cdn.zjbku.com/start/light-shadow-1.png)
+![light-shadow-1](https://cdn.zjbku.com/start/light-shadow-1-min.jpg)
 
 将创建灯光的拼图放在创建地面之前，以使灯光能对地面产生作用。有了灯光，地面的材质效果就表现出来了。
 
@@ -18,19 +16,11 @@
 
 ## 创建阴影
 
-在灯光分类下找到`create_shadow`拼图，第一个参数是灯光，第二个参数是阴影贴图的大小。
+1. 创建阴影 - 在灯光分类下的阴影子类中，使用`创建阴影create_shadow`拼图创建阴影，第一个参数是灯光，第二个参数是阴影贴图的大小
+2. 设置网格接收阴影 - 默认网格不会接收阴影，需要使用网格分类的`网格属性mesh_properties_accessors`拼图设置地面`接收阴影`为`true`
+3. 设置网格产生阴影 - 使用`添加阴影生成器add_shadow_caster`拼图可以指定哪些网格产生阴影
 
-![light-shadow-3](https://cdn.zjbku.com/start/light-shadow-3.png)
-
-在三维软件中，要调出好看的阴影需要设置很多参数，Block3D中也一样。我们先不关注这些细节。要让阴影产生效果，还需要设置产生阴影的物体和接收阴影的物体。通过设置地面的`receiveShadow`属性为`true`，可以让地面接收阴影。
-
-![light-shadow-4](https://cdn.zjbku.com/start/light-shadow-4.png)
-
-使用`add_shadow_caster`拼图可以指定哪些物体产生阴影，这里自然是角色模型。通过场景查看器，或者在三维软件中查看，角色模型分为两部分。我们可以使用两次`add_shadow_caster`拼图，分别设置两个模型产生阴影。或者，使用循环执行这些重复性的操作：
-
-![light-shadow-5](https://cdn.zjbku.com/start/light-shadow-5.png)
-
-其中，橘黄色的拼图名为`scene_get_loaded_asset`，位于场景分类，紧挨着`scene_load_asset`拼图。
+![light-shadow-5](https://cdn.zjbku.com/start/light-shadow-5-min.jpg)
 
 设置完成之后，保存，阴影就出现了。
 
@@ -45,7 +35,7 @@
 
 ![light-shadow-7](https://cdn.zjbku.com/start/light-shadow-7.jpg)
 
-在下方的属性面板中，可以看到调节后的位置和方向参数。方向用于创建灯光时的`direction`参数；位置用于设置灯光的`position`属性。
+在下方的属性面板中，可以看到调节后的位置和方向参数。方向用于创建灯光时的`方向`参数；位置用于设置灯光的`位置`属性。
 
 ![light-shadow-8](https://cdn.zjbku.com/start/light-shadow-8.jpg)
 
@@ -53,9 +43,9 @@
 
 ![light-shadow-9](https://cdn.zjbku.com/start/light-shadow-9.jpg)
 
-这些参数可以通过灯光分类下的`set_shadow_prop`拼图应用到阴影上。
+这些参数可以通过灯光分类下的`阴影属性shadow_properties_accessors`拼图应用到阴影上。
 
-![light-shadow-10](https://cdn.zjbku.com/start/light-shadow-10.png)
+![light-shadow-10](https://cdn.zjbku.com/start/light-shadow-10-min.jpg)
 
 调节后的灯光和阴影效果：
 

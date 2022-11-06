@@ -6,93 +6,75 @@
 
 ## create_tweak_pane
 
-创建面板。参数`title`为面板标题，可以为空。只能创建一个面板。
-
-![create_tweak_pane](https://cdn.zjbku.com/blocks/create_tweak_pane_1.png)
+创建面板。参数`标签`为面板标题，可以为空。只能创建一个面板。
 
 ## pane_add_folder
 
-在面板上添加折叠菜单，用于管理控件。参数`title`为面板标题，可以为空。
-
-![pane_add_folder](https://cdn.zjbku.com/blocks/pane_add_folder.png)
+在面板上添加折叠菜单，用于管理控件。参数`标签`为面板标题，可以为空。
 
 ## pane_add_slider
 
 添加滑块控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- label - 该控件的标签名
-- options - 滑块参数，接收一个对象参数，通过拼图右键菜单的`创建 option`可创建选项拼图
-  - main - 最小值
-  - max - 最大值
-  - step - 步进值
-  - value - 默认值
-- onChange - 当控件的值发生改变时，执行该插槽中的拼图
-
-![pane_add_slider](https://cdn.zjbku.com/blocks/pane_add_slider.png)
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 该控件的标签名
+- 选项 - 滑块参数，接收一个对象参数，通过拼图右键菜单的`创建 选项`可创建选项拼图
+  - 最小值
+  - 最大值
+  - 步进值
+  - 值 - 默认值
+- 当改变时 - 当控件的值发生改变时，执行该插槽中的拼图
 
 ## pane_add_list
 
 添加下拉菜单控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- label - 该控件的标签名
-- options - 菜单项，接收一个对象参数，`key`为菜单选项，`value`为该选项的值
-- onChange - 当控件的值发生改变时，执行该插槽中的拼图
-
-![pane_add_list](https://cdn.zjbku.com/blocks/pane_add_list.png)
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 该控件的标签名
+- 选项 - 菜单项，接收一个对象参数，`键`为菜单选项，`值`为该选项的值
+- 当改变时 - 当控件的值发生改变时，执行该插槽中的拼图
 
 ## pane_add_checkbox
 
 添加单选框控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- label - 该控件的标签名
-- checked - 单选框默认值
-- onChange - 当控件的值发生改变时，执行该插槽中的拼图
-
-![pane_add_checkbox](https://cdn.zjbku.com/blocks/pane_add_checkbox.png)
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 该控件的标签名
+- 勾选 - 单选框默认值
+- 当改变时 - 当控件的值发生改变时，执行该插槽中的拼图
 
 ## pane_add_text
 
 添加文本控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- label - 该控件的标签名
-- text - 文本内容
-- onChange - 当控件的值发生改变时，执行该插槽中的拼图
-
-![pane_add_text](https://cdn.zjbku.com/blocks/pane_add_text.png)
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 该控件的标签名
+- 文本 - 文本内容
+- 当改变时 - 当控件的值发生改变时，执行该插槽中的拼图
 
 ## pane_add_color
 
 添加拾色器控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- label - 该控件的标签名
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 该控件的标签名
 - hex - 默认的16进制颜色值
-- onChange - 当控件的值发生改变时，执行该插槽中的拼图
+- 当改变时 - 当控件的值发生改变时，执行该插槽中的拼图
   
-![pane_add_color](https://cdn.zjbku.com/blocks/pane_add_color.png)
-
 ## pane_add_button
 
 添加按钮控件。
 
 参数：
-- to - 用于指定折叠菜单，可以为空
-- title - 按钮名称
-- onClick - 当触发按钮时，执行该插槽中的拼图
-
-![pane_add_button](https://cdn.zjbku.com/blocks/pane_add_button.png)
+- 到 - 用于指定折叠菜单，可以为空
+- 标签 - 按钮名称
+- 当点击时 - 当触发按钮时，执行该插槽中的拼图
 
 ## pane_get_value
 
 获取控件的值。
-
-![pane_get_value](https://cdn.zjbku.com/blocks/pane_get_value.png)

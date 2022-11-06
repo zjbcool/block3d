@@ -16,13 +16,8 @@
 
 创建一个没有返回值的函数。快捷键`Shift` + `F`。
 
-![procedures_defnoreturn](https://cdn.zjbku.com/blocks/procedures_defnoreturn.png)
-
 ## procedures_defreturn
 
-创建一个带有返回值的函数。快捷键`Alt` + `Shift` + `F`。
-
-![procedures_defreturn](https://cdn.zjbku.com/blocks/procedures_defreturn.png)
-
+创建一个带有返回值的函数。
 
 

@@ -3,6 +3,7 @@ home: true
 heroImage: https://cdn.zjbku.com/logo.svg
 heroAlt: LOGO
 heroText: Block3D
+heroHeight: 200
 tagline: 一款免费的零代码Web3D开发工具
 actions:
   - text: 快速上手
@@ -30,21 +31,17 @@ footer: 版权所有 © 2022-至今 宅家呗
 
 ## 示例
 
-以下拼图加载了一个`.gltf`场景，并将加载的网格显示为卡通轮廓渲染。
-
-![demo](https://cdn.zjbku.com/demo-3.png)
+![demo](https://cdn.zjbku.com/demo-10.png)
 
 ## 可升级
 
-Block3D提供完全免费的标准版本；如果你遇到难以解决的特殊需求，可以升级到更易扩展的专业版。两者区别如下：
-
-|            |免费版                   |专业版                       |备注                           |
-|:----------:|:----------------------:|:--------------------------:|:-----------------------------|
-|**关闭广告**  |✘                       |✔︎                           |                               |
-|**解锁拼图**  |✘                       |✔︎                           |专业版可以解锁更多高级功能拼图      |
-|**插件系统**  |✘                       |✔︎                           |用于订制拼图                     |
-|**代码视图**  |✘                       |✔︎                           |                               |
-|**目标定位**  |满足多数开发者通用的开发需求 |为专业开发者实现特殊需求提供可能性|                               |
+|              |免费版                   |专业版                       |备注                      |
+|:-------------|:----------------------:|:--------------------------:|:-------------------------|
+|**解锁选项卡**  |✘                       |✔︎                           |解除只能创建1个选项卡的限制|
+|**解锁拼图**    |✘                       |✔︎                           |解锁被禁用的高级拼图|
+|**插件系统**    |✘                       |✔︎                           |解锁插件系统，用于订制拼图|
+|**代码视图**    |✘                       |✔︎                           |查看生成的JavaScript代码|
+|**目标定位**    |满足多数开发者通用的开发需求 |为专业开发者实现特殊需求提供可能性|                        |
 
 ::: tip 如何升级专业版？
 在免费版中通过`下拉菜单`-`激活码...`，输入[购买][price]的激活码，升级后标题会出现`Pro`标识，并解锁全部功能。
@@ -52,9 +49,25 @@ Block3D提供完全免费的标准版本；如果你遇到难以解决的特殊�
 
 [price]: https://shop.zjbku.com/product/block3d-license-key/
 
-## 界面
+## 交流
 
-![block3d](https://cdn.zjbku.com/start-5.png) 
+<div class="media-container">
+  <a class="media-icon" href="https://github.com/zjbcool/block3d/discussions" target="_blank">
+    <img src="https://cdn.zjbku.com/media/github-fill.png">
+    <p class="media-text">论坛</p>
+  </a>
+
+  <a class="media-icon" href="https://h5.dingtalk.com/circle/healthCheckin.html?corpId=ding3eff0fcb04937b52984df9a2ac8e1df3&dcfd07d0-73=05c3b591-a9&cbdbhh=qwertyuiop&origin=1#/" target="_blank">
+    <img src="https://cdn.zjbku.com/media/dingding.png">
+    <p class="media-text">钉钉群:21935218</p>
+  </a>
+
+  <div class="media-icon">
+    <img src="https://cdn.zjbku.com/media/e-mail.png">
+    <p class="media-text">block3d@163.com</p>
+  </div>
+
+</div>
 
 ## 媒体
 
@@ -70,17 +83,3 @@ Block3D提供完全免费的标准版本；如果你遇到难以解决的特殊�
   </a>
 </div>
 
-## 交流
-
-<div class="media-container">
-  <a class="media-icon" href="https://github.com/zjbcool/block3d/discussions" target="_blank">
-    <img src="https://cdn.zjbku.com/media/github-fill.png">
-    <p class="media-text">论坛</p>
-  </a>
-
-  <a class="media-icon" href="https://h5.dingtalk.com/circle/healthCheckin.html?corpId=ding3eff0fcb04937b52984df9a2ac8e1df3&dcfd07d0-73=05c3b591-a9&cbdbhh=qwertyuiop&origin=1#/" target="_blank">
-    <img src="https://cdn.zjbku.com/media/dingding.png">
-    <p class="media-text">群:21935218</p>
-  </a>
-
-</div>

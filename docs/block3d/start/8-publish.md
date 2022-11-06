@@ -6,17 +6,15 @@
 
 通过菜单栏-`下拉菜单`-`发布...`，可以打开发布面板（快捷键`Ctrl` + `P`）。发布面板用于将Block3D应用发布成可部署到服务器的静态文件。
 
-![publish-app](https://cdn.zjbku.com/start/publish-app.jpg)
+![publish-app](https://cdn.zjbku.com/start/publish-app-2-min.jpg)
 
 ### 模块：
 
 - Babylon - 底层引擎babylon.js，核心模块，默认勾选
 - PEP - 用于兼容触屏设置，建议始终勾选
-- glTF 2.0 Loader - 用于加载.gltf/.glb格式的文件
-- Obj Loader - 用于加载.obj格式的文件
-- Stl Loader - 用于加载.stl格式的文件
-- GUI - 如果用到GUI分类拼图，需要勾选
-- TweakPane - 如果用到TweakPane分类拼图，需要勾选
+- .glTF/.glb加载器 - 用于加载.gltf/.glb格式的文件
+- .obj加载器 - 用于加载.obj格式的文件
+- .stl加载器 - 用于加载.stl格式的文件
 
 ### 应用：
 
@@ -24,7 +22,9 @@
 
 ### 构建：
 
-勾选`压缩JS文件`，会将生成的JS文件进行代码压缩。
+- 覆盖index.html - 每次构建会覆盖之前的文件
+- 覆盖main.js - 每次构建会覆盖之前的文件
+- 压缩JS文件 - 会将生成的JS文件进行代码压缩
 
 ## 静态文件
 

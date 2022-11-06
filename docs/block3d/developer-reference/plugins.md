@@ -1,12 +1,16 @@
-# 插件 <Badge text="pro"/>
+# 插件开发 <Badge text="pro"/>
 
-本节内容适合程序员阅读。
+插件系统是Block3D专业版解锁的功能之一，本文面向专业版开发者介绍插件的开发。
 
 [[toc]]
 
-Block3D拼图系统采用谷歌[Blockly](https://developers.google.cn/blockly/)开发，专业版用户可以使用该技术开发拼图插件，实现订制拼图。订制拼图将显示在工具栏最底部。
+Block3D拼图插件遵循谷歌[Blockly](https://developers.google.cn/blockly/)标准开发，要开发出灵活、实用的拼图，可能需要花点时间仔细阅读它的文档。一开始，为了降低难度你可以使用[可视化工具](https://developers.google.cn/blockly/guides/create-custom-blocks/blockly-developer-tools)快速定义简单的拼图。
 
-拼图插件包括两部分：工具箱和拼图。
+一个拼图插件包括两类文件：工具箱（.json）和拼图(.block)。
+
+## 安装插件
+
+将包含`.json`和`.block`文件的插件文件夹拷贝到windows路径`我的文档\block3d\plugins`，macOS路径`文稿\block3d\plugins`，刷新浏览器即可生效。
 
 ## 定义工具箱
 
@@ -49,7 +53,7 @@ Block3D拼图系统采用谷歌[Blockly](https://developers.google.cn/blockly/)�
 
 ## 定义拼图
 
-拼图是一个或多个`.block`文件，用于定义拼图外观和要生成的JavaScript代码。见`hello.block`模板：
+拼图是一个或多个`.block`文件，用于定义拼图外观和要生成的JavaScript代码。可将前文介绍的可视化工具生成的代码复制进该文件。见`hello.block`模板：
 
 ```js
 Blockly.Blocks['say_hello'] = {
@@ -74,6 +78,3 @@ Blockly.JavaScript['say_hello'] = block => {
 }
 ```
 
-## 如何使扩展生效？
-
-将上述文件拷贝到`用户\我的文档\block3d\extensions`目录下即可生效。
