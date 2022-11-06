@@ -10,7 +10,7 @@ actions:
     link: /block3d/start/1-install
     type: primary
   - text: 立即下载
-    link: /download/
+    link: /download
     type: secondary
 features:
   - title: 中文可视化编程
