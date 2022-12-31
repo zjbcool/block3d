@@ -1,5 +1,59 @@
 # 更新日志
 
+## 1.0.0-beta.11(2022)
+
+- 破坏性更新
+  - 不再为场景创建默认环境贴图，现在需要通过`场景属性`拼图或者`创建环境`拼图手动指定。这样修改是因为有时候场景中可能没有PBR材质，就用不到环境贴图了
+  - 网格分类移除`创建贴花`拼图，会在下个版本中弃用
+- 新增拼图
+  - 数字分类新增`转为数字math_convert_to_number`拼图，用于将其它类型的值转为数字
+  - 数字分类新增`16进制math_hex`拼图，它主要用于设置场景中节点的图层蒙板
+  - 数组分类新增`数组方法array_methods`拼图，可实现数组find filter map方法
+  - 对象分类新增`获取对象成员get_object_member`拼图，可支持链式获取对象成员
+  - 场景分类新增`资产管理器方法scene_assets_manager_methods`拼图，用于代替`scene_load_asset`拼图
+  - 网格分类`创建网格mesh_create_set_shapes`拼图新增创建`贴花`选项
+  - 灯光分类下新增`删除灯光remove_light`拼图
+  - 事件分类下新增`多帧time_multi_frame` `下一帧time_next_frame` `等待time_await_delay`3个拼图，用于处理跨帧逻辑
+  - 事件分类下新增`监听场景事件listen_scene_event`拼图，推荐使用该拼图并选择"场景渲染前"选项，代替时间分类下的`每帧time_every_frame`拼图
+  - 时间分类下新增`创建计时器create_advanced_timer` `计时器属性advanced_timer_properties_accessors` `计时器方法advanced_timer_methods`3个拼图，用于实现高级计时器功能
+- 修改拼图
+  - 场景分类下`创建环境scene_create_default_environment`拼图新增选项`环境贴图`，用于为PBR材质指定环境照明和反射纹理
+  - `创建环境`拼图的选项中如果没有指定“天空盒纹理”、“地面纹理”和“环境贴图”，默认从babylon远程服务器加载，以避免选项为空而本地不存在这3张贴图时造成加载错误
+  - 场景分类下`简易环境scene_create_easy_environment`拼图修改拼图提示，提醒用户该拼图依赖项目路径/assets/texutre下的3张贴图： backgroundSkybox.dds backgroundGround.png environment.dds
+  - 场景分类下`资产管理器scene_assets_manager`拼图增加高级选项，可开启和关闭`加载中`回调插槽，另外增加了`加载界面`参数，可实现自定义属性加载界面
+  - 场景分类下重做了`创建加载界面scene_create_loading_screen`拼图，用来代替之前的两个创建加载器的拼图
+  - 事件分类调整了拼图顺序，增加了一个`动作`子类
+  - 事件分类下使用`listen_custom_event`拼图代替`add_custom_event_listener`拼图
+  - 事件分类下使用`listen_pointer_event`拼图代替`pointer_event`拼图
+  - 事件分类下使用`listen_keyboard_event`拼图代替`keyboard_event`拼图
+  - 为基础拼图以外的所有拼图增加了图标，以表明拼图所属分类，便于查找
+  - 系统分类下`获取函数get_function_by_name`拼图增加下拉菜单，当函数被创建、删除、修改时，可以做出动态响应
+  - 系统分类下`执行选项卡exec_tab`拼图增加下拉菜单，当选项卡被创建、删除、重命名时，可以做出动态响应
+  - 为`合并文本text_join`拼图增加快捷键 `shift + T`
+  - 为`文本元素text_item`拼图增加快捷键 `shift + alt + T`
+  - 数组分类的`创建数组元素array_create_item`拼图增加了序号，可以更直观地展示数组元素的索引（脚标）
+- 界面
+  - 改进主题切换功能，支持根据系统切换明暗主题
+  - 原来的侧边栏改为商城，更换了图标
+  - 修改设置面板，将外观、语言功能加入其中，新增了拼图和代码编辑器的配置选项
+- 汉化
+  - 网格属性`椭圆球`改为`椭球体`
+  - ArcRotateCamera翻译改为`环绕相机`，原来是`轨道相机`，这是受threejs习惯的影响，修改后更符合原意
+  - 事件分类的`add_custom_event_listener`翻译改为`监听事件`
+  - 所有属性类拼图下拉菜单的`访问器` 改为 `状态`，虽然与原文accessor有出入，但更易理解
+- 文档
+  - 文档由线上文档改为本地文档，这样在没有网络的情况下也可以使用；线上文档仍然可用
+- 示例
+  - 2_cannoCamera - 通过`创建环境`拼图添加环境贴图
+  - 3_showroom - 通过`创建环境`拼图添加环境贴图
+  - 4_classroom - 通过`场景属性`拼图添加环境贴图；增加按键显示界面
+  - 6_playground - 添加环境贴图，修改环境强度
+  - 8_edgeRender - 添加环境贴图
+  - 9_changeTexture - 网格改为标准材质；场景中加了一个聚光灯
+  - 10-加载卸载 - 新增的示例，用来演示加载容器、卸载场景、动态加载
+- 修复
+  - 修复系统分类`获取函数get_function_by_name`拼图代码生成错误问题
+
 ## 1.0.0-beta.10(2022-11-06)
 
 - 破坏性更新

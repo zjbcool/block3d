@@ -16,7 +16,9 @@ Block3D提供了默认的环境和相机，以方便用户快速进行开发。�
 
 ## 环境
 
-环境由一个天空盒和一个地面组成，用于为场景提供背景和地面。创建环境可以使用场景分类下的[简易环境](../blocks-reference/scenes.md#scene-create-easy-environment)或[创建环境](../blocks-reference/scenes.md#scene-create-default-environment)拼图。默认地面带有一张`.png`格式的贴图`backgroundGround.png`；天空盒背景带有`.dds`（或`.env`）格式的立方体贴图`backgroundSkybox.dds`。这两张贴图位于项目文件夹的`assets/texture`中。
+环境由一个天空盒和一个地面组成，用于为场景提供背景和地面。创建环境可以使用场景分类下的[简易环境](../blocks-reference/scenes.md#scene-create-easy-environment)或[创建环境](../blocks-reference/scenes.md#scene-create-default-environment)拼图。默认地面带有一张名为`backgroundGround.png`的贴图；天空盒背景带有一张名为`backgroundSkybox.dds`（或.env格式）的立方体贴图。此外，这两个拼图还可以为场景指定环境贴图，默认是一张名为`environment.dds`的立方体贴图。环境贴图只对场景中的PBR材质有效，用于提供环境照明和反射。
+
+注意：`简易环境`拼图使用的是本地贴图，位于`assets/texture`中。`创建环境`拼图若未在选项中指定贴图地址，则从babylon远程服务器加载。
 
 ![skybox-ground](https://cdn.zjbku.com/start/skybox-ground.jpg)
 
@@ -29,13 +31,13 @@ Block3D提供了默认的环境和相机，以方便用户快速进行开发。�
 
 ## 相机
 
-名为`defaultCamera`的默认相机是一种`轨道相机`类型的相机，可以围绕一个目标点进行环绕观察，也可称为“环绕相机”。使用相机分类下的`相机属性`拼图，可以设置和获取它的所有参数。
+名为`defaultCamera`的默认相机是一种`环绕相机`类型的相机，可以围绕一个目标点进行环绕观察，也可称为“轨道相机”。使用相机分类下的`相机属性`拼图，可以设置和获取它的所有参数。
 
 如果视图中你的模型看起来太远或太近，这是由于相机观察半径太大或太小所致，这时可以通过该拼图设置相机的`半径`和`半径上限`参数，获得合理构图。
 
 获取相机可以使用`节点`分类下带有相机图标的`相机选择器`拼图，或者该分类下的`获取节点`拼图。
 
-![camera-properties-accessors](https://cdn.zjbku.com/start/camera-properties-accessors.jpeg)
+![camera-properties-accessors](https://cdn.zjbku.com/start/camera-properties-accessors-1-min.jpg)
 
 ## 下一步
 

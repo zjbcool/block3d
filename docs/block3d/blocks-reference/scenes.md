@@ -36,7 +36,7 @@
 
 访问器：
 - 激活相机 activeCameras - 场景中所有的激活相机
-- 环境贴图 environmentTexture - 用于所有PBR材质的反射纹理。由于在大多数场景中，它们是相同的（多房间等除外），因此在此处设置比在所有材质中都更容易。
+- 环境贴图 environmentTexture - 用于所有PBR材质的反射纹理。因为在大多数情况下它们是共用的，所以在这里设置比在每个材质中分别设置都更方便。也可以在创建环境时设置它。
 - 启用雾 fogEnabled - 设置是否在当前场景中启用雾效
 - 雾模式 fogMode - 设置雾效模式0-无1-指数2-指数23-线性
 - 启用灯光 lightsEnabled - 设置在当前场景中是否启用灯光 lights
@@ -49,7 +49,13 @@
 
 ### scene_create_easy_environment
 
-用于快速创建环境。环境由天空盒和地面组成，可根据需要选择是否创建。
+简易环境。用于快速创建环境。环境由天空盒和地面组成，可根据需要选择是否创建。
+
+该拼图需要用到位于`项目路径/assets/texture`下的3张贴图，使用该拼图时要确保以下贴图存在：
+
+- 天空盒纹理 - assets/texture/backgroundSkybox.dds
+- 地面纹理 - assets/texture/backgroundGround.png
+- 环境贴图 - assets/texture/environment.dds
 
 ### scene_create_default_environment
 
@@ -64,6 +70,7 @@
 - 创建天空盒createSkybox - 是否创建天空盒
 - 启用地面反射enableGroundMirror - 创建镜面纹理结合到地面
 - 启用地面阴影enableGroundShadow - 启用地面接收阴影
+- 环境贴图environmentTexture - 场景中使用的环境贴图。可以是立方体纹理或者贴图地址，如果未指定纹理或地址，则从babylon远程服务器加载
 - 地面颜色groundColor - 默认混入地面纹理的颜色 默认为clearColor
 - 地面反射数量groundMirrorAmount - 指定地面镜面可见度
 - 地面反射模糊粒度groundMirrorBlurKernel - 指定地面镜面模糊颗粒大小
@@ -132,7 +139,7 @@
 
 将更新加载器拼图放入[资产管理器scene_assets_manager](#scene-assets-manager)拼图的`加载中`插槽中；将结束加载器拼图放入`就绪`插槽中。
 
-### scene_assets_manager
+### scene_init_assets_manager
 
 该拼图用于加载Block3D应用所需的所有类型的资产。
 

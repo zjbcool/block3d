@@ -6,6 +6,20 @@
 
 ## 事件
 
+### create_custom_event
+
+创建自定义事件。事件分3部分：事件、派发事件和监听事件。
+
+### dispatch_custom_event
+
+派发事件。向事件的监听者发出通知。
+
+`数据`参数通过接收一个对象，可以在派发事件时携带参数。
+
+### add_custom_event_listener
+
+事件监听。当事件触发时执行`执行`插槽中的拼图。
+
 ### pointer_event
 
 指针事件。Block3D中的事件同时兼容PC设备和移动设备。
@@ -38,6 +52,8 @@
 ### get_key_input
 
 用于返回键盘按键和按键代码。
+
+## 动作
 
 ### event_create_action
 
@@ -73,20 +89,6 @@
 将动作指定给网格。
 
 `动作`参数接收一个包含动作的数组。
-
-### create_custom_event
-
-创建自定义事件。事件分3部分：事件、派发事件和监听事件。
-
-### dispatch_custom_event
-
-派发事件。向事件的监听者发出通知。
-
-`数据`参数通过接收一个对象，可以在派发事件时携带参数。
-
-### add_custom_event_listener
-
-事件监听。当事件触发时执行`do`插槽中的拼图。
 
 ## 射线
 
