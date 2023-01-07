@@ -1,0 +1,19 @@
+:root {
+  --vp-c-orange: #e16531;
+  --vp-c-orange-light: #e96d38;
+  --vp-c-orange-lighter: #f67842;
+  --vp-c-orange-dark: #ce5e2e;
+  --vp-c-orange-darker: #ca5c2d;
+
+  --vp-home-hero-name-color: var(--vp-c-orange);
+  --vp-button-brand-bg: var(--vp-c-orange);
+  --vp-button-brand-border: var(--vp-c-orange-lighter);
+  --vp-button-brand-hover-bg: var(--vp-c-orange-dark);
+  --vp-button-brand-hover-border: var(--vp-c-orange-darker);
+
+  --vp-c-brand: var(--vp-c-orange);
+  --vp-c-brand-light: var(--vp-c-orange-light);
+  --vp-c-brand-lighter: var(--vp-c-orange-lighter);
+  --vp-c-brand-dark: var(--vp-c-orange-dark);
+  --vp-c-brand-darker: var(--vp-c-orange-darker);
+}
