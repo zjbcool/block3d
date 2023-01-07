@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 import navbar from './navbar';
 import sidebar from './sidebar';
 
-
 export default defineConfig({
   lang: 'zh-CN',
   base: '/block3d/',
