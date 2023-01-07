@@ -4,7 +4,7 @@ import sidebar from './sidebar';
 
 export default defineConfig({
   lang: 'zh-CN',
-  base: '/block3d/',
+  base: '/',
   appearance: true,
   // outDir: '../../dest-docs',
   title: '宅家呗',
