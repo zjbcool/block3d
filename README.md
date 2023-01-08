@@ -4,7 +4,7 @@
 
 此仓库专为方便Block3D用户交流和反馈，非代码。
 
-- 官网：<https://zjbku.com/>
+- 官网：<https://www.zjbku.com/>
 - 钉钉群：21935218
 
 
