@@ -6,7 +6,6 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   appearance: true,
-  // outDir: '../../dest-docs',
   title: '宅家呗',
   description: '一款免费的零代码Web3D开发工具',
   head: [

@@ -10,7 +10,7 @@
 
 可以发现，角色背对我们的原因是，模型缩放属性的z值为-1。修复此问题，可以在`网格`分类的`变换`子类中，找到第一个`网格变换set_get_mesh_transform`拼图，将`__root__`的缩放改为`1,1,1`。此拼图用于设置和获取网格的变换属性，即位置、旋转、缩放。注意，此拼图要放到`资产管理器scene_assets_manager`拼图的'完成'插槽下，即当网格加载完成后执行此操作。
 
-![mesh-material-1](/img/start/set-transform.jpg)
+![mesh-material-1](https://cdn.zjbku.com/start/set-transform.jpg)
 
 ## 创建地面
 
@@ -30,7 +30,7 @@
 
 材质可以通过三维软件导出，也可以在Block3D中创建。下面的示例中，使用`创建材质create_material`拼图创建了一个标准类型的材质，然后使用`材质属性material_properties_accessors`设置了漫反射颜色和高光颜色属性，最后，使用`网格属性mesh_properties_accessors`拼图将这个材质赋给了地面。
 
-![mesh-material-10](/img/start/mesh-material.jpg)
+![mesh-material-10](https://cdn.zjbku.com/start/mesh-material.jpg)
 
 保存之后，发现地面变成了黑色。这是因为场景中还没有灯光，而标准材质并不受环境照明影响。
 

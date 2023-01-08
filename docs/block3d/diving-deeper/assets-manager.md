@@ -15,7 +15,7 @@ Block3D通过[资产管理器scene_assets_manager](../blocks-reference/scenes.md
 
 在用户等待资产加载的过程中，提供一个加载界面展示加载进度和展示LOGO，可以改善用户体验。使用场景分类下的`创建加载界面scene_create_loading_screen`拼图可以很方便地实现这个功能。
 
-![assets-manager-5](/img/diving/loading-screen.jpg)
+![assets-manager-5](https://cdn.zjbku.com/diving-deeper/loading-screen.jpg)
 
 创建加载界面的选项中的`logo图片`需要将图片转为base64编码，可以使用`下拉菜单-工具-Base64编辑器`转换。
 

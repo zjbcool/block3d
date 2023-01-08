@@ -8,7 +8,7 @@
 
 使用`灯光属性light_properties_accessors`拼图可以设置灯光的属性，如强度、漫反射等
 
-![light-shadow-1](/img/start/light-shadow.jpg)
+![light-shadow-1](https://cdn.zjbku.com/start/light-shadow.jpg)
 
 将创建灯光的拼图放在创建地面之前，以使灯光能对地面产生作用。有了灯光，地面的材质效果就表现出来了。
 
@@ -20,7 +20,7 @@
 2. 设置网格接收阴影 - 默认网格不会接收阴影，需要使用网格分类的`网格属性mesh_properties_accessors`拼图设置地面`接收阴影`为`true`
 3. 设置网格产生阴影 - 使用`添加阴影生成器add_shadow_caster`拼图可以指定哪些网格产生阴影
 
-![light-shadow-5](/img/start/light-shadow-5.jpg)
+![light-shadow-5](https://cdn.zjbku.com/start/light-shadow-5.jpg)
 
 设置完成之后，保存，阴影就出现了。
 
@@ -45,7 +45,7 @@
 
 这些参数可以通过灯光分类下的`阴影属性shadow_properties_accessors`拼图应用到阴影上。
 
-![light-shadow-10](/img/start/light-shadow-10.jpg)
+![light-shadow-10](https://cdn.zjbku.com/start/light-shadow-10.jpg)
 
 调节后的灯光和阴影效果：
 

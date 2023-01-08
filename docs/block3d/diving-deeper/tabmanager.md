@@ -39,7 +39,7 @@
 
 选项卡中，除了默认的`main`选项卡是自动执行的，用户自行创建的选项卡需要使用`系统 System`分类下的[exec_tab](../blocks-reference/system.md#exec-tab)拼图指定要执行的选项卡。这样做的好处是，用户可以完全控制选项卡的执行时机。
 
-![execute_tab](/img/diving/exec-tab-min.jpg)
+![execute_tab](https://cdn.zjbku.com/diving-deeper/exec-tab-min.jpg)
 
 使用[返回选项卡结果 return_tab_result](../blocks-reference/system.md#return-tab-result)拼图可以从`main`以外的选项卡内部返回一个值。
 

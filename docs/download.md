@@ -7,10 +7,11 @@
 |[block3d-v1.0.0-beta.12-win-x64.zip][1]    |win10+  |
 |[block3d-v1.0.0-beta.12-macos-arm64.zip][2]|macOS   |
 
-[更新日志](./changelog.md) | [所有发行版](https://github.com/zjbcool/block3d/releases) ｜ [升级专业版](./professional-versions.md)
+[更新日志](./changelog.md) | [所有发行版][release] ｜ [升级专业版](./professional-versions.md)
 
-[1]:https://cdn.zjbku.com/download/block3d-v1.0.0-beta.12-win-x64.zip
-[2]:https://cdn.zjbku.com/download/block3d-v1.0.0-beta.12-macos-arm64.zip
+[1]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.12/block3d-v1.0.0-beta.12-win-x64.zip
+[2]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.12/block3d-v1.0.0-beta.12-macos-arm64.zip
+[release]:https://github.com/zjbcool/block3d/releases
 
 ::: warning 注意
 测试版仅用于测试新功能，不适合项目开发。

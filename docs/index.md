@@ -13,7 +13,7 @@ hero:
   text: 一款免费的零代码Web3D开发工具
   tagline: 人人都能开发可交互3D网页
   image:
-    src: /media/example.png
+    src: https://cdn.zjbku.com/example/example-min.png
     alt: Block3D
   actions:
     - theme: brand
