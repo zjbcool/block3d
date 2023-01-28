@@ -75,6 +75,7 @@ export default {
         { text: "辅助", link: "/block3d/blocks-reference/helpers" },
         { text: "界面", link: "/block3d/blocks-reference/gui" },
         { text: "调参", link: "/block3d/blocks-reference/tweakpane" },
+        { text: "寻径", link: "/block3d/blocks-reference/pathfinding" },
       ],
     },
     {

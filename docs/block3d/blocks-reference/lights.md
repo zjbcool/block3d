@@ -47,16 +47,16 @@
 
 ### 灯光属性 light_properties_accessors {#light-properties-accessors}
 
-用于设置或获取灯光属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取灯光属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
-灯光根据其类型有不同的属性和状态。
+灯光根据其类型有不同的属性和访问器。
 
 灯光属性有：
 - 漫反射：漫反射，赋予对象基础颜色
 - 强度：灯光强度
 - 高光：注意: 不会影响PBR材质
 
-灯光状态：
+灯光访问器：
 - 方向：设置或获取灯光方向用于产生阴影
 - 仅包含网格：设置或获取仅被灯光影响的网格
 - 内角：内角。仅在gltf衰减模式中使用，它定义了在定向衰减开始，在裁切角度（外角）之前的角度，
@@ -84,7 +84,7 @@
 
 ### 阴影属性 shadow_properties_accessors {#shadow-properties-accessors}
 
-用于设置或获取阴影属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取阴影属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
 阴影属性：
 
@@ -93,12 +93,12 @@
 - 视锥体边缘衰减: frustumEdgeFalloff - 控制阴影在视锥体边缘淡出的程度
 - 使用不透明度贴图用于透明阴影: useOpacityTextureForTransparentShadow - 如果为true，那么在透明阴影中使用不透明度贴图opacity texture的alpha通道，而不是漫反射通道。
 
-阴影状态：
+阴影访问器：
 
 - 偏移：bias - 设置偏移: 偏移用于深度防止阴影错误 (在灯光方向上)
-- 模糊框偏移：blurBoxOffset - 设置模糊方框偏移：偏移用于模糊通道\n仅当useKernelBlur = false时有效
-- 模糊粒度：blurKernel - 设置模糊粒度：模糊通道颗粒大小\n仅当useKernelBlur = true时有效
-- 模糊缩放：blurScale - 设置模糊缩放：与主阴影贴图相比，模糊纹理的比例\n2表示半尺寸
+- 模糊框偏移：blurBoxOffset - 设置模糊方框偏移：偏移用于模糊通道，仅当使用模糊内核为false时有效
+- 模糊内核：blurKernel - 设置模糊内核：模糊通道内核大小\n仅当useKernelBlur = true时有效
+- 模糊缩放：blurScale - 设置模糊缩放：与主阴影贴图相比，模糊纹理的比例 2表示半尺寸
 - 接触硬化灯光大小UV比率：contactHardeningLightSizeUVRatio - 设置PCSS中使用的灯光大小(在阴影贴图uv单元中)，以确定屏蔽器搜索区域和半影大小。使用一个比例有助于保持形状稳定独立于贴图大小。它不解释光线投影，因为它在光线设置或光线位置变化期间有太多的不稳定性。只有当useContactHardeningShadow为true时才有效
 - 暗度：darkness - 设置或获取实际阴影暗度
 - 深度缩放：depthScale - 在ESM模式下设置深度比例。这会覆盖存储在灯光中的缩放
@@ -112,10 +112,10 @@
 - 使用近似指数阴影贴图：useCloseExponentialShadowMap - 设置当前过滤模式为"close ESM"（使用指数的倒数来防止急剧衰减伪影）
 - 使用接触硬化阴影：useContactHardeningShadow - 设置当前过滤模式为"PCSS" (contact hardening).
 - 使用指数阴影贴图：useExponentialShadowMap - 设置当前过滤模式为ESM.
-- 使用颗粒模糊：useKernelBlur - 设置模糊通道是颗粒模糊(如果为真)还是方框模糊。仅在过滤模式（useBlurExponentialShadowMap等）下有效
+- 使用内核模糊：useKernelBlur - 设置模糊通道是内核模糊(如果为真)还是方框模糊。仅在过滤模式（useBlurExponentialShadowMap等）下有效
 - 使用百分比近似过滤：usePercentageCloserFiltering - 设置当前过滤模式为"PCF" (percentage closer filtering).
 - 使用泊松采样：usePoissonSampling - 设置当前过滤模式为Poisson采样
 
 ### 添加阴影生成器 add_shadow_caster {#add-shadow-caster}
 
-设置可以产生阴影的网格。
+设置可以产生阴影的网格（包含网格的子级）。

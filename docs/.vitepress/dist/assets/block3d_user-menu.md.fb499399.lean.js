@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t,a as c}from"./app.9d829298.js";const b=JSON.parse('{"title":"Block3D用户手册","description":"","frontmatter":{},"headers":[],"relativePath":"block3d/user-menu.md"}'),r={name:"block3d/user-menu.md"},s=c("",5),a=[s];function l(n,i,d,_,p,h){return t(),o("div",null,a)}const k=e(r,[["render",l]]);export{b as __pageData,k as default};

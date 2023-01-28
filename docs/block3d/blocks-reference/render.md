@@ -12,7 +12,7 @@
 
 ### 渲染效果属性 rendering_effects_properties_accessors {#rendering-effects-properties-accessors}
 
-用于设置或获取渲染效果属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取渲染效果属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
 属性：
 - 色差chromaticAberration - 色差效果，可将图片的RGB通道分离出来
@@ -21,7 +21,7 @@
 - 颗粒grain - 颗粒效果，在图片上添加噪点
 - 图像处理imageProcessing - 图像处理效果，用于改变图片亮度、对比度等
 
-状态：
+访问器：
 - 启用泛光bloomEnabled - 启用或禁用泛光效果
 - 泛光颗粒bloomKernel - 模糊颗度
 - 泛光缩放bloomScale - 泛光缩放，值越小，性能越好
@@ -34,7 +34,7 @@
 
 ### 后处理属性 post_process_properties {#post-process-properties}
 
-用于设置或获取景深、颗粒、图像处理、锐化等后处理效果属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取景深、颗粒、图像处理、锐化等后处理效果属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
 景深属性：
 - fStop - 相机的F-Stop。最终的快门直径可通过镜头大小/F-Stop得到
@@ -62,14 +62,14 @@
 
 ### 高亮层属性 highlight_layer_properties_accessors {#highlight-layer-properties-accessors}
 
-用于设置或获取高亮层属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取高亮层属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
 属性：
 - 启用isEnabled - 是否启用高亮层
 - 内辉光innerGlow - 是否激活内部辉光
 - 外辉光outerGlow - 是否激活外部辉光
 
-状态：
+访问器：
 - 水平模糊度blurHorizontalSize - 水平方向模糊度
 - 垂直模糊度blurVerticalSize - 垂直方向模糊度
 - 相机camera - 获取附加到辉光层的相机
@@ -90,14 +90,14 @@
 
 ### 辉光层属性 glow_layer_properties_accessors {#glow-layer-properties-accessors}
 
-用于设置或获取辉光层属性或状态。状态是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同。
+用于设置或获取辉光层属性或访问器。访问器是访问对象属性时触发的回调函数，用于设置或获取对象的内部数据，用法与属性相同，在拼图中表示为"属性*"。
 
 属性：
 - 启用isEnabled - 是否启用辉光层
 - 自然颜色neutralColor - 用于生成辉光贴图的纹理背景色
 
-状态：
-- 模糊粒度blurKernelSize - 设置或获取模糊粒度
+访问器：
+- 模糊内核大小blurKernelSize - 设置或获取模糊内核大小
 - 相机camera - 获取附加到辉光层的相机
 - 强度intensity - 设置或获取辉光强度
 - 主纹理mainTexture - 获取特效渲染的主纹理
