@@ -5,6 +5,7 @@ import sidebar from './sidebar';
 export default defineConfig({
   lang: 'zh-CN',
   base: '/',
+  outDir: '../../dist-doc',
   appearance: true,
   title: '宅家呗',
   description: '一款免费的零代码Web3D开发工具',
