@@ -25,5 +25,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ../../dist-doc
+          publish_dir: docs/.vitepress/dist
           cname: www.zjbku.com
