@@ -1,21 +1,17 @@
 # 下载
 
-## Block3D <Badge type="warning" text="beta" />
+## Block3D
 
-|测试版 |操作系统 |
+|发行版 |操作系统 |
 |:-----|:-------|
-|[block3d-v1.0.0-beta.13-win-x64.zip][1]    |win10+  |
-|[block3d-v1.0.0-beta.13-macos-arm64.zip][2]|macOS   |
+|[block3d-v1.0.0-win-x64.zip][1]    |win10+  |
+|[block3d-v1.0.0-macos-arm64.zip][2]|macOS   |
 
 [更新日志](./changelog.md) | [所有发行版][release] ｜ [升级专业版](./professional-version.md)
 
-[1]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.13/block3d-v1.0.0-beta.13-win-x64.zip
-[2]:https://github.com/zjbcool/block3d/releases/download/v1.0.0-beta.13/block3d-v1.0.0-beta.13-macos-arm64.zip
+[1]:https://github.com/zjbcool/block3d/releases/download/v1.0.0/block3d-v1.0.0-win-x64.zip
+[2]:https://github.com/zjbcool/block3d/releases/download/v1.0.0/block3d-v1.0.0-macos-arm64.zip
 [release]:https://github.com/zjbcool/block3d/releases
-
-::: warning 注意
-测试版仅用于测试新功能，不适合项目开发。
-:::
 
 ## .babylon导出插件 <Badge type="info" text="可选" />
 

@@ -30,10 +30,10 @@
 - 当销毁时：onDisposeObservable -当网格销毁时触发时此事件
 - 描边颜色：outlineColor - 当渲染描边时，定义颜色值
 - 描边宽度：outlineWidth - 当渲染描边时，定义描边宽度
-- 叠加层不透明度：overlayAlpha - 当渲染叠加层时，定义不透明度
-- 叠加层颜色：overlayColor - 当渲染叠加层时，定义颜色值
+- 覆盖层不透明度：overlayAlpha - 当渲染覆盖层时，定义不透明度
+- 覆盖层颜色：overlayColor - 当渲染覆盖层时，定义颜色值
 - 渲染描边：renderOutline - 设置或获取是否同时渲染描边
-- 渲染叠加层：renderOverlay - 设置或获取是否同时渲染叠加层
+- 渲染覆盖层：renderOverlay - 设置或获取是否同时渲染覆盖层
 - 显示边界盒：showBoundingBox - 设置或获取是否同时渲染边界盒
 
 访问器：

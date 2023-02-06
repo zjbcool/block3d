@@ -4,13 +4,13 @@ title: 首页
 head:
   - - meta
     - name: description
-      content: 一款免费的零代码Web3D开发工具
+      content: 一款免费零代码Web3D开发工具
   - - meta
     - name: keywords
       content: 拼图编程 可视化编程 图形编程 中文编程 web3d webgl blender 3dsMax maya
 hero:
   name: Block3D
-  text: 一款免费的零代码Web3D开发工具
+  text: 一款免费零代码Web3D开发工具
   tagline: 人人都能开发可交互3D网页
   image:
     src: https://cdn.zjbku.com/example/example-min.png
