@@ -1,5 +1,13 @@
 # 更新日志
 
+## 1.1.0(开发中)
+
+- 拼图
+  - GUI分类使用`gui_create_adt_for_fullscreen_ui`代替`create_adt_for_fullscreen_ui`拼图，新的创建全屏UI拼图不再返回结果。原有拼图仍然可用，但是不再工具栏显示。
+  - GUI分类使用`gui_get_control_by_name`代替`gui_get_control`拼图，新的获取控件拼图原来的UI输入改为"网格纹理"，默认关闭，需要在高级选项中开启。原有拼图仍然可用，但是不再工具栏显示。
+  - GUI分类新增`销毁全屏UI gui_dispose_fullscreen_ui`拼图
+  - 新增输入分类，包含用于创建虚拟摇杆的一组拼图
+
 ## 1.0.0(2023-02-06)
 
 - 更新示例程序
