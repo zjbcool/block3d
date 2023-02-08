@@ -1,6 +1,6 @@
 # 更新日志
 
-## 1.1.0(开发中)
+## 1.1.0(2023-01-08)
 
 - 拼图
   - GUI分类使用`gui_create_adt_for_fullscreen_ui`代替`create_adt_for_fullscreen_ui`拼图，新的创建全屏UI拼图不再返回结果。原有拼图仍然可用，但是不再工具栏显示。

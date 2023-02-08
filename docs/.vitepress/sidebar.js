@@ -72,6 +72,7 @@ export default {
         { text: "时间", link: "/block3d/blocks-reference/time" },
         { text: "动画", link: "/block3d/blocks-reference/animation" },
         { text: "渲染", link: "/block3d/blocks-reference/render" },
+        { text: "输入", link: "/block3d/blocks-reference/input" },
         { text: "辅助", link: "/block3d/blocks-reference/helpers" },
         { text: "界面", link: "/block3d/blocks-reference/gui" },
         { text: "调参", link: "/block3d/blocks-reference/tweakpane" },

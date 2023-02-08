@@ -4,7 +4,13 @@
 
 [[toc]]
 
-## 创建全屏UI create_adt_for_fullscreen_ui {#create-adt-for-fullscreen-ui}
+## 创建全屏UI gui_create_adt_for_fullscreen_ui {#gui-create-adt-for-fullscreen-ui}
+
+用于从包含UI信息的json文件创建用户界面。json数据可通过[加载资产scene_load_asset](./scenes.md#scene-load-asset)拼图以二进制文件方式加载，然后通过[获取加载资产scene_get_loaded_from_asset](./scenes.md#scene-get-loaded-from-asset)拼图获取json数据。整个场景中只能有一个全屏UI。
+
+- 视网膜屏幕 - 用于在视网膜屏幕或高ppi（pixels per inch）屏幕上让UI显示更加清晰
+
+## 创建全屏UI create_adt_for_fullscreen_ui <Badge type="warning" text="弃用" />{#create-adt-for-fullscreen-ui}
 
 用于从包含UI信息的json文件创建用户界面。json数据可通过[加载资产scene_load_asset](./scenes.md#scene-load-asset)拼图以二进制文件方式加载，然后通过[获取加载资产scene_get_loaded_from_asset](./scenes.md#scene-get-loaded-from-asset)拼图获取json数据。
 
@@ -25,7 +31,17 @@
 
 定义图层蒙板用于将图层仅限于场景的某些相机。
 
-## 获取控件 gui_get_control {#gui-get-control}
+## 销毁全屏UI gui_dispose_fullscreen_ui {#gui-dispose-fullscreen-ui}
+
+销毁全屏UI。
+
+## 获取控件 gui_get_control_by_name {#gui-get-control-by-name}
+
+通过名称获取UI中的控制器。控制器是用户创建的按钮、滑块等组件。
+
+该拼图还可用于获取[网格纹理](#create-adt-for-mesh-texture)上的控件。点击该拼图齿轮图标打开高级选项，勾选开启网格纹理输入即可支持此功能。
+
+## 获取控件 gui_get_control <Badge type="warning" text="弃用" /> {#gui-get-control}
 
 通过名称获取UI中的控制器。控制器是用户创建的按钮、滑块等组件。
 
