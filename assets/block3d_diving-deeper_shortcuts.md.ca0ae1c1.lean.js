@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as l,a as d}from"./app.7818b0d9.js";const c=JSON.parse('{"title":"快捷键","description":"","frontmatter":{},"headers":[],"relativePath":"block3d/diving-deeper/shortcuts.md"}'),a={name:"block3d/diving-deeper/shortcuts.md"},i=d("",7),s=[i];function f(n,r,y,x,g,h){return l(),e("div",null,s)}const S=t(a,[["render",f]]);export{c as __pageData,S as default};
