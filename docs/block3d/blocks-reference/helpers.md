@@ -1,4 +1,4 @@
-# 辅助 Helpers <Badge text="pro"/>
+# 辅助 Helpers
 
 这类拼图提供了一些开发中会用到的工具。
 
@@ -11,3 +11,7 @@
 ## 添加检查器属性 add_inspectable_custom_properties {#add-inspectable-custom-properties}
 
 向检查器中添加可查看的自定义属性。`属性`参数接收一个对象数组，对象成员可通过该拼图右键菜单-`创建 选项`创建。
+
+## 显示射线 create_and_show_ray_helper {#create-and-show-ray-helper}
+
+将射线显示为一条有颜色的线条。

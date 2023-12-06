@@ -43,6 +43,7 @@ export default {
         { text: "选项卡", link: "/block3d/diving-deeper/tabmanager" },
         { text: "资产管理器", link: "/block3d/diving-deeper/assets-manager" },
         { text: "Markdown项目文档", link: "/block3d/diving-deeper/markdown" },
+        { text: "发布桌面应用", link: "/block3d/diving-deeper/desktop-apps" },
         { text: "快捷键", link: "/block3d/diving-deeper/shortcuts" },
         { text: "工具", link: "/block3d/diving-deeper/tools" },
       ],

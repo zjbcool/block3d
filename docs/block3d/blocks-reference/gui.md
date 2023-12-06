@@ -6,9 +6,14 @@
 
 ## 创建全屏UI gui_create_adt_for_fullscreen_ui {#gui-create-adt-for-fullscreen-ui}
 
-用于从包含UI信息的json文件创建用户界面。json数据可通过[加载资产scene_load_asset](./scenes.md#scene-load-asset)拼图以二进制文件方式加载，然后通过[获取加载资产scene_get_loaded_from_asset](./scenes.md#scene-get-loaded-from-asset)拼图获取json数据。整个场景中只能有一个全屏UI。
+创建全屏UI。一个场景中只能有一个全屏UI。
 
+json数据可通过[加载资产scene_load_asset](./scenes.md#scene-load-asset)拼图以二进制文件方式加载，然后通过[获取加载资产scene_get_loaded_from_asset](./scenes.md#scene-get-loaded-from-asset)拼图获取json数据。整个场景中只能有一个全屏UI。
+
+参数：
+- 名字 - UI的名字
 - 视网膜屏幕 - 用于在视网膜屏幕或高ppi（pixels per inch）屏幕上让UI显示更加清晰
+- JSON - 包含纹理信息的json数据，可为空
 
 ## 创建全屏UI create_adt_for_fullscreen_ui <Badge type="warning" text="弃用" />{#create-adt-for-fullscreen-ui}
 
@@ -25,7 +30,7 @@
 - 宽度 - 纹理宽度
 - 高度 - 纹理高度
 - 指针移动 - 是否纹理必须捕获指针移动事件
-- JSON - 包含纹理信息的json数据
+- JSON - 包含纹理信息的json数据，可为空
 
 ## 设置UI图层蒙板 set_ui_layer_mask {#set-ui-layer-mask}
 
@@ -74,6 +79,7 @@
 - 变换中心XtransformCenterX - 设置或获取X轴的变换中心点
 - 变换中心YtransformCenterY - 设置或获取Y轴的变换中心点
 - 值value - 设置或获取当前值
+- z值zIndex - 设置或获取z索引值，用于对控件在Z轴上重新排序
 
 还可以使用[object_member](./object.md#object-member)拼图直接控制任何属性。
 
@@ -83,4 +89,15 @@
 
 ## 移动控件 gui_move_control_to_vector {#gui-move-control-to-vector}
 
-使控制器绑定到场景中的某个点。可实现为三维物体添加标签的效果。
+使控制器绑定到场景中的某个点。可实现为三维物体添加标签的效果。仅支持全屏UI。
+
+## 连接控件 gui_link_control_with_mesh {#gui-link-control-with-mesh}
+
+将控件与网格连接到一起。仅支持全屏UI。
+
+参数：
+- 控件 - 要连接的控件
+- 目标 - 网格或变换节点
+- 偏移X - 控件与连接网格在X轴的偏移值(单位：像素)
+- 偏移Y - 控件与连接网格在Y轴的偏移值(单位：像素)
+- 直线关联控件 - 设置直线末端连接到的控件，可为空

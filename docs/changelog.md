@@ -1,6 +1,19 @@
 # 更新日志
 
-## 1.1.0(2023-01-08)
+## 1.2.0（开发中）
+
+- 支持WebGPU
+- 拼图
+  - GUI分类
+    - 新增`连接控件 gui_link_control_with_mesh`拼图，可将控件连接到网格上
+    - 新增`绘制连接线 gui_draw_line_from_mesh_to_control`拼图，可在控件和网格之间绘制连接线
+    - 新增`克隆控件 gui_clone_control`拼图
+  - 辅助分类
+    - 新增`显示射线 create_and_show_ray_helper`拼图，用于将创建的射线显示为可见的线条
+- 界面
+  - 发布面板新增`输出JS模块文件`选项和`设置输出路径`，用于输出`main_module.js visual_logic_module.js`文件，便于与前端框架集成
+
+## 1.1.0(2023-02-08)
 
 - 拼图
   - GUI分类使用`gui_create_adt_for_fullscreen_ui`代替`create_adt_for_fullscreen_ui`拼图，新的创建全屏UI拼图不再返回结果。原有拼图仍然可用，但是不再工具栏显示。

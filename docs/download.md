@@ -7,13 +7,11 @@
 |[block3d-v1.1.0-win-x64.zip][1]    |win10+  |
 |[block3d-v1.1.0-macos-arm64.zip][2]|macOS   |
 
-[更新日志](./changelog.md) | [所有发行版][release] ｜ [升级专业版](./professional-version.md)
+[更新日志](./changelog.md) | [所有发行版][release]
 
 [1]:https://github.com/zjbcool/block3d/releases/download/v1.1.0/block3d-v1.1.0-win-x64.zip
 [2]:https://github.com/zjbcool/block3d/releases/download/v1.1.0/block3d-v1.1.0-macos-arm64.zip
 [release]:https://github.com/zjbcool/block3d/releases
-
-提示：示例程序从软件右侧边栏下载。
 
 ## .babylon导出插件 <Badge type="info" text="可选" />
 

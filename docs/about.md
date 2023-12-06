@@ -1,8 +1,6 @@
 
 # 关于
 
-![about](https://cdn.zjbku.com/about-1.jpg)
-
 [[toc]]
 
 ## 产品简介

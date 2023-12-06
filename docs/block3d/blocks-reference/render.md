@@ -1,4 +1,4 @@
-# 渲染 Rendering <Badge text="pro"/>
+# 渲染 Rendering
 
 用于创建高亮、辉光、后处理等渲染效果。
 
